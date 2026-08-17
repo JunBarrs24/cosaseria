@@ -5,7 +5,6 @@ const ORIGENES = [
   'https://www.cosaseria.mx'
 ];
 
-const RAFAGA = { segundos: 20, max: 1 };
 const VENTANA = { segundos: 3600, max: 5 };
 
 const VIDA_TOKEN = { minimo: 3000, maximo: 2 * 60 * 60 * 1000 };
@@ -92,29 +91,25 @@ async function tokenValido(env, token) {
   return igualSeguro(esperada, partes[1]);
 }
 
-async function excedeLimite(env, ip) {
-  if (!env.LIMITES) {
-    console.warn('contacto: falta el binding KV LIMITES; sin rate limit');
-    return false;
-  }
+async function excedeRafaga(env, ip) {
+  if (!env.RAFAGA) return false;
 
-  const ahora = Date.now();
-  const ventanas = [
-    { nombre: 'r', ...RAFAGA },
-    { nombre: 'v', ...VENTANA }
-  ];
+  const { success } = await env.RAFAGA.limit({ key: ip });
+  return !success;
+}
 
-  for (const ventana of ventanas) {
-    const bloque = Math.floor(ahora / (ventana.segundos * 1000));
-    const clave = `rl:${ventana.nombre}:${ip}:${bloque}`;
-    const previo = Number(await env.LIMITES.get(clave)) || 0;
+async function excedeVentana(env, ip) {
+  if (!env.LIMITES) return false;
 
-    if (previo >= ventana.max) return true;
+  const bloque = Math.floor(Date.now() / (VENTANA.segundos * 1000));
+  const clave = `rl:v:${ip}:${bloque}`;
+  const previo = Number(await env.LIMITES.get(clave)) || 0;
 
-    await env.LIMITES.put(clave, String(previo + 1), {
-      expirationTtl: ventana.segundos + 60
-    });
-  }
+  if (previo >= VENTANA.max) return true;
+
+  await env.LIMITES.put(clave, String(previo + 1), {
+    expirationTtl: VENTANA.segundos + 60
+  });
 
   return false;
 }
@@ -199,7 +194,11 @@ export async function contactoPost(request, env) {
 
   const ip = ipDe(request);
 
-  if (await excedeLimite(env, ip)) {
+  if (await excedeRafaga(env, ip)) {
+    return respuesta(request, false, RECADO_LIMITE, 429, 'Calma');
+  }
+
+  if (await excedeVentana(env, ip)) {
     return respuesta(request, false, RECADO_LIMITE, 429, 'Calma');
   }
 

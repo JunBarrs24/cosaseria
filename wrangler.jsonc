@@ -42,6 +42,24 @@
   // `wrangler deploy` borra las variables sueltas que se hayan puesto en
   // el panel. Por eso lo que no es secreto vive aquí, y lo que sí lo es
   // se sube como secreto, que es lo único que el deploy no toca.
+  // Corte de ráfaga. KV no sirve para esto: leer, decidir y escribir son tres
+  // pasos, así que cien peticiones simultáneas leen el mismo contador y pasan
+  // todas. Este binding cuenta dentro de Cloudflare, en una sola operación.
+  //
+  // "period" solo acepta 10 o 60. Por eso la ventana larga (5 por hora) se
+  // queda en KV, donde la consistencia eventual ya no importa porque la
+  // ráfaga viene detenida de aquí.
+  //
+  // El conteo es por ubicación de Cloudflare y eventualmente consistente:
+  // frena el abuso de un formulario, no es un sistema de contabilidad.
+  "ratelimits": [
+    {
+      "name": "RAFAGA",
+      "namespace_id": "1001",
+      "simple": { "limit": 2, "period": 60 }
+    }
+  ],
+
   "vars": {
     "CORREO_ORIGEN": "sitio@cosaseria.mx"
   },
