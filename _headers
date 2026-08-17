@@ -1,0 +1,25 @@
+# Cabeceras para Cloudflare Pages.
+# Un archivo de texto. Sin build, sin plugin, sin panel que recordar.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+
+# 'unsafe-inline' en style-src es necesario por los atributos style= del
+# marcado y de los SVG. No aplica a scripts: ahí la política es estricta.
+
+# Los assets no llevan hash en el nombre, así que no se marcan como
+# immutable: un año de caché sobre un archivo que sí puede cambiar es
+# una decisión que se paga después.
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/favicon.svg
+  Cache-Control: public, max-age=604800
+
+/api/*
+  Cache-Control: no-store

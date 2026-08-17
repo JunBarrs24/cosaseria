@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>CosaSeria. · Estudio de ingeniería de software</title>
+<meta name="description" content="Estudio mexicano de ingeniería de software. Arquitectura, sistemas a medida, escalabilidad, inteligencia artificial y technical advisory para equipos que necesitan criterio técnico senior.">
+<link rel="canonical" href="https://cosaseria.mx/">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/">
+<meta property="og:title" content="CosaSeria. · Estudio de ingeniería de software">
+<meta property="og:description" content="Trae el problema difícil. Arquitectura, sistemas a medida, escalabilidad, inteligencia artificial y technical advisory.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CosaSeria. · Estudio de ingeniería de software">
+<meta name="twitter:description" content="Trae el problema difícil.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CosaSeria",
+  "alternateName": "CosaSeria Engineering Studio",
+  "url": "https://cosaseria.mx/",
+  "logo": "https://cosaseria.mx/favicon.svg",
+  "email": "hola@cosaseria.mx",
+  "description": "Estudio mexicano de ingeniería de software para problemas técnicamente importantes: arquitectura, sistemas distribuidos, escalabilidad, software a medida, inteligencia artificial y technical advisory.",
+  "address": { "@type": "PostalAddress", "addressCountry": "MX" },
+  "founder": {
+    "@type": "Person",
+    "name": "Juan Barrera",
+    "sameAs": [
+      "https://www.linkedin.com/in/junbarrs/",
+      "https://x.com/JunBarrs24"
+    ]
+  },
+  "knowsAbout": [
+    "Arquitectura de software",
+    "Sistemas distribuidos",
+    "Escalabilidad",
+    "Plataformas de pagos",
+    "Inteligencia artificial",
+    "Cloud"
+  ]
+}
+</script>
+</head>
+
+<body>
+<!--
+                       ,~.
+                    ,-'__ `-,                     ,
+                   {,-'  `. }                   ,'|
+                  ,( o )   `-.__              ,'  |  ,
+                 <=.) (          `-.__      ,'    |,'|
+                   (   )               `-._'      '  |
+                    `-'                    `-.       |
+                      \                       `-.   ,'
+                       \                         `-'
+                        `-.___________________,-'
+                            ||         ||
+                           _||_       _||_
+                          (____)     (____)
+
+    miau.
+
+    ─────────────────────────────────────────────────────────────
+    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
+    Expediente 001 · Sitio propio
+    ─────────────────────────────────────────────────────────────
+
+    Si estás leyendo el código fuente, probablemente nos vamos a
+    llevar bien.
+
+    Esta gallina tampoco necesita un framework. No hay build, ni
+    bundler, ni hydration, ni node_modules. Un HTML por página, una
+    hoja de estilos y un archivo de JavaScript que puedes leer
+    completo en menos de lo que tarda un `npm install`.
+
+    Nada de lo que hace ese JavaScript es necesario para leer el
+    sitio. Apágalo y compruébalo.
+
+    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
+    Ese tipo de correo lo contestamos rapidísimo.
+
+    hola@cosaseria.mx
+-->
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="index.html" aria-label="CosaSeria, inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="trabajo/index.html">Trabajo</a>
+      <a href="notas/index.html">Notas</a>
+      <a href="#detras" data-secundario>Quiénes están detrás</a>
+    </nav>
+    <a class="nav-contacto" href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <div class="heroe">
+    <div class="marco">
+      <p class="ceja">Estudio de ingeniería · México</p>
+
+      <h1>Trae el problema difícil<span class="punto">.</span></h1>
+
+      <p class="deck">
+        Arquitectura, sistemas a medida, escalabilidad, inteligencia artificial
+        y technical advisory para equipos que necesitan criterio técnico senior.
+      </p>
+
+      <p class="credencial">
+        Ingeniería con experiencia en <b>Google</b>, <b>Microsoft</b>, <b>Amazon</b>
+        y <b>HP</b>, incluyendo posiciones senior y Principal Engineering.
+      </p>
+
+      <div class="acciones">
+        <a class="btn btn-primario" href="#contacto">Cuéntanos el problema</a>
+        <a class="btn btn-secundario" href="trabajo/index.html">Ver trabajo</a>
+      </div>
+
+      <button class="sello-heroe" type="button" data-habla aria-label="Sello de CosaSeria">
+        <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+        <span class="oculto-visual" role="status" data-vivo></span>
+      </button>
+    </div>
+  </div>
+
+  <section class="seccion" aria-labelledby="h-asuntos">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-asuntos">Asuntos que atendemos</h2>
+        <span class="folio">Folio 002 · Alcance</span>
+      </div>
+      <div class="cuerpo">
+
+        <div class="asunto revela">
+          <div>
+            <span class="clave">Asunto A</span>
+            <h3>Arquitectura de sistemas</h3>
+          </div>
+          <p>Decisiones técnicas que puedan seguir teniendo sentido varios años después. Primero el problema; después la tecnología.</p>
+        </div>
+
+        <div class="asunto revela">
+          <div>
+            <span class="clave">Asunto B</span>
+            <h3>Escalabilidad y sistemas distribuidos</h3>
+          </div>
+          <p>Performance, reliability, observabilidad y operación. Funcionaba perfecto con veinte usuarios: ese suele ser exactamente el problema.</p>
+        </div>
+
+        <div class="asunto revela">
+          <div>
+            <span class="clave">Asunto C</span>
+            <h3>Software a medida</h3>
+          </div>
+          <p>Sistemas construidos alrededor del problema que ya tienes, con las restricciones que ya tienes. Web y mobile cuando forman parte del problema de ingeniería.</p>
+        </div>
+
+        <div class="asunto revela">
+          <div>
+            <span class="clave">Asunto D</span>
+            <h3>Inteligencia artificial</h3>
+          </div>
+          <p>Diseño, integración y evaluación de agentes y sistemas con IA cuando el problema lo justifica. Si no la necesitas, te lo vamos a decir.</p>
+        </div>
+
+        <div class="asunto revela">
+          <div>
+            <span class="clave">Asunto E</span>
+            <h3>Principal Engineering / Technical advisory</h3>
+          </div>
+          <p>Experiencia temporal de nivel Staff/Principal para decisiones que no justifican otra contratación permanente: una revisión de arquitectura, una migración que hay que decidir bien, un sistema crítico que nadie quiere tocar.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-hondo" aria-labelledby="h-condiciones">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-condiciones">Tres condiciones</h2>
+        <span class="folio">Folio 003 · Criterio</span>
+      </div>
+      <div class="cuerpo">
+        <div class="condiciones revela">
+          <div class="condicion">
+            <h3>Bien pensada<span class="punto">.</span></h3>
+            <p>Antes de construir, entendemos. Cada decisión de tecnología tiene una razón que se puede explicar sin diapositivas.</p>
+          </div>
+          <div class="condicion">
+            <h3>Bien construida<span class="punto">.</span></h3>
+            <p>Arquitectura, mantenibilidad, pruebas, performance y observabilidad. Código que no da pena heredar.</p>
+          </div>
+          <div class="condicion">
+            <h3>Bien terminada<span class="punto">.</span></h3>
+            <p>Experiencia de uso, documentación, detalles y operación. Lo que nadie ve hasta el día que falla.</p>
+          </div>
+        </div>
+        <p class="maxima revela">Que funcione es apenas el principio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="h-trabajo">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-trabajo">Trabajo</h2>
+        <span class="folio">Folio 004 · Evidencia</span>
+      </div>
+      <div class="cuerpo">
+        <p class="deck medida-corta" style="margin-top:0">
+          Productos que el estudio construye y opera, y sistemas en los que
+          participamos dentro de otras organizaciones. Los separamos, porque
+          no es lo mismo.
+        </p>
+        <div class="acciones">
+          <a class="btn btn-secundario" href="trabajo/index.html">Ver trabajo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="detras" aria-labelledby="h-detras">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-detras">Quiénes están detrás</h2>
+        <span class="folio">Folio 005 · Firma</span>
+      </div>
+      <div class="cuerpo detras revela">
+
+        <div>
+          <svg class="gallo" viewBox="0 0 260 284" role="img" aria-labelledby="gallo-t gallo-d">
+            <title id="gallo-t">Un gallo</title>
+            <desc id="gallo-d">Ilustración de línea de un gallo erguido de perfil, con el pecho inflado hacia adelante, una cresta desproporcionadamente grande, barbillas colgantes, cola alta de plumas curvas y una postura exageradamente importante.</desc>
+            <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <line class="suelo" x1="40" y1="272" x2="250" y2="272"/>
+              <g class="g-figura">
+
+                <g class="g-cola">
+                  <path d="M 170 148 C 192 130 204 102 206 70"/>
+                  <path d="M 174 160 C 200 148 220 120 224 84"/>
+                  <path d="M 176 176 C 206 168 228 140 234 106"/>
+                  <path d="M 176 192 C 208 190 232 166 240 134"/>
+                </g>
+
+                <path stroke-width="2.4" d="M 96 222 L 92 254 M 92 254 L 74 264 M 92 254 L 92 268 M 92 254 L 110 264"/>
+                <path stroke-width="2.4" d="M 128 224 L 130 254 M 130 254 L 112 264 M 130 254 L 130 268 M 130 254 L 148 264"/>
+
+                <g class="g-torso">
+                  <path d="M 64 76 C 58 96 62 118 74 132"/>
+                  <path d="M 86 74 C 96 94 104 116 116 126"/>
+                  <path d="M 74 132 C 56 146 46 172 52 194 C 58 216 84 226 112 222 C 146 218 172 196 174 168 C 176 142 152 128 116 126"/>
+                </g>
+
+                <g class="g-ala">
+                  <path d="M 92 166 C 118 158 148 170 152 190 C 134 206 102 202 88 182 Z"/>
+                  <path stroke-width="1.5" d="M 98 178 C 116 172 134 180 143 191"/>
+                </g>
+
+                <g class="g-cabeza">
+                  <circle cx="74" cy="64" r="14"/>
+                  <path class="relleno" stroke-width="2.2" d="M 61 64 L 38 71 L 61 78 Z"/>
+                  <path stroke-width="2.2" d="M 64 78 C 56 96 60 112 70 108 C 78 104 76 86 72 76"/>
+                  <path stroke-width="1.8" d="M 74 78 C 71 92 74 100 80 98"/>
+                  <circle class="g-ojo relleno" cx="70" cy="59" r="3" stroke="none"/>
+                  <g class="g-cresta">
+                    <path stroke-width="2.4" d="M 52 52 C 48 38 50 28 56 32 C 56 16 60 10 66 18 C 70 4 76 4 78 18 C 84 8 90 10 90 26 C 98 24 100 34 93 50"/>
+                  </g>
+                </g>
+
+              </g>
+            </g>
+          </svg>
+          <p class="pie-gallo">Founder. El gallo no toma decisiones técnicas.</p>
+        </div>
+
+        <div>
+          <p class="persona-nombre">Juan Barrera</p>
+          <p class="persona-rol">Founder / Principal Engineer</p>
+          <p class="persona-bio">
+            Ingeniero de software mexicano con experiencia en Google, Microsoft,
+            Amazon y HP. Ha trabajado en arquitectura, sistemas distribuidos,
+            cloud, plataformas de pagos e inteligencia artificial, además de
+            docencia de posgrado e investigación doctoral.
+          </p>
+          <p class="persona-datos">
+            <span class="marbete">Arquitectura</span>
+            <span class="marbete">Sistemas distribuidos</span>
+            <span class="marbete">Cloud</span>
+            <span class="marbete">Plataformas de pagos</span>
+            <span class="marbete">IA y agentes</span>
+          </p>
+          <p class="persona-enlaces">
+            <a href="https://www.linkedin.com/in/junbarrs/" rel="me noopener">LinkedIn</a>
+            <a href="https://x.com/JunBarrs24" rel="me noopener">X</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-hondo" aria-labelledby="h-nota">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-nota">Notas al expediente</h2>
+        <span class="folio">Folio 006 · Bitácora</span>
+      </div>
+      <div class="cuerpo nota-destacada revela">
+        <div>
+          <p class="folio" style="margin-bottom:14px">Nota 001 · Agosto 2026 · 8 min</p>
+          <h3><a href="notas/microservicios-cuando-no/index.html">Microservicios: cuándo no<span class="punto">.</span></a></h3>
+          <p>
+            Lo que compras es independencia de despliegue. Lo que pagas es que
+            cada llamada de función se convierte en un problema de red. Cómo
+            saber de qué lado de esa cuenta estás hoy.
+          </p>
+        </div>
+        <p><a class="btn btn-secundario" href="notas/index.html">Todas las notas</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion en-oscuro" id="contacto" aria-labelledby="h-contacto">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-contacto" class="oculto-visual">Contacto</h2>
+        <span class="folio" style="margin-left:auto">Folio 007 · Contacto</span>
+      </div>
+      <div class="cuerpo">
+        <p class="cierre-lema">Cuando ya sea cosa seria<span class="punto">.</span></p>
+
+        <form class="forma" data-forma method="post" action="/api/contacto"
+              data-correo="hola@cosaseria.mx">
+
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="campo">
+            <label for="f-empresa">Empresa <span class="opcional">(opcional)</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+
+          <div class="campo">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="campo">
+            <label for="f-problema">Cuéntanos el problema</label>
+            <textarea id="f-problema" name="problema" required aria-describedby="ayuda-problema"></textarea>
+            <p class="ayuda" id="ayuda-problema">Tres párrafos bastan.</p>
+          </div>
+
+          <div class="trampa" aria-hidden="true">
+            <label for="f-trampa">No llenar este campo</label>
+            <input id="f-trampa" name="empresa_adicional" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="token" value="">
+
+          <div class="forma-pie">
+            <button class="btn btn-primario" type="submit">Enviar</button>
+            <p class="recado" data-recado hidden></p>
+          </div>
+        </form>
+
+        <p class="correo-alterno">
+          ¿Prefieres correo? <a href="mailto:hola@cosaseria.mx">hola@cosaseria.mx</a>
+        </p>
+        <p class="ayuda" style="margin-top:14px">Leemos personalmente cada mensaje.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="trabajo/index.html">Trabajo</a>
+        <a href="notas/index.html">Notas</a>
+        <a href="https://www.linkedin.com/in/junbarrs/" rel="me noopener">LinkedIn</a>
+        <a href="https://x.com/JunBarrs24" rel="me noopener">X</a>
+        <a href="privacidad/index.html">Privacidad</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<button id="audio-toggle" type="button" hidden>Audio · Sí</button>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

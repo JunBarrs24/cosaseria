@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>Microservicios: cuándo no. · Notas al expediente · CosaSeria.</title>
+<meta name="description" content="Los microservicios resuelven un problema de organización antes que uno de tecnología. Qué compras realmente cuando los adoptas, qué pagas a cambio y cómo saber si todavía no te toca.">
+<link rel="canonical" href="https://cosaseria.mx/notas/microservicios-cuando-no/">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/notas/microservicios-cuando-no/">
+<meta property="og:title" content="Microservicios: cuándo no.">
+<meta property="og:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada de función se convierte en un problema de red.">
+<meta property="article:published_time" content="2026-08-16">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Microservicios: cuándo no.">
+<meta name="twitter:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada de función se convierte en un problema de red.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Microservicios: cuándo no.",
+  "description": "Los microservicios resuelven un problema de organización antes que uno de tecnología. Qué compras realmente cuando los adoptas y qué pagas a cambio.",
+  "inLanguage": "es-MX",
+  "datePublished": "2026-08-16",
+  "mainEntityOfPage": "https://cosaseria.mx/notas/microservicios-cuando-no/",
+  "author": { "@type": "Organization", "name": "CosaSeria" },
+  "publisher": { "@type": "Organization", "name": "CosaSeria" }
+}
+</script>
+</head>
+
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="../../index.html" aria-label="CosaSeria, inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../trabajo/index.html">Trabajo</a>
+      <a href="../index.html" aria-current="page">Notas</a>
+      <a href="../../index.html#detras" data-secundario>Quiénes están detrás</a>
+    </nav>
+    <a class="nav-contacto" href="../../index.html#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <article class="marco articulo">
+
+    <p class="ceja articulo-cabeza"><a href="../index.html" style="text-decoration:none;border-bottom:2px solid var(--rosa)">Notas al expediente</a></p>
+
+    <h1>Microservicios: cuándo no<span class="punto">.</span></h1>
+
+    <p class="articulo-meta">
+      <span>Nota 001</span>
+      <span>16 de agosto de 2026</span>
+      <span>8 min de lectura</span>
+    </p>
+
+    <div class="prosa">
+
+      <p>Una junta de dos horas, seis personas y un diagrama en el pizarrón con once cajitas y flechas entre casi todas. Cuando ya estaba dibujado, alguien preguntó cuántos ingenieros había en el equipo. Eran cuatro.</p>
+
+      <p>Esa junta pasa seguido, y la pregunta que la convoca llega casi siempre con la misma forma: <em>¿deberíamos migrarnos a microservicios?</em> Es una pregunta sobre cómo está organizado tu equipo y cuántas cosas quieres poder desplegar sin pedirle permiso a nadie.</p>
+
+      <p>Esta nota defiende que elijas a sabiendas.</p>
+
+      <h2>Lo que compras</h2>
+
+      <p>Un microservicio te vende exactamente un producto: <strong>independencia de despliegue</strong>. Un pedazo del sistema puede salir a producción en su propio horario, con su propio riesgo, sin coordinarse con el resto.</p>
+
+      <p>Todo lo demás que se le atribuye (escalar por partes, usar otro lenguaje, aislar fallos, separar responsabilidades) se puede conseguir sin partir el despliegue, y casi siempre más barato:</p>
+
+      <ul>
+        <li><strong>Escalar por partes.</strong> Un mismo binario desplegado en dos grupos de máquinas, uno atendiendo tráfico web y otro consumiendo una cola, ya escala por partes. No hacen falta dos repositorios.</li>
+        <li><strong>Aislar fallos.</strong> Bulkheads, timeouts, límites de concurrencia y circuit breakers son patrones de proceso. Funcionan igual dentro de un solo binario.</li>
+        <li><strong>Separar responsabilidades.</strong> Eso son módulos con fronteras que alguien defiende. La frontera la imponen la disciplina y el compilador.</li>
+      </ul>
+
+      <p>Si lo que te duele es alguna de esas tres cosas, hay una respuesta más corta que partir el sistema.</p>
+
+      <h2>Lo que pagas</h2>
+
+      <p>El costo tiene un nombre concreto: <strong>cada llamada de función se convierte en un problema de red</strong>. Esa frase parece pequeña escrita. No lo es.</p>
+
+      <figure>
+        <svg class="diagrama" viewBox="0 0 680 300" role="img" aria-labelledby="dg-t dg-d">
+          <title id="dg-t">Antes y después de partir el despliegue</title>
+          <desc id="dg-d">Dos paneles. En el primero, cuatro módulos dentro de una sola caja de despliegue, unidos por cuatro llamadas en proceso. En el segundo, los mismos cuatro módulos como despliegues separados, unidos por cuatro llamadas de red que cruzan espacio vacío.</desc>
+
+          <text class="titulo" x="20" y="26">A · UN DESPLIEGUE</text>
+          <rect class="trazo" x="20" y="40" width="290" height="170"/>
+          <rect class="trazo" x="40" y="60" width="119" height="62"/>
+          <rect class="trazo" x="171" y="60" width="119" height="62"/>
+          <rect class="trazo" x="40" y="148" width="119" height="62"/>
+          <rect class="trazo" x="171" y="148" width="119" height="62"/>
+          <text x="99" y="95" text-anchor="middle">catálogo</text>
+          <text x="230" y="95" text-anchor="middle">carrito</text>
+          <text x="99" y="183" text-anchor="middle">pagos</text>
+          <text x="230" y="183" text-anchor="middle">envíos</text>
+          <path class="trazo" d="M 159 91 H 171"/>
+          <path class="trazo" d="M 99 122 V 148"/>
+          <path class="trazo" d="M 230 122 V 148"/>
+          <path class="trazo" d="M 159 179 H 171"/>
+          <text class="tenue" x="20" y="238">1 despliegue · 4 llamadas en proceso</text>
+          <text class="tenue" x="20" y="256">falla todo o no falla nada</text>
+
+          <text class="titulo" x="370" y="26">B · CUATRO DESPLIEGUES</text>
+          <rect class="trazo" x="370" y="60" width="119" height="62"/>
+          <rect class="trazo" x="541" y="60" width="119" height="62"/>
+          <rect class="trazo" x="370" y="148" width="119" height="62"/>
+          <rect class="trazo" x="541" y="148" width="119" height="62"/>
+          <text x="429" y="95" text-anchor="middle">catálogo</text>
+          <text x="600" y="95" text-anchor="middle">carrito</text>
+          <text x="429" y="183" text-anchor="middle">pagos</text>
+          <text x="600" y="183" text-anchor="middle">envíos</text>
+          <path class="trazo-rosa" stroke-dasharray="5 4" d="M 489 91 H 541"/>
+          <path class="trazo-rosa" stroke-dasharray="5 4" d="M 429 122 V 148"/>
+          <path class="trazo-rosa" stroke-dasharray="5 4" d="M 600 122 V 148"/>
+          <path class="trazo-rosa" stroke-dasharray="5 4" d="M 489 179 H 541"/>
+          <text class="tenue" x="370" y="238">4 despliegues · 4 llamadas de red · 4 contratos versionados</text>
+          <text class="tenue" x="370" y="256">cada línea rosa puede fallar sola, tardar de más o llegar dos veces</text>
+        </svg>
+        <figcaption>Lo mismo, partido. Las cuatro líneas rosas son el trabajo nuevo.</figcaption>
+      </figure>
+
+      <p>Lo que en el panel A era esto:</p>
+
+<pre><code>total = pagos.cobrar(carrito)</code></pre>
+
+      <p>en el panel B es esto, y ninguna de las líneas nuevas es opcional:</p>
+
+<pre><code>total = pagos.cobrar(
+    carrito,
+    timeout        = 800ms,      # ¿cuánto es demasiado?
+    reintentos     = 3,          # ¿y si el cobro sí pasó?
+    clave_idem     = pedido.id,  # por eso hace falta esta
+    contrato       = "v2",       # y por eso hace falta esta otra
+)
+# y si aun así no contesta: ¿el pedido queda cobrado, cancelado o pendiente?</code></pre>
+
+      <p>Esa última línea es la factura. En el panel A la pregunta no existía: o corría la función o no corría. En el panel B existe un estado nuevo (<em>no sé</em>) y alguien tiene que diseñarlo, probarlo, monitorearlo y explicárselo a soporte.</p>
+
+      <p>Multiplícalo por cada frontera que cruces. Aparecen, todos juntos y el mismo mes:</p>
+
+      <ul>
+        <li>fallos parciales y el estado <em>no sé</em>;</li>
+        <li>latencia de cola larga (<em>tail latency</em>): la petición más lenta manda, y ahora hay cuatro oportunidades de ser la más lenta;</li>
+        <li>idempotencia obligatoria en cualquier cosa que cobre, cargue o envíe;</li>
+        <li>versionado de contratos y despliegues que ya no pueden ir en cualquier orden;</li>
+        <li>consistencia eventual donde antes había una transacción;</li>
+        <li>trazas distribuidas, porque sin ellas depurar es adivinar;</li>
+        <li>entornos: levantar el sistema completo en la laptop deja de ser gratis.</li>
+      </ul>
+
+      <p class="al-margen"><b>Una señal barata de diagnóstico.</b> Pregunta cuántas veces al mes el equipo despliega y cuántas de esas hubo que coordinar con otro equipo. Si la respuesta es «desplegamos los jueves y no coordinamos con nadie», tienes un problema de frecuencia de despliegue, y ese se arregla con pipeline.</p>
+
+      <h2>Conway, en la dirección correcta</h2>
+
+      <p>La ley de Conway dice que los sistemas terminan pareciéndose a la estructura de comunicación de la organización que los construye. La lectura útil es la inversa: <strong>no compres una topología de sistema que no corresponde a tu topología de equipos</strong>.</p>
+
+      <p>Cuatro servicios y un equipo dan cuatro repositorios que la misma gente tiene que desplegar en orden. Eso es un monolito distribuido: el monolito con la factura de red incluida y ninguno de sus beneficios.</p>
+
+      <blockquote>El mejor microservicio puede ser el que decidimos no construir.</blockquote>
+
+      <h2>Cuándo no</h2>
+
+      <p>Si alguna de estas es cierta hoy, la respuesta probablemente es <em>todavía no</em>:</p>
+
+      <ul>
+        <li><strong>El equipo cabe en una sala.</strong> Con uno o dos equipos, la coordinación se resuelve en una junta de quince minutos.</li>
+        <li><strong>El dominio todavía se mueve.</strong> Las fronteras que dibujes hoy se van a mover. Moverlas dentro de un repositorio cuesta una tarde; moverlas entre servicios cuesta un trimestre.</li>
+        <li><strong>No tienes observabilidad distribuida.</strong> Sin trazas correlacionadas, partir el sistema es apagar la luz antes de entrar.</li>
+        <li><strong>El cuello de botella está en la base de datos.</strong> Cuatro servicios contra la misma base de datos son cuatro clientes peleándose por el mismo recurso, con más conexiones y menos control del plan de consultas.</li>
+        <li><strong>Nadie está de guardia.</strong> Los sistemas distribuidos fallan de formas que solo se aprenden operándolos. Si no hay quien los opere, no los construyas.</li>
+      </ul>
+
+      <h2>Cuándo sí</h2>
+
+      <p>Hay razones buenas, y son concretas y pocas:</p>
+
+      <ul>
+        <li>Dos o más equipos con dueños distintos se bloquean entre sí, con evidencia: despliegues detenidos, releases coordinados, filas de revisión.</li>
+        <li>Una parte tiene un perfil de escala genuinamente distinto: mil veces más tráfico, o mil veces más caro por petición.</li>
+        <li>Una parte tiene un perfil de riesgo o cumplimiento distinto y conviene aislarla también en operación.</li>
+        <li>Una parte tiene un ciclo de vida distinto: cambia cada semana mientras el resto cambia cada trimestre.</li>
+      </ul>
+
+      <p>Fíjate en el patrón: todas son afirmaciones verificables. Ninguna es «así se hace ahora».</p>
+
+      <h2>Qué hacer mientras tanto</h2>
+
+      <p>Casi siempre hay un camino intermedio que se paga solo:</p>
+
+      <ol>
+        <li><strong>Pon fronteras dentro de un solo despliegue.</strong> Módulos con interfaz pública explícita, y una regla de compilación que impida importar sus adentros. Si el lenguaje puede fallar el build por una dependencia prohibida, mejor: el criterio deja de depender de que alguien lo recuerde en la revisión.</li>
+        <li><strong>Separa los datos antes que el proceso.</strong> Que cada módulo sea dueño de sus tablas y nadie más las lea directamente. Este es el trabajo difícil, y es el mismo trabajo que tendrías que hacer para extraer un servicio. Hazlo primero, donde equivocarse es barato.</li>
+        <li><strong>Haz que desplegar sea aburrido.</strong> Si desplegar da miedo, partir el sistema no lo va a quitar: lo va a multiplicar por cuatro.</li>
+        <li><strong>Extrae uno, cuando duela por una razón que puedas nombrar.</strong> El primero enseña cuánto cuesta en tu contexto. Sácalo, opéralo tres meses y vuelve a decidir con datos.</li>
+      </ol>
+
+      <p>Si haces los tres primeros pasos y el cuarto ya no hace falta, hiciste el mismo trabajo de diseño y te ahorraste la red.</p>
+
+      <hr>
+
+      <p>La arquitectura correcta es la que corresponde al tamaño de tu equipo, al estado de tu dominio y a lo que tu operación puede sostener un martes a las tres de la mañana. Elegir eso bien cuesta trabajo. Elegirlo mal cuesta más.</p>
+
+    </div>
+
+    <div class="cierre-articulo">
+      <h2>¿Tienes un problema parecido?</h2>
+      <p>Si estás en medio de esta decisión y equivocarse sale caro, es exactamente el tipo de conversación que nos gusta tener.</p>
+      <a class="btn btn-primario" href="../../index.html#contacto">Cuéntanoslo</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="../../trabajo/index.html">Trabajo</a>
+        <a href="../index.html">Notas</a>
+        <a href="../../privacidad/index.html">Privacidad</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

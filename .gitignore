@@ -1,0 +1,12 @@
+# Documentos internos. No son parte del sitio y no deben publicarse:
+# Cloudflare Pages sirve la raíz del repositorio tal cual, así que
+# cualquier archivo versionado aquí queda accesible por URL.
+identidad-marca.md
+radiografia_escritura_juan_barrera.md
+
+# Secretos locales de Wrangler
+.dev.vars
+.wrangler/
+
+.DS_Store
+node_modules/
