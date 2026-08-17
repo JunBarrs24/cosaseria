@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="only light">
 
 <title>CosaSeria. · Estudio de ingeniería de software</title>
-<meta name="description" content="Estudio mexicano de ingeniería de software. Arquitectura, sistemas a medida, escalabilidad, inteligencia artificial y technical advisory para equipos que necesitan criterio técnico senior.">
+<meta name="description" content="Estudio mexicano de ingeniería de software. Arquitectura, sistemas a medida, escalabilidad e IA para equipos que necesitan criterio técnico senior.">
 <link rel="canonical" href="https://cosaseria.mx/">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -17,41 +17,104 @@
 <meta property="og:url" content="https://cosaseria.mx/">
 <meta property="og:title" content="CosaSeria. · Estudio de ingeniería de software">
 <meta property="og:description" content="Trae el problema difícil. Arquitectura, sistemas a medida, escalabilidad, inteligencia artificial y technical advisory.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CosaSeria. · Estudio de ingeniería de software">
 <meta name="twitter:description" content="Trae el problema difícil.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<link rel="preload" href="assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "CosaSeria",
-  "alternateName": "CosaSeria Engineering Studio",
-  "url": "https://cosaseria.mx/",
-  "logo": "https://cosaseria.mx/favicon.svg",
-  "email": "hola@cosaseria.mx",
-  "description": "Estudio mexicano de ingeniería de software para problemas técnicamente importantes: arquitectura, sistemas distribuidos, escalabilidad, software a medida, inteligencia artificial y technical advisory.",
-  "address": { "@type": "PostalAddress", "addressCountry": "MX" },
-  "founder": {
-    "@type": "Person",
-    "name": "Juan Barrera",
-    "sameAs": [
-      "https://www.linkedin.com/in/junbarrs/",
-      "https://x.com/JunBarrs24"
-    ]
-  },
-  "knowsAbout": [
-    "Arquitectura de software",
-    "Sistemas distribuidos",
-    "Escalabilidad",
-    "Plataformas de pagos",
-    "Inteligencia artificial",
-    "Cloud"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cosaseria.mx/#org",
+      "name": "CosaSeria",
+      "alternateName": "CosaSeria Engineering Studio",
+      "url": "https://cosaseria.mx/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cosaseria.mx/og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "image": "https://cosaseria.mx/og.png",
+      "email": "hola@cosaseria.mx",
+      "description": "Estudio mexicano de ingeniería de software para problemas técnicamente importantes: arquitectura, sistemas distribuidos, escalabilidad, software a medida, inteligencia artificial y technical advisory.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      },
+      "founder": {
+        "@id": "https://cosaseria.mx/#juan"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/junbarrs/",
+        "https://x.com/JunBarrs24"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hola@cosaseria.mx",
+        "availableLanguage": [
+          "es",
+          "en"
+        ]
+      },
+      "knowsAbout": [
+        "Arquitectura de software",
+        "Sistemas distribuidos",
+        "Escalabilidad",
+        "Plataformas de pagos",
+        "Inteligencia artificial",
+        "Cloud"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cosaseria.mx/#juan",
+      "name": "Juan Barrera",
+      "jobTitle": "Founder / Principal Engineer",
+      "worksFor": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Tecnológico Nacional de México campus Morelia"
+      },
+      "knowsAbout": [
+        "Arquitectura de software",
+        "Sistemas distribuidos",
+        "Escalabilidad",
+        "Plataformas de pagos",
+        "Inteligencia artificial",
+        "Agentes de IA",
+        "Cloud",
+        "Recuperación aumentada por generación"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/junbarrs/",
+        "https://x.com/JunBarrs24"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cosaseria.mx/#sitio",
+      "url": "https://cosaseria.mx/",
+      "name": "CosaSeria",
+      "inLanguage": "es-MX",
+      "publisher": {
+        "@id": "https://cosaseria.mx/#org"
+      }
+    }
   ]
 }
 </script>
@@ -136,7 +199,7 @@
 
 <header class="cabecera">
   <div class="marco barra">
-    <a class="marca" href="index.html" aria-label="CosaSeria, inicio">
+    <a class="marca" href="/" aria-label="CosaSeria, inicio">
       <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
       <span class="marca-texto">
         <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
@@ -144,8 +207,8 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="trabajo/index.html">Trabajo</a>
-      <a href="notas/index.html">Notas</a>
+      <a href="/trabajo/">Trabajo</a>
+      <a href="/notas/">Notas</a>
       <a href="#detras" data-secundario>Quiénes están detrás</a>
     </nav>
     <a class="nav-contacto" href="#contacto">Contacto</a>
@@ -172,7 +235,7 @@
 
       <div class="acciones">
         <a class="btn btn-primario" href="#contacto">Cuéntanos el problema</a>
-        <a class="btn btn-secundario" href="trabajo/index.html">Ver trabajo</a>
+        <a class="btn btn-secundario" href="/trabajo/">Ver trabajo</a>
       </div>
 
       <button class="sello-heroe" type="button" data-habla aria-label="Sello de CosaSeria">
@@ -273,7 +336,7 @@
           no es lo mismo.
         </p>
         <div class="acciones">
-          <a class="btn btn-secundario" href="trabajo/index.html">Ver trabajo</a>
+          <a class="btn btn-secundario" href="/trabajo/">Ver trabajo</a>
         </div>
       </div>
     </div>
@@ -368,14 +431,14 @@
       <div class="cuerpo nota-destacada revela">
         <div>
           <p class="folio" style="margin-bottom:14px">Nota 001 · Agosto 2026 · 8 min</p>
-          <h3><a href="notas/microservicios-cuando-no/index.html">Microservicios: cuándo no<span class="punto">.</span></a></h3>
+          <h3><a href="/notas/microservicios-cuando-no/">Microservicios: cuándo no<span class="punto">.</span></a></h3>
           <p>
             Lo que compras es independencia de despliegue. Lo que pagas es que
             cada llamada de función se convierte en un problema de red. Cómo
             saber de qué lado de esa cuenta estás hoy.
           </p>
         </div>
-        <p><a class="btn btn-secundario" href="notas/index.html">Todas las notas</a></p>
+        <p><a class="btn btn-secundario" href="/notas/">Todas las notas</a></p>
       </div>
     </div>
   </section>
@@ -443,11 +506,11 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="trabajo/index.html">Trabajo</a>
-        <a href="notas/index.html">Notas</a>
+        <a href="/trabajo/">Trabajo</a>
+        <a href="/notas/">Notas</a>
         <a href="https://www.linkedin.com/in/junbarrs/" rel="me noopener">LinkedIn</a>
         <a href="https://x.com/JunBarrs24" rel="me noopener">X</a>
-        <a href="privacidad/index.html">Privacidad</a>
+        <a href="/privacidad/">Privacidad</a>
       </nav>
     </div>
     <div class="pie-legal">

@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cosaseria",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-08-16",
+
+  // Solo se publica public/. La raíz del repositorio queda fuera:
+  // README, .gitignore y el código del Worker no son parte del sitio.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+
+  // Pendientes en el panel, no en el repositorio:
+  //   KV namespace con binding LIMITES  (rate limit)
+  //   FIRMA_SECRETO, RESEND_API_KEY     (secretos)
+  //   CORREO_DESTINO, CORREO_ORIGEN     (variables)
+}

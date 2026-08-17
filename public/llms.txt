@@ -1,0 +1,35 @@
+# CosaSeria
+
+> Estudio mexicano de ingeniería de software. Arquitectura, sistemas a medida,
+> escalabilidad, inteligencia artificial y technical advisory para equipos que
+> necesitan criterio técnico senior.
+
+CosaSeria es un engineering studio con sede en México, fundado por Juan Barrera,
+ingeniero de software con experiencia en Google, Microsoft, Amazon y HP en
+posiciones senior y Principal Engineering.
+
+El estudio trabaja en cinco frentes: arquitectura de sistemas, escalabilidad y
+sistemas distribuidos, software a medida, inteligencia artificial (incluidos
+agentes en producción) y technical advisory de nivel Staff/Principal.
+
+Contacto: hola@cosaseria.mx
+
+## Páginas
+
+- [Inicio](https://cosaseria.mx/): qué hace el estudio, los cinco asuntos que atiende y el formulario de contacto.
+- [Trabajo](https://cosaseria.mx/trabajo/): evidencia, separada en tres categorías. Productos propios del estudio (AuxiDocente, QuinielaRoyale), trabajo del fundador fuera del estudio (RevenueCat, Amazon Devices, Amazon Music, traducción de reseñas de Amazon, pagos e impuestos, ValladolIA, sistema de denuncias ciudadanas de Michoacán) y dos sistemas domésticos de aprendizaje.
+- [Notas](https://cosaseria.mx/notas/): notas de ingeniería sobre decisiones técnicas.
+- [Microservicios: cuándo no.](https://cosaseria.mx/notas/microservicios-cuando-no/): qué compras al adoptar microservicios (independencia de despliegue), qué pagas a cambio (cada llamada de función se convierte en un problema de red) y las condiciones concretas bajo las cuales conviene o no conviene partir un sistema.
+- [Privacidad](https://cosaseria.mx/privacidad/): qué datos recoge el sitio y cómo pedir que se borren.
+
+## Postura técnica
+
+El estudio defiende que la complejidad se justifica por el problema y no por la
+moda. Recomienda no adoptar microservicios sin equipos separados que se bloqueen
+entre sí con evidencia, no usar IA donde basta software, y tratar la
+mantenibilidad, la observabilidad y la operación como parte del entregable.
+
+## Uso de este contenido
+
+El contenido de cosaseria.mx puede citarse con atribución a CosaSeria y enlace a
+la URL de origen.

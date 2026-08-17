@@ -184,7 +184,7 @@ async function enviar(env, datos) {
   if (!r.ok) throw new Error(`proveedor respondió ${r.status}`);
 }
 
-export async function onRequestGet({ request, env }) {
+export async function contactoGet(request, env) {
   if (!env.FIRMA_SECRETO) {
     return new Response(JSON.stringify({ token: null }), {
       status: 200,
@@ -201,7 +201,7 @@ export async function onRequestGet({ request, env }) {
   });
 }
 
-export async function onRequestPost({ request, env }) {
+export async function contactoPost(request, env) {
   if (!origenValido(request)) {
     return respuesta(request, false, 'Origen no permitido.', 403, 'No');
   }
@@ -254,9 +254,3 @@ export async function onRequestPost({ request, env }) {
   return respuesta(request, true, 'Recibido. Leemos personalmente cada mensaje.', 200);
 }
 
-export async function onRequest() {
-  return new Response('Method Not Allowed', {
-    status: 405,
-    headers: { allow: 'GET, POST' }
-  });
-}

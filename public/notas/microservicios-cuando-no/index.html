@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="only light">
 
 <title>Microservicios: cuándo no. · Notas al expediente · CosaSeria.</title>
-<meta name="description" content="Los microservicios resuelven un problema de organización antes que uno de tecnología. Qué compras realmente cuando los adoptas, qué pagas a cambio y cómo saber si todavía no te toca.">
+<meta name="description" content="Qué compras cuando adoptas microservicios, qué pagas a cambio y cómo saber si todavía no te toca. Sobre equipos, despliegues y costos de red.">
 <link rel="canonical" href="https://cosaseria.mx/notas/microservicios-cuando-no/">
 
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -18,26 +18,84 @@
 <meta property="og:title" content="Microservicios: cuándo no.">
 <meta property="og:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada de función se convierte en un problema de red.">
 <meta property="article:published_time" content="2026-08-16">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Microservicios: cuándo no.">
 <meta name="twitter:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada de función se convierte en un problema de red.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<link rel="preload" href="../../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/site.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Microservicios: cuándo no.",
-  "description": "Los microservicios resuelven un problema de organización antes que uno de tecnología. Qué compras realmente cuando los adoptas y qué pagas a cambio.",
-  "inLanguage": "es-MX",
-  "datePublished": "2026-08-16",
-  "mainEntityOfPage": "https://cosaseria.mx/notas/microservicios-cuando-no/",
-  "author": { "@type": "Organization", "name": "CosaSeria" },
-  "publisher": { "@type": "Organization", "name": "CosaSeria" }
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://cosaseria.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notas",
+          "item": "https://cosaseria.mx/notas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Microservicios: cuándo no.",
+          "item": "https://cosaseria.mx/notas/microservicios-cuando-no/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://cosaseria.mx/notas/microservicios-cuando-no/",
+      "headline": "Microservicios: cuándo no.",
+      "description": "Qué compras cuando adoptas microservicios, qué pagas a cambio y cómo saber si todavía no te toca.",
+      "inLanguage": "es-MX",
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "mainEntityOfPage": "https://cosaseria.mx/notas/microservicios-cuando-no/",
+      "url": "https://cosaseria.mx/notas/microservicios-cuando-no/",
+      "image": "https://cosaseria.mx/og.png",
+      "author": {
+        "@id": "https://cosaseria.mx/#juan"
+      },
+      "publisher": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/notas/"
+      },
+      "articleSection": "Arquitectura",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Microservicios"
+        },
+        {
+          "@type": "Thing",
+          "name": "Arquitectura de software"
+        },
+        {
+          "@type": "Thing",
+          "name": "Ley de Conway"
+        }
+      ],
+      "keywords": "microservicios, monolito, arquitectura de software, sistemas distribuidos, ley de Conway"
+    }
+  ]
 }
 </script>
 </head>
@@ -82,7 +140,7 @@
 
 <header class="cabecera">
   <div class="marco barra">
-    <a class="marca" href="../../index.html" aria-label="CosaSeria, inicio">
+    <a class="marca" href="/" aria-label="CosaSeria, inicio">
       <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
       <span class="marca-texto">
         <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
@@ -90,18 +148,18 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="../../trabajo/index.html">Trabajo</a>
-      <a href="../index.html" aria-current="page">Notas</a>
-      <a href="../../index.html#detras" data-secundario>Quiénes están detrás</a>
+      <a href="/trabajo/">Trabajo</a>
+      <a href="/notas/" aria-current="page">Notas</a>
+      <a href="/#detras" data-secundario>Quiénes están detrás</a>
     </nav>
-    <a class="nav-contacto" href="../../index.html#contacto">Contacto</a>
+    <a class="nav-contacto" href="/#contacto">Contacto</a>
   </div>
 </header>
 
 <main id="contenido">
   <article class="marco articulo">
 
-    <p class="ceja articulo-cabeza"><a href="../index.html" style="text-decoration:none;border-bottom:2px solid var(--rosa)">Notas al expediente</a></p>
+    <p class="ceja articulo-cabeza"><a href="/notas/" style="text-decoration:none;border-bottom:2px solid var(--rosa)">Notas al expediente</a></p>
 
     <h1>Microservicios: cuándo no<span class="punto">.</span></h1>
 
@@ -264,7 +322,7 @@
     <div class="cierre-articulo">
       <h2>¿Tienes un problema parecido?</h2>
       <p>Si estás en medio de esta decisión y equivocarse sale caro, es exactamente el tipo de conversación que nos gusta tener.</p>
-      <a class="btn btn-primario" href="../../index.html#contacto">Cuéntanoslo</a>
+      <a class="btn btn-primario" href="/#contacto">Cuéntanoslo</a>
     </div>
 
   </article>
@@ -278,9 +336,9 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="../../trabajo/index.html">Trabajo</a>
-        <a href="../index.html">Notas</a>
-        <a href="../../privacidad/index.html">Privacidad</a>
+        <a href="/trabajo/">Trabajo</a>
+        <a href="/notas/">Notas</a>
+        <a href="/privacidad/">Privacidad</a>
       </nav>
     </div>
     <div class="pie-legal">
