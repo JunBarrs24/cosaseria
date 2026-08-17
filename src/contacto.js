@@ -231,7 +231,12 @@ export async function contactoPost(request, env) {
   }
 
   if (!env.EMAIL || !env.CORREO_DESTINO || !env.CORREO_ORIGEN) {
-    console.error('contacto: faltan variables de envío');
+    const faltan = [
+      env.EMAIL ? null : 'binding EMAIL (send_email)',
+      env.CORREO_DESTINO ? null : 'CORREO_DESTINO',
+      env.CORREO_ORIGEN ? null : 'CORREO_ORIGEN'
+    ].filter(Boolean);
+    console.error('contacto: falta configuración →', faltan.join(', '));
     return respuesta(request, false, 'El envío no está disponible en este momento.', 503);
   }
 

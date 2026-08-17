@@ -498,11 +498,11 @@ a{color:inherit}
 
 .gallo g,.gallo circle{transform-box:fill-box}
 .g-figura{transform-origin:50% 100%;animation:g-paso 11s ease-in-out infinite}
-.g-torso{transform-origin:92% 70%;animation:g-pecho 4.2s ease-in-out infinite}
-.g-cabeza{transform-origin:65% 69%;animation:g-cabezada 6.5s ease-in-out infinite}
+.g-torso{transform-origin:91% 64%;animation:g-pecho 4.2s ease-in-out infinite}
+.g-cabeza{transform-origin:71% 69%;animation:g-cabezada 6.5s ease-in-out infinite}
 .g-cresta{transform-origin:50% 100%;animation:g-cresta 6.5s ease-in-out infinite}
-.g-cola{transform-origin:6% 90%;animation:g-cola 5.5s ease-in-out infinite}
-.g-ala{transform-origin:6% 17%;animation:g-corbata 9s ease-in-out infinite}
+.g-cola{transform-origin:5% 97%;animation:g-cola 5.5s ease-in-out infinite}
+.g-ala{transform-origin:17% 7%;animation:g-corbata 9s ease-in-out infinite}
 .g-ojo{transform-origin:center;animation:g-parpadeo 5.7s ease-in-out infinite}
 
 @keyframes g-paso{

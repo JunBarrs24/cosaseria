@@ -24,12 +24,26 @@
     { "name": "EMAIL" }
   ],
 
+  // Conteo del rate limit por IP. El binding debe llamarse LIMITES: es el
+  // nombre que busca src/contacto.js, y si no coincide la función registra
+  // un aviso y deja pasar todas las peticiones.
+  //
+  // Sin "preview_id": wrangler dev simula KV en local. Solo haría falta
+  // para `wrangler dev --remote`, y entonces hay que crear un segundo
+  // namespace con `wrangler kv namespace create LIMITES --preview`.
+  "kv_namespaces": [
+    {
+      "binding": "LIMITES",
+      "id": "b2a119572c5b43b896fd70c697d5ecd9"
+    }
+  ],
+
   "observability": {
     "enabled": true
   }
 
   // Pendientes en el panel, no en el repositorio:
-  //   KV namespace con binding LIMITES  (rate limit)
   //   FIRMA_SECRETO                     (secreto)
   //   CORREO_DESTINO, CORREO_ORIGEN     (variables)
+  //   Regla de Rate Limiting del WAF sobre /api/contacto
 }
