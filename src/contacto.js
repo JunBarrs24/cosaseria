@@ -166,22 +166,13 @@ async function enviar(env, datos) {
     datos.problema
   ].join('\n');
 
-  const r = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      authorization: `Bearer ${env.RESEND_API_KEY}`,
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify({
-      from: env.CORREO_ORIGEN,
-      to: [env.CORREO_DESTINO],
-      reply_to: datos.email,
-      subject: `Sitio · ${datos.nombre}${datos.empresa ? ' · ' + datos.empresa : ''}`,
-      text: cuerpo
-    })
+  await env.EMAIL.send({
+    to: env.CORREO_DESTINO,
+    from: env.CORREO_ORIGEN,
+    replyTo: datos.email,
+    subject: `Sitio · ${datos.nombre}${datos.empresa ? ' · ' + datos.empresa : ''}`,
+    text: cuerpo
   });
-
-  if (!r.ok) throw new Error(`proveedor respondió ${r.status}`);
 }
 
 export async function contactoGet(request, env) {
@@ -239,7 +230,7 @@ export async function contactoPost(request, env) {
     return respuesta(request, false, 'Faltan datos o el correo no es válido.', 400, 'Falta algo');
   }
 
-  if (!env.RESEND_API_KEY || !env.CORREO_DESTINO || !env.CORREO_ORIGEN) {
+  if (!env.EMAIL || !env.CORREO_DESTINO || !env.CORREO_ORIGEN) {
     console.error('contacto: faltan variables de envío');
     return respuesta(request, false, 'El envío no está disponible en este momento.', 503);
   }

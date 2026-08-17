@@ -13,12 +13,23 @@
     "not_found_handling": "404-page"
   },
 
+  // Envío nativo de Cloudflare. Enviar a una dirección de destino ya
+  // verificada en Email Routing es gratis y no consume cuota, que es
+  // exactamente lo que hace el formulario: un aviso interno por mensaje.
+  //
+  // Sin "allowed_destination_addresses" a propósito: este repositorio es
+  // público y ahí acabaría una dirección personal. El destino vive en la
+  // variable CORREO_DESTINO, en el panel.
+  "send_email": [
+    { "name": "EMAIL" }
+  ],
+
   "observability": {
     "enabled": true
   }
 
   // Pendientes en el panel, no en el repositorio:
   //   KV namespace con binding LIMITES  (rate limit)
-  //   FIRMA_SECRETO, RESEND_API_KEY     (secretos)
+  //   FIRMA_SECRETO                     (secreto)
   //   CORREO_DESTINO, CORREO_ORIGEN     (variables)
 }
