@@ -38,12 +38,22 @@
     }
   ],
 
+  // Con un archivo de configuración presente, este archivo manda: un
+  // `wrangler deploy` borra las variables sueltas que se hayan puesto en
+  // el panel. Por eso lo que no es secreto vive aquí, y lo que sí lo es
+  // se sube como secreto, que es lo único que el deploy no toca.
+  "vars": {
+    "CORREO_ORIGEN": "sitio@cosaseria.mx"
+  },
+
   "observability": {
     "enabled": true
   }
 
-  // Pendientes en el panel, no en el repositorio:
-  //   FIRMA_SECRETO                     (secreto)
-  //   CORREO_DESTINO, CORREO_ORIGEN     (variables)
+  // Como secretos, nunca en el repositorio ni como variables del panel:
+  //   wrangler secret put FIRMA_SECRETO
+  //   wrangler secret put CORREO_DESTINO
+  //
+  // Pendiente en el panel:
   //   Regla de Rate Limiting del WAF sobre /api/contacto
 }
