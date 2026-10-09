@@ -20,6 +20,7 @@ Contacto: hola@cosaseria.mx
 - [Trabajo](https://cosaseria.mx/trabajo/): evidencia, separada en tres categorías. Productos propios del estudio (AuxiDocente, QuinielaRoyale), trabajo del fundador fuera del estudio (RevenueCat, Amazon Devices, Amazon Music, traducción de reseñas de Amazon, pagos e impuestos, ValladolIA, sistema de denuncias ciudadanas de Michoacán) y dos sistemas domésticos de aprendizaje.
 - [Notas](https://cosaseria.mx/notas/): notas de ingeniería sobre decisiones técnicas.
 - [Microservicios: cuándo no.](https://cosaseria.mx/notas/microservicios-cuando-no/): qué compras al adoptar microservicios (independencia de despliegue), qué pagas a cambio (cada llamada de función se convierte en un problema de red) y las condiciones concretas bajo las cuales conviene o no conviene partir un sistema.
+- [StoneVsSilicon](https://cosaseria.mx/StoneVsSilicon/): página del juego, en español e inglés. Historia, personajes, cómo se juega y video. Juego de duelos sin conexión para iOS y Android.
 - [Privacidad](https://cosaseria.mx/privacidad/): qué datos recoge el sitio y cómo pedir que se borren.
 
 ## Postura técnica

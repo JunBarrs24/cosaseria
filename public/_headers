@@ -21,3 +21,9 @@
 
 /favicon.svg
   Cache-Control: public, max-age=604800
+
+/StoneVsSilicon/img/*
+  Cache-Control: public, max-age=604800
+
+/StoneVsSilicon/video/*
+  Cache-Control: public, max-age=604800

@@ -1,0 +1,278 @@
+/* StoneVsSilicon: estilos propios de la página. Hereda tokens y componentes de site.css.
+   Layout: el arte vive fijo al fondo con parallax; los paneles opacos flotan encima y entre
+   ellos asoman piedras y chips. Cada sección cambia el encuadre del arte. */
+:root{
+  --piedra:#9A5B2B;
+  --piedra-oscuro:#5E3615;
+  --piedra-claro:#E8B06B;
+  --silicio:#1F62C9;
+  --silicio-oscuro:#0E3A82;
+  --silicio-claro:#8DBBFF;
+  --vs:#F0821E;
+}
+
+/* Idioma: el html lleva data-lang y solo se muestra un bloque de cada par. */
+html[data-lang="es"] .en{display:none !important}
+html[data-lang="en"] .es{display:none !important}
+.idiomas{display:flex;gap:4px;margin-left:clamp(10px,2vw,22px);flex:none}
+.idiomas a{
+  font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.14em;
+  text-decoration:none;padding:7px 10px;border:2px solid var(--linea);min-height:0;line-height:1;
+}
+.idiomas a[aria-pressed="true"]{background:var(--tinta);color:var(--papel)}
+.idiomas a:hover{border-color:var(--rosa);color:var(--rosa)}
+.idiomas a[aria-pressed="true"]:hover{color:var(--papel);border-color:var(--tinta)}
+
+/* Fondo con parallax */
+html{background:var(--tinta)}
+body{background:transparent}
+.fondo-parallax{position:fixed;inset:0;z-index:0;overflow:hidden;background:var(--tinta)}
+.fondo-parallax img{
+  width:100%;height:160%;object-fit:cover;object-position:50% 50%;
+  will-change:transform;
+  transition:filter 1.2s ease;
+}
+body[data-escena="piedra"] .fondo-parallax img{filter:saturate(1.15) sepia(.22)}
+body[data-escena="silicio"] .fondo-parallax img{filter:saturate(1.25) hue-rotate(-12deg) brightness(.92)}
+body[data-escena="centro"] .fondo-parallax img{filter:none}
+body[data-escena="portada"] .fondo-parallax img{filter:none}
+.cabecera,main,.pie{position:relative;z-index:1}
+.panel{background:var(--papel);border-top:2px solid var(--linea);border-bottom:2px solid var(--linea)}
+.panel.seccion-hondo{background:var(--papel-hondo)}
+.pie{border-top:2px solid var(--linea)}
+
+/* Portada: solo el arte de fondo y el botón de la historia */
+.portada{
+  position:relative;min-height:clamp(380px,68vh,720px);
+  display:flex;align-items:flex-end;justify-content:center;
+  padding:0 var(--aire) clamp(24px,5vw,56px);
+}
+.btn-dual{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  min-height:56px;padding:0 clamp(26px,4vw,44px);
+  border:3px solid var(--tinta);border-radius:6px;overflow:hidden;cursor:pointer;
+  color:#fff;font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(1rem,2.2vw,1.3rem);letter-spacing:.04em;line-height:1;
+  box-shadow:0 6px 0 var(--tinta),0 12px 24px rgba(0,0,0,.35);
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+.btn-dual:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--tinta),0 8px 18px rgba(0,0,0,.35)}
+.btn-dual:active{transform:translateY(5px);box-shadow:0 1px 0 var(--tinta),0 4px 10px rgba(0,0,0,.35)}
+.btn-dual:focus-visible{outline:3px solid var(--papel);outline-offset:3px}
+.btn-dual-piedra,.btn-dual-silicio{position:absolute;top:0;bottom:0;width:52%}
+.btn-dual-piedra{
+  left:0;
+  background:
+    radial-gradient(circle at 18% 30%,rgba(255,255,255,.18) 0 6%,transparent 7%),
+    radial-gradient(circle at 70% 70%,rgba(0,0,0,.22) 0 5%,transparent 6%),
+    radial-gradient(circle at 40% 85%,rgba(0,0,0,.16) 0 4%,transparent 5%),
+    linear-gradient(180deg,#C8935A 0%,var(--piedra) 55%,var(--piedra-oscuro) 100%);
+  clip-path:polygon(0 0,100% 0,88% 100%,0 100%);
+}
+.btn-dual-silicio{
+  right:0;
+  background:
+    linear-gradient(90deg,transparent 0 46%,rgba(141,187,255,.55) 46% 50%,transparent 50%),
+    linear-gradient(0deg,transparent 0 30%,rgba(141,187,255,.45) 30% 34%,transparent 34%),
+    radial-gradient(circle at 48% 32%,#DDEBFF 0 3px,transparent 4px),
+    linear-gradient(180deg,#5A9BFF 0%,var(--silicio) 55%,var(--silicio-oscuro) 100%);
+  clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);
+}
+.btn-dual-texto{
+  position:relative;z-index:1;padding-block:14px;
+  text-shadow:0 2px 0 rgba(0,0,0,.55),0 0 10px rgba(0,0,0,.35);
+}
+
+/* Logo y presentación */
+.presentacion-marco{padding-block:clamp(40px,7vw,80px) clamp(36px,6vw,64px)}
+.portada-logo{margin-top:clamp(18px,3vw,28px);max-width:min(100%,520px)}
+.portada-logo img{width:100%;height:auto}
+.portada-lema{
+  margin-top:clamp(18px,3vw,26px);
+  font-size:clamp(1.35rem,3.2vw,2rem);line-height:1.25;max-width:24ch;
+}
+.presentacion .deck{max-width:48ch}
+.portada-pregunta{margin-top:clamp(28px,4vw,40px);max-width:36ch}
+
+/* Separadores: franjas del fondo con piedras o chips flotando */
+.separador{position:relative;height:clamp(120px,18vw,220px);overflow:visible;pointer-events:none}
+.separador .roca,.separador .chip{position:absolute;will-change:transform;filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))}
+.separador .roca{height:auto}
+.roca-a{left:6%;top:10%;width:clamp(90px,12vw,170px)}
+.roca-b{left:30%;top:45%;width:clamp(50px,7vw,100px)}
+.roca-c{right:8%;top:14%;width:clamp(80px,11vw,160px)}
+.chip{width:clamp(44px,6vw,84px);height:clamp(44px,6vw,84px)}
+.chip-a{right:8%;top:8%}
+.chip-b{right:28%;top:50%;width:clamp(30px,4vw,56px);height:clamp(30px,4vw,56px)}
+.chip-c{right:44%;top:18%;width:clamp(26px,3.4vw,48px);height:clamp(26px,3.4vw,48px)}
+.chip-d{left:12%;top:40%}
+
+/* Personajes: dos botones que abren cada alineación */
+.intro-personajes{font-size:1.06rem;line-height:1.72}
+.facciones{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(20px,4vw,48px);margin-top:clamp(32px,5vw,48px);align-items:stretch;
+}
+.faccion-boton{
+  position:relative;display:grid;gap:6px;text-align:left;cursor:pointer;min-width:0;
+  padding:clamp(18px,3vw,28px);padding-right:clamp(120px,22%,180px);
+  border:3px solid var(--linea);border-radius:6px;background:var(--papel);color:var(--tinta);
+  box-shadow:0 5px 0 var(--linea);transition:transform .12s ease,box-shadow .12s ease;overflow:hidden;
+}
+.faccion-boton:hover{transform:translateY(2px)}
+.faccion-boton:active{transform:translateY(5px);box-shadow:none !important}
+.faccion-piedra{border-color:var(--piedra);box-shadow:0 5px 0 var(--piedra);background:linear-gradient(180deg,var(--papel-alto),#F3E3CF)}
+.faccion-silicio{border-color:var(--silicio);box-shadow:0 5px 0 var(--silicio);background:linear-gradient(180deg,var(--papel-alto),#DCE8FB)}
+.faccion-piedra:hover{box-shadow:0 3px 0 var(--piedra)}
+.faccion-silicio:hover{box-shadow:0 3px 0 var(--silicio)}
+.faccion-figura{
+  position:absolute;right:-6px;bottom:-10px;width:clamp(120px,24%,190px);height:auto;
+  pointer-events:none;
+}
+.faccion-silicio .faccion-figura{transform:scaleX(-1)}
+.faccion-nombre{
+  font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(1.6rem,3.6vw,2.4rem);letter-spacing:-.01em;line-height:1;
+}
+.faccion-piedra .faccion-nombre{color:var(--piedra)}
+.faccion-silicio .faccion-nombre{color:var(--silicio)}
+.faccion-sub{
+  font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--pardo);
+}
+.faccion-accion{
+  margin-top:10px;justify-self:start;
+  font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px 12px;border:2px solid currentColor;
+}
+.faccion-piedra .faccion-accion{color:var(--piedra)}
+.faccion-silicio .faccion-accion{color:var(--silicio)}
+
+/* Modales: historia y alineaciones */
+.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:clamp(12px,3vw,32px)}
+.modal[hidden]{display:none}
+.modal-fondo{position:absolute;inset:0;background:rgba(26,24,21,.72)}
+.modal-caja{
+  position:relative;z-index:1;width:min(100%,720px);max-height:calc(100dvh - 2*clamp(12px,3vw,32px));
+  overflow:auto;background:var(--tinta);color:var(--papel);
+  border:2px solid var(--papel);box-shadow:0 10px 0 var(--rosa),0 24px 60px rgba(0,0,0,.5);
+  padding:clamp(22px,4vw,40px);
+}
+.modal-piedra .modal-caja{box-shadow:0 10px 0 var(--piedra),0 24px 60px rgba(0,0,0,.5)}
+.modal-silicio .modal-caja{box-shadow:0 10px 0 var(--silicio),0 24px 60px rgba(0,0,0,.5)}
+.modal-caja:focus{outline:none}
+.modal-cabeza{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.modal .ceja{color:var(--pardo-claro)}
+.modal-cerrar{
+  width:44px;height:44px;border:2px solid var(--papel);border-radius:50%;
+  color:var(--papel);font-size:1.6rem;line-height:1;cursor:pointer;flex:none;
+}
+.modal-cerrar:hover{background:var(--papel);color:var(--tinta)}
+.modal-texto{max-width:62ch;margin-top:clamp(18px,3vw,26px);display:grid;gap:1.1em}
+.modal-texto p{font-size:1.04rem;line-height:1.7}
+.modal-acciones{margin-top:clamp(22px,3vw,30px)}
+.modal .btn-primario{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
+.modal .btn-primario:hover{background:var(--rosa-claro);border-color:var(--rosa-claro);color:var(--tinta)}
+body.modal-abierto{overflow:hidden}
+.roster{display:grid;gap:0;margin-top:14px}
+.pj{
+  display:grid;grid-template-columns:112px minmax(0,1fr);gap:16px;align-items:center;
+  padding-block:16px;border-bottom:1px solid rgba(241,238,230,.18);
+}
+.pj:last-child{border-bottom:none}
+.pj img{width:112px;height:112px;object-fit:contain}
+.modal-silicio .pj img{transform:scaleX(-1)}
+.pj-nombre{
+  font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:1.12rem;letter-spacing:-.005em;line-height:1.2;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.poder{display:inline-flex;gap:4px}
+.poder i{width:11px;height:11px;border:2px solid var(--pardo-claro);border-radius:50%;display:block}
+.modal-piedra .poder i[data-n]{background:var(--piedra-claro);border-color:var(--piedra-claro)}
+.modal-silicio .poder i[data-n]{background:var(--silicio-claro);border-color:var(--silicio-claro)}
+.pj-linea{font-size:.95rem;line-height:1.5;margin-top:4px;max-width:46ch;color:var(--papel)}
+
+/* Cómo se juega: la pantalla con piedras y chips que explican cada parte */
+.intro-jugar{font-size:1.06rem;line-height:1.72}
+.mapa-scroll{margin-top:clamp(28px,5vw,44px);max-width:1000px}
+.mapa{position:relative;margin:0}
+.mapa-pista{display:none;margin-top:10px;font-family:var(--mono);font-size:.76rem;color:var(--pardo)}
+.mapa > img{width:100%;height:auto;border:3px solid var(--linea);display:block}
+.marcador{
+  position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);
+  width:clamp(40px,6vw,60px);height:clamp(40px,6vw,60px);padding:0;cursor:pointer;border-radius:50%;
+  display:grid;place-items:center;filter:drop-shadow(0 4px 6px rgba(0,0,0,.5));
+  transition:transform .15s ease;
+}
+.marcador img,.marcador svg{width:100%;height:auto;display:block;pointer-events:none}
+.marcador svg{height:100%}
+.marcador:hover,.marcador.activo{transform:translate(-50%,-50%) scale(1.15)}
+.marcador::after{
+  content:"";position:absolute;inset:-6px;border-radius:50%;border:3px solid var(--papel-alto);
+  opacity:0;animation:latido 1.8s ease-out infinite;
+}
+.marcador-piedra::after{border-color:var(--piedra-claro)}
+.marcador-silicio::after{border-color:var(--silicio-claro)}
+.marcador.activo::after{animation:none;opacity:1}
+.marcador:focus-visible{outline:3px solid var(--rosa-claro);outline-offset:4px}
+@keyframes latido{0%{transform:scale(.8);opacity:.9}70%{transform:scale(1.5);opacity:0}100%{opacity:0}}
+.tip{
+  position:absolute;z-index:3;transform:translate(0,26px);
+  background:var(--papel-alto);color:var(--tinta);border:2px solid var(--tinta);
+  padding:12px 14px;font-size:.96rem;line-height:1.45;box-shadow:0 6px 0 var(--tinta);
+  font-family:var(--serif);font-style:italic;
+}
+.tip.tip-arriba{transform:translate(0,calc(-100% - 26px))}
+.tip[hidden]{display:none}
+.modos{margin-top:clamp(32px,5vw,48px)}
+.condicion-pronto{background:var(--papel-hondo)}
+.condicion .pronto{
+  display:inline-block;margin-bottom:10px;font-family:var(--mono);font-size:.66rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--vs);border:2px solid var(--vs);padding:4px 8px;
+}
+
+/* Video */
+.video-marco{max-width:1000px;border:3px solid var(--linea);background:var(--tinta)}
+.video-marco video{width:100%;height:auto;display:block}
+.video-pie{
+  margin-top:12px;max-width:1000px;font-family:var(--mono);font-size:.78rem;line-height:1.6;color:var(--pardo);
+}
+
+/* Cierre */
+.cierre{display:flex;align-items:center;justify-content:center;min-height:clamp(220px,34vh,360px)}
+.cierre-marco{text-align:center}
+.cierre-texto{
+  display:inline-block;background:var(--tinta);color:var(--papel);
+  font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(1.2rem,3.2vw,2.1rem);letter-spacing:.02em;line-height:1.15;
+  padding:clamp(14px,2.4vw,22px) clamp(20px,4vw,40px);border:3px solid var(--papel);
+  box-shadow:0 8px 0 var(--vs);
+}
+
+@media (max-width:780px){
+  .idiomas{margin-left:auto}
+  .facciones{grid-template-columns:minmax(0,1fr)}
+  .pj{grid-template-columns:88px minmax(0,1fr)}
+  .pj img{width:88px;height:88px}
+  .separador{height:clamp(90px,16vw,140px)}
+}
+@media (max-width:780px){
+  .mapa-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-inline:calc(-1*var(--aire));padding-inline:var(--aire);scroll-snap-type:x proximity}
+  .mapa{width:760px;max-width:none}
+  .mapa-pista{display:block}
+  .marcador{width:48px;height:48px}
+  .video-marco{margin-inline:calc(-1*var(--aire));border-left:none;border-right:none}
+  .video-marco.vertical video{height:100svh;max-height:100svh;object-fit:contain}
+  #video .cuerpo{padding-bottom:0}
+}
+@media (max-width:560px){
+  .portada-lema,.portada-pregunta{max-width:none}
+  .btn-dual{min-height:48px;font-size:.95rem;padding-inline:18px}
+  .tip{font-size:.88rem;padding:10px 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .btn-dual,.faccion-boton,.fondo-parallax img{transition:none}
+  .fondo-parallax img{transform:none}
+  .marcador::after{animation:none;opacity:.8}
+}

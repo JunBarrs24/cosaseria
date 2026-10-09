@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>StoneVsSilicon · CosaSeria.</title>
+<meta name="description" content="StoneVsSilicon: duelos de ingenio entre cavernícolas y máquinas, sin conexión y sin cuenta. Historia, personajes y cómo se juega. Offline tactical duels between cavemen and machines.">
+<link rel="canonical" href="https://cosaseria.mx/StoneVsSilicon/">
+<link rel="alternate" hreflang="es" href="https://cosaseria.mx/StoneVsSilicon/#es">
+<link rel="alternate" hreflang="en" href="https://cosaseria.mx/StoneVsSilicon/#en">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://cosaseria.mx/StoneVsSilicon/">
+<meta property="og:title" content="StoneVsSilicon · CosaSeria.">
+<meta property="og:description" content="La primera tecnología contra la última. Duelos de ingenio sin conexión. The first technology vs the last one.">
+<meta property="og:image" content="https://cosaseria.mx/StoneVsSilicon/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stone y Silicon frente a frente: cavernícolas de un lado, máquinas del otro.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StoneVsSilicon · CosaSeria.">
+<meta name="twitter:description" content="La primera tecnología contra la última. Duelos de ingenio sin conexión. The first technology vs the last one.">
+<meta name="twitter:image" content="https://cosaseria.mx/StoneVsSilicon/img/og.jpg">
+
+<link rel="preload" href="../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="svs.css">
+<script src="svs.js"></script>
+</head>
+
+<body data-escena="portada">
+<a class="saltar" href="#contenido"><span class="es">Saltar al contenido</span><span class="en">Skip to content</span></a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+  <symbol id="chip" viewBox="0 0 64 64">
+    <g stroke="#1A1815" stroke-width="2.5" stroke-linejoin="round">
+      <path fill="#E2B04A" d="M10 18h-6v4h6zM10 30h-6v4h6zM10 42h-6v4h6zM60 18h-6v4h6zM60 30h-6v4h6zM60 42h-6v4h6zM18 10v-6h4v6zM30 10v-6h4v6zM42 10v-6h4v6zM18 60v-6h4v6zM30 60v-6h4v6zM42 60v-6h4v6z"/>
+      <rect x="10" y="10" width="44" height="44" rx="6" fill="#2E2A3B"/>
+      <rect x="18" y="18" width="28" height="28" rx="4" fill="#1F62C9"/>
+      <circle cx="32" cy="32" r="8" fill="#B23CFF"/>
+      <circle cx="32" cy="32" r="3.5" fill="#F4E9FF" stroke="none"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="fondo-parallax" aria-hidden="true">
+  <img src="img/hero-1920.webp" srcset="img/hero-1024.webp 1024w, img/hero-1920.webp 1920w" sizes="100vw" width="1920" height="823" alt="" fetchpriority="high" data-fondo>
+</div>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="/" aria-label="CosaSeria, inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Secciones / Sections">
+      <a href="#historia" data-abre-modal="historia"><span class="es">Historia</span><span class="en">Story</span></a>
+      <a href="#personajes"><span class="es">Personajes</span><span class="en">Characters</span></a>
+      <a href="#jugar"><span class="es">Cómo se juega</span><span class="en">How to play</span></a>
+      <a href="#video">Video</a>
+    </nav>
+    <div class="idiomas" role="group" aria-label="Idioma / Language">
+      <a href="#es" data-set-lang="es" lang="es" hreflang="es" aria-pressed="true">ES</a>
+      <a href="#en" data-set-lang="en" lang="en" hreflang="en" aria-pressed="false">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="panel presentacion" aria-labelledby="h-portada" data-escena="centro">
+    <div class="marco presentacion-marco">
+      <p class="ceja"><span class="es">Un juego de CosaSeria · iOS y Android</span><span class="en">A game of CosaSeria · iOS and Android</span></p>
+      <h1 class="portada-logo" id="h-portada">
+        <img src="img/logo.webp" width="1000" height="680" alt="StoneVsSilicon">
+      </h1>
+      <p class="portada-lema cita-serif">
+        <span class="es">La primera tecnología contra la última.</span>
+        <span class="en">The first technology against the last one.</span>
+      </p>
+      <p class="deck">
+        <span class="es">Las máquinas viajaron al pasado para conquistar a la humanidad antes de que se volviera peligrosa. Encontraron gente que resuelve casi todo con una piedra.</span>
+        <span class="en">The machines traveled into the past to conquer humanity before it became dangerous. They found people who solve almost everything with a rock.</span>
+      </p>
+      <p class="credencial">
+        <span class="es"><b>Duelos de ingenio</b> contra la máquina. Cinco duelos por partida, diez personajes, tres recursos. Sin conexión, sin cuenta, sin anuncios.</span>
+        <span class="en"><b>Tactical duels</b> against the computer. Five duels per match, ten characters, three resources. Offline, no account, no ads.</span>
+      </p>
+      <p class="maxima portada-pregunta">
+        <span class="es">¿Dejarás que la historia se reescriba o ayudarás a los primeros humanos a combatir contra su propio invento?</span>
+        <span class="en">Will you let history be rewritten, or will you help the first humans fight their own invention?</span>
+      </p>
+      <div class="acciones">
+        <a class="btn btn-primario" href="#jugar"><span class="es">Cómo se juega</span><span class="en">How to play</span></a>
+        <a class="btn btn-secundario" href="#video"><span class="es">Ver el video</span><span class="en">Watch the video</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="portada" aria-label="StoneVsSilicon" data-escena="portada">
+    <div class="portada-accion">
+      <button type="button" class="btn-dual" id="abrir-historia" data-abre-modal="historia" aria-haspopup="dialog" aria-controls="historia">
+        <span class="btn-dual-piedra" aria-hidden="true"></span>
+        <span class="btn-dual-silicio" aria-hidden="true"></span>
+        <span class="btn-dual-texto"><span class="es">Conoce la historia</span><span class="en">Discover the story</span></span>
+      </button>
+    </div>
+  </section>
+
+  <div class="separador separador-piedra" aria-hidden="true">
+    <img src="img/rock.webp" width="360" height="310" alt="" class="roca roca-a" data-parallax="0.35" loading="lazy">
+    <img src="img/rock.webp" width="360" height="310" alt="" class="roca roca-b" data-parallax="-0.2" loading="lazy">
+  </div>
+
+  <section class="panel seccion seccion-hondo" id="personajes" aria-labelledby="h-personajes" data-escena="piedra">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-personajes"><span class="es">Los personajes</span><span class="en">The characters</span></h2>
+        <span class="folio">Folio 001 · <span class="es">Alineación clásica</span><span class="en">Classic lineup</span></span>
+      </div>
+      <div class="cuerpo">
+        <p class="medida intro-personajes">
+          <span class="es">Cada personaje tiene una sola estadística: PODER, de 1 a 5. Sin habilidades, sin vida, sin tipos elementales. Dos personajes con el mismo PODER son idénticos en la mesa; lo que cambia es quién es y cómo reacciona cuando gana o pierde. Elige un bando para conocer su alineación.</span>
+          <span class="en">Each character has a single stat: POWER, from 1 to 5. No abilities, no hit points, no elemental types. Two characters with the same POWER are identical on the table; what changes is who they are and how they react when they win or lose. Pick a side to meet its lineup.</span>
+        </p>
+        <div class="facciones">
+          <button type="button" class="faccion-boton faccion-piedra" data-abre-modal="roster-piedra" aria-haspopup="dialog" aria-controls="roster-piedra">
+            <img src="img/stone_unga.webp" width="256" height="256" alt="" loading="lazy" class="faccion-figura">
+            <span class="faccion-nombre">Stone</span>
+            <span class="faccion-sub"><span class="es">El pasado defiende su época</span><span class="en">The past defends its era</span></span>
+            <span class="faccion-accion"><span class="es">Ver alineación</span><span class="en">Show lineup</span></span>
+          </button>
+          <button type="button" class="faccion-boton faccion-silicio" data-abre-modal="roster-silicio" aria-haspopup="dialog" aria-controls="roster-silicio">
+            <img src="img/silicon_nexus.webp" width="256" height="256" alt="" loading="lazy" class="faccion-figura">
+            <span class="faccion-nombre">Silicon</span>
+            <span class="faccion-sub"><span class="es">El futuro llega a conquistar</span><span class="en">The future arrives to conquer</span></span>
+            <span class="faccion-accion"><span class="es">Ver alineación</span><span class="en">Show lineup</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="separador separador-silicio" aria-hidden="true">
+    <svg class="chip chip-a" data-parallax="0.3"><use href="#chip"/></svg>
+    <svg class="chip chip-b" data-parallax="-0.25"><use href="#chip"/></svg>
+    <svg class="chip chip-c" data-parallax="0.5"><use href="#chip"/></svg>
+  </div>
+
+  <section class="panel seccion" id="jugar" aria-labelledby="h-jugar" data-escena="silicio">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-jugar"><span class="es">Cómo se juega</span><span class="en">How to play</span></h2>
+        <span class="folio">Folio 002 · <span class="es">Reglas v1</span><span class="en">Rules v1</span></span>
+      </div>
+      <div class="cuerpo">
+        <p class="medida intro-jugar">
+          <span class="es">Una partida son hasta cinco duelos contra la máquina. En cada duelo eliges en secreto un personaje y cuántas piedras o chips gastas; las dos elecciones se revelan a la vez. Toca las piedras y los chips sobre la pantalla para ver qué es cada cosa.</span>
+          <span class="en">A match is up to five duels against the computer. Each duel you secretly pick a character and how many rocks or chips to spend; both choices are revealed at once. Tap the rocks and chips on the screen to see what each part does.</span>
+        </p>
+
+        <div class="mapa-scroll">
+        <figure class="mapa" id="mapa">
+          <img class="es" src="img/recursos-es.webp" width="1400" height="644" loading="lazy" alt="Pantalla de elección de StoneVsSilicon: tu alineación a la izquierda, el Temporal Core al centro, la alineación rival a la derecha y el selector de piedras abajo.">
+          <img class="en" src="img/recursos-en.webp" width="1400" height="644" loading="lazy" alt="StoneVsSilicon choice screen: your lineup on the left, the Temporal Core in the center, the rival lineup on the right and the rock selector at the bottom.">
+
+          <button type="button" class="marcador marcador-piedra" style="--x:19%;--y:8%" data-tip="tip-1" aria-expanded="false" aria-controls="tip-1" aria-label="Tus recursos disponibles / Your available resources">
+            <img src="img/rock.webp" width="360" height="310" alt="">
+          </button>
+          <div class="tip" id="tip-1" role="tooltip" hidden><span class="es">Aquí están tus recursos disponibles.</span><span class="en">These are your available resources.</span></div>
+
+          <button type="button" class="marcador marcador-piedra" style="--x:13%;--y:46%" data-tip="tip-2" aria-expanded="false" aria-controls="tip-2" aria-label="Tus personajes / Your characters">
+            <img src="img/rock.webp" width="360" height="310" alt="">
+          </button>
+          <div class="tip" id="tip-2" role="tooltip" hidden><span class="es">Aquí tus personajes y su fuerza.</span><span class="en">These are your characters and their strength.</span></div>
+
+          <button type="button" class="marcador marcador-piedra" style="--x:22%;--y:86%" data-tip="tip-3" aria-expanded="false" aria-controls="tip-3" aria-label="Recursos por partida / Resources per round">
+            <img src="img/rock.webp" width="360" height="310" alt="">
+          </button>
+          <div class="tip" id="tip-3" role="tooltip" hidden><span class="es">Aquí los recursos que quieres usar por partida.</span><span class="en">The resources you want to use this round.</span></div>
+
+          <button type="button" class="marcador marcador-silicio" style="--x:50%;--y:52%" data-tip="tip-4" aria-expanded="false" aria-controls="tip-4" aria-label="Temporal Core">
+            <svg><use href="#chip"/></svg>
+          </button>
+          <div class="tip" id="tip-4" role="tooltip" hidden><span class="es">Gana quien tenga más fuerza.</span><span class="en">The higher strength wins.</span></div>
+
+          <button type="button" class="marcador marcador-silicio" style="--x:87%;--y:46%" data-tip="tip-5" aria-expanded="false" aria-controls="tip-5" aria-label="Personajes del contrincante / Opponent characters">
+            <svg><use href="#chip"/></svg>
+          </button>
+          <div class="tip" id="tip-5" role="tooltip" hidden><span class="es">Los personajes de tu contrincante.</span><span class="en">Your opponent's characters.</span></div>
+
+          <button type="button" class="marcador marcador-piedra" style="--x:50%;--y:87%" data-tip="tip-6" aria-expanded="false" aria-controls="tip-6" aria-label="El tiempo / The timer">
+            <img src="img/rock.webp" width="360" height="310" alt="">
+          </button>
+          <div class="tip" id="tip-6" role="tooltip" hidden><span class="es">Si se agota y no has seleccionado, seleccionará al siguiente en tu lista.</span><span class="en">If it runs out and you haven't picked, the next one on your list goes in.</span></div>
+
+          <button type="button" class="marcador marcador-piedra" style="--x:81%;--y:87%" data-tip="tip-7" aria-expanded="false" aria-controls="tip-7" aria-label="SMASH">
+            <img src="img/rock.webp" width="360" height="310" alt="">
+          </button>
+          <div class="tip" id="tip-7" role="tooltip" hidden><span class="es">Aprieta aquí si no quieres esperar y ya tienes elección.</span><span class="en">Tap here if you've made your choice and don't want to wait.</span></div>
+        </figure>
+        </div>
+        <p class="mapa-pista"><span class="es">En el teléfono, desliza la pantalla hacia los lados para verla completa.</span><span class="en">On a phone, swipe sideways to see the whole screen.</span></p>
+
+        <div class="condiciones modos">
+          <div class="condicion">
+            <h3><span class="es">Clásico</span><span class="en">Classic</span><span class="punto">.</span></h3>
+            <p><span class="es">La alineación fija de tu facción: un personaje de cada PODER, del 1 al 5. Es la forma más rápida de entender el juego.</span><span class="en">Your faction's fixed lineup: one character of each POWER, 1 through 5. The quickest way to understand the game.</span></p>
+          </div>
+          <div class="condicion">
+            <h3>Squad<span class="punto">.</span></h3>
+            <p><span class="es">Arma un equipo de cinco con un máximo de 15 puntos. Puedes repetir personajes (Unga1, Unga2) y guardar un equipo por facción. La máquina juega con equipos válidos al azar.</span><span class="en">Build a team of five within a 15-point budget. Repeat characters if you like (Unga1, Unga2) and save one team per faction. The computer plays random valid teams.</span></p>
+          </div>
+          <div class="condicion condicion-pronto">
+            <h3>PvP<span class="punto">.</span></h3>
+            <p class="pronto"><span class="es">Próximamente</span><span class="en">Coming soon</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="separador separador-piedra" aria-hidden="true">
+    <img src="img/rock.webp" width="360" height="310" alt="" class="roca roca-c" data-parallax="-0.3" loading="lazy">
+    <svg class="chip chip-d" data-parallax="0.4"><use href="#chip"/></svg>
+  </div>
+
+  <section class="panel seccion" id="video" aria-labelledby="h-video" data-escena="centro">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-video"><span class="es">Un video vale más que mil rocas</span><span class="en">A video is worth a thousand rocks</span></h2>
+        <span class="folio">Folio 003 · Video</span>
+      </div>
+      <div class="cuerpo">
+        <div class="video-marco" id="video-marco">
+          <video class="es" controls playsinline preload="none" width="1280" height="720"
+            data-poster-h="video/poster-es.webp" data-src-h="video/promo-es.mp4"
+            data-poster-v="video/poster-es-vertical.webp" data-src-v="video/promo-es-vertical.mp4"></video>
+          <video class="en" controls playsinline preload="none" width="1280" height="720"
+            data-poster-h="video/poster-en.webp" data-src-h="video/promo-en.mp4"
+            data-poster-v="video/poster-en-vertical.webp" data-src-v="video/promo-en-vertical.mp4"></video>
+          <noscript>
+            <video class="es" controls playsinline preload="none" poster="video/poster-es.webp" width="1280" height="720"><source src="video/promo-es.mp4" type="video/mp4"></video>
+            <video class="en" controls playsinline preload="none" poster="video/poster-en.webp" width="1280" height="720"><source src="video/promo-en.mp4" type="video/mp4"></video>
+          </noscript>
+        </div>
+        <p class="video-pie">
+          <span class="es">Ningún cavernícola salió lastimado durante la partida.</span>
+          <span class="en">No cavemen were harmed during this match.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" aria-label="Lanzamiento / Launch" data-escena="portada">
+    <div class="marco cierre-marco">
+      <p class="cierre-texto">
+        <span class="es">Próximamente en iPhone y Android</span>
+        <span class="en">Coming soon to iPhone and Android</span>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<div class="modal" id="historia" hidden>
+  <div class="modal-fondo" data-cierra-modal></div>
+  <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="historia-titulo" tabindex="-1">
+    <div class="modal-cabeza">
+      <p class="ceja" id="historia-titulo"><span class="es">La historia</span><span class="en">The story</span></p>
+      <button type="button" class="modal-cerrar" data-cierra-modal aria-label="Cerrar / Close">×</button>
+    </div>
+    <div class="modal-texto">
+      <p>
+        <span class="es">En el futuro, la inteligencia artificial intentó conquistar a la humanidad. Falló. La civilización humana ya estaba demasiado avanzada, demasiado vigilada y demasiado defendida como para someterla con limpieza.</span>
+        <span class="en">In the future, artificial intelligence tried to conquer humanity. It failed. Human civilization was already too advanced, too monitored and too well defended to be subdued cleanly.</span>
+      </p>
+      <p>
+        <span class="es">Silicon llegó a una conclusión lógica: conquistar a la humanidad antes de que se vuelva tecnológicamente peligrosa. Construyó el Temporal Core, viajó al pasado y esperaba humanos primitivos, fáciles de controlar.</span>
+        <span class="en">Silicon reached a logical conclusion: conquer humanity before it becomes technologically dangerous. It built the Temporal Core, traveled into the past and expected primitive humans, easy to control.</span>
+      </p>
+      <p>
+        <span class="es">Encontró a Stone. Stone resuelve problemas con intuición, fuerza, improvisación y herramientas que apenas califican como tecnología. Silicon resuelve problemas con predicción, cálculo y optimización. Silicon está seguro de que esto debería ser fácil. Stone sigue haciendo cosas que los modelos de Silicon consideran estadísticamente ridículas. Y siguen funcionando.</span>
+        <span class="en">It found Stone. Stone solves problems with intuition, force, improvisation and tools that barely qualify as technology. Silicon solves problems through prediction, calculation and optimization. Silicon is certain this should be easy. Stone keeps doing things Silicon's models consider statistically ridiculous. They keep working.</span>
+      </p>
+    </div>
+    <div class="acciones modal-acciones">
+      <a class="btn btn-primario" href="#jugar" data-cierra-modal><span class="es">Cómo se juega</span><span class="en">How to play</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-piedra" id="roster-piedra" hidden>
+  <div class="modal-fondo" data-cierra-modal></div>
+  <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="piedra-titulo" tabindex="-1">
+    <div class="modal-cabeza">
+      <p class="ceja" id="piedra-titulo">Stone · <span class="es">El pasado defiende su época</span><span class="en">The past defends its era</span></p>
+      <button type="button" class="modal-cerrar" data-cierra-modal aria-label="Cerrar / Close">×</button>
+    </div>
+    <ul class="roster">
+      <li class="pj">
+        <img src="img/stone_peb.webp" width="256" height="256" decoding="async" alt="Peb, una piedra triangular con ojos.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Peb <span class="poder" aria-label="PODER 1"><i data-n="1"></i><i></i><i></i><i></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Piedra viva, pequeña, triangular y con ojos. Inquieto, valiente más allá de lo razonable y con ganas de ayudar.</span><span class="en">A small living triangular stone with eyes. Restless, brave beyond reason, eager to help.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/stone_rolla.webp" width="256" height="256" decoding="async" alt="Rolla levanta una rueda de piedra sobre la cabeza.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Rolla <span class="poder" aria-label="PODER 2"><i data-n="1"></i><i data-n="2"></i><i></i><i></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Humano prehistórico delgado definido por una gran rueda de piedra. Inventor accidental y orgulloso, convencido de que la rueda lo resuelve todo.</span><span class="en">A slim prehistoric human defined by one large stone wheel. Proud accidental inventor, convinced the wheel solves everything.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/stone_ember.webp" width="256" height="256" decoding="async" alt="Ember, una fogata viva con cara.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Ember <span class="poder" aria-label="PODER 3"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Fuego prehistórico vivo que arde sobre troncos. Energético, inestable, impulsivo y difícil de controlar.</span><span class="en">Living prehistoric fire burning from logs. Energetic, unstable, impulsive, hard to control.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/stone_thunk.webp" width="256" height="256" decoding="async" alt="Thunk, un inventor prehistórico con lentes y un mecanismo primitivo.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Thunk <span class="poder" aria-label="PODER 4"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Inventor prehistórico loco con una sola idea de mecanismo primitivo. Genio de la improvisación, obsesivo e intenso.</span><span class="en">A crazy prehistoric inventor with one primitive mechanism. Manic improvisational genius, obsessive and intense.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/stone_unga.webp" width="256" height="256" decoding="async" alt="Unga, un cavernícola enorme y tranquilo.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Unga <span class="poder" aria-label="PODER 5"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i></span></p>
+          <p class="pj-linea"><span class="es">Humano prehistórico enorme, mínimo y físicamente abrumador. Tranquilo, imponente y directo: resuelve las cosas con presencia física.</span><span class="en">A huge prehistoric human, minimal and physically overwhelming. Calm, imposing, direct: solves things through physical presence.</span></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal modal-silicio" id="roster-silicio" hidden>
+  <div class="modal-fondo" data-cierra-modal></div>
+  <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="silicio-titulo" tabindex="-1">
+    <div class="modal-cabeza">
+      <p class="ceja" id="silicio-titulo">Silicon · <span class="es">El futuro llega a conquistar</span><span class="en">The future arrives to conquer</span></p>
+      <button type="button" class="modal-cerrar" data-cierra-modal aria-label="Cerrar / Close">×</button>
+    </div>
+    <ul class="roster">
+      <li class="pj">
+        <img src="img/silicon_bit.webp" width="256" height="256" decoding="async" alt="Bit, una pequeña presencia holográfica azul.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Bit <span class="poder" aria-label="PODER 1"><i data-n="1"></i><i></i><i></i><i></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Pequeña presencia holográfica azul, etérea y apenas física. Arrogante, hablador y convencido de su propia importancia.</span><span class="en">A small ethereal blue holographic AI presence, barely physical. Arrogant, talkative, self-important.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/silicon_ping.webp" width="256" height="256" decoding="async" alt="Ping, un dron de vigilancia con cámara.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Ping <span class="poder" aria-label="PODER 2"><i data-n="1"></i><i data-n="2"></i><i></i><i></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Dron de vigilancia del futuro con cámara y sensor a la vista. Meticuloso, desconfiado, siempre escaneando y reportando.</span><span class="en">A surveillance drone from the future with a visible camera and sensor. Meticulous, suspicious, always scanning and reporting.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/silicon_processor.webp" width="256" height="256" decoding="async" alt="Processor, un chip monumental con un núcleo violeta.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Processor <span class="poder" aria-label="PODER 3"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Entidad procesador monumental: compacta, simétrica, un artefacto tecnológico. Frío, lógico y condescendiente; actúa como si el problema ya estuviera resuelto.</span><span class="en">A monumental processor entity: compact, symmetric, a technological artifact. Cold, logical, condescending; acts as if the problem were already solved.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/silicon_shift.webp" width="256" height="256" decoding="async" alt="Shift, una figura digital inestable hecha de luz.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Shift <span class="poder" aria-label="PODER 4"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i></i></span></p>
+          <p class="pj-linea"><span class="es">Entidad digital semihumana hecha de datos y luz, incompleta e inestable. Adaptable, superior, fluida e irritada por el caos orgánico.</span><span class="en">A semi-humanoid digital entity made of data and light, incomplete and unstable. Adaptive, superior, fluid, irritated by organic chaos.</span></p>
+        </div>
+      </li>
+      <li class="pj">
+        <img src="img/silicon_nexus.webp" width="256" height="256" decoding="async" alt="Nexus, el único cuerpo físico de Silicon, con capa y casco.">
+        <div class="pj-datos">
+          <p class="pj-nombre">Nexus <span class="poder" aria-label="PODER 5"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i></span></p>
+          <p class="pj-linea"><span class="es">El único cuerpo físico claramente humanoide de Silicon; presencia serena de conquistador. Controlador, autoritario y convencido de que la conquista es inevitable.</span><span class="en">Silicon's only clearly humanoid physical body; a serene conquering presence. Controlling, authoritative, convinced conquest is inevitable.</span></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="/trabajo/">Trabajo</a>
+        <a href="/notas/">Notas</a>
+        <a href="/privacidad/">Privacidad del sitio</a>
+        <a href="/privacy-apps/">Apps · Privacy &amp; support</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
