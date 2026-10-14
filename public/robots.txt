@@ -1,4 +1,51 @@
+# cosaseria.mx
+#
+# Todo el contenido público es rastreable. Los grupos explícitos de abajo
+# existen para dejar constancia de qué crawlers de búsqueda y de respuesta
+# queremos recibir; la política por defecto ya los admite.
+#
+# /api/ es el endpoint del formulario: no tiene nada que indexar.
+
+# Buscadores convencionales
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# Crawlers de búsqueda y recuperación de asistentes de IA.
+# Indexan para responder con cita y enlace, sin entrenar modelos.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+# Crawlers de entrenamiento (GPTBot, ClaudeBot, Google-Extended, CCBot,
+# Applebot-Extended, meta-externalagent, Bytespider). Hoy heredan la regla
+# general y quedan permitidos, igual que antes de este archivo. Para
+# excluirlos del entrenamiento sin afectar la búsqueda, añade un grupo por
+# crawler con "Disallow: /". Esa decisión corresponde al estudio.
+
+# Todo lo demás
 User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://cosaseria.mx/sitemap.xml

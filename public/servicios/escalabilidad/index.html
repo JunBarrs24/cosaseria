@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>Escalabilidad y sistemas distribuidos · Servicios · CosaSeria.</title>
+<meta name="description" content="Ayuda para escalar un backend que funcionaba con veinte usuarios: rendimiento, confiabilidad, observabilidad y operación de sistemas distribuidos, desde México.">
+<link rel="canonical" href="https://cosaseria.mx/servicios/escalabilidad/">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/servicios/escalabilidad/">
+<meta property="og:title" content="Escalabilidad y sistemas distribuidos · Servicios · CosaSeria.">
+<meta property="og:description" content="Performance, reliability, observabilidad y operación. Funcionaba perfecto con veinte usuarios: ese suele ser exactamente el problema.">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Escalabilidad y sistemas distribuidos · Servicios · CosaSeria.">
+<meta name="twitter:description" content="Performance, reliability, observabilidad y operación. Funcionaba perfecto con veinte usuarios: ese suele ser exactamente el problema.">
+
+<link rel="preload" href="../../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://cosaseria.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://cosaseria.mx/servicios/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Escalabilidad y sistemas distribuidos",
+          "item": "https://cosaseria.mx/servicios/escalabilidad/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://cosaseria.mx/servicios/escalabilidad/#servicio",
+      "name": "Escalabilidad y sistemas distribuidos",
+      "serviceType": "Consultoría de escalabilidad, rendimiento y confiabilidad",
+      "description": "Diagnóstico y corrección de problemas de rendimiento, confiabilidad y escala en sistemas en producción: cuellos de botella, latencia, fallos parciales, observabilidad y operación de sistemas distribuidos.",
+      "url": "https://cosaseria.mx/servicios/escalabilidad/",
+      "provider": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "CTOs, founders y equipos de ingeniería"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cosaseria.mx/servicios/escalabilidad/",
+      "url": "https://cosaseria.mx/servicios/escalabilidad/",
+      "name": "Escalabilidad y sistemas distribuidos · Servicios",
+      "description": "Ayuda para escalar un backend que funcionaba con veinte usuarios: rendimiento, confiabilidad, observabilidad y operación de sistemas distribuidos, desde México.",
+      "inLanguage": "es-MX",
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/#sitio"
+      },
+      "about": {
+        "@id": "https://cosaseria.mx/servicios/escalabilidad/#servicio"
+      },
+      "mainEntity": {
+        "@id": "https://cosaseria.mx/servicios/escalabilidad/#servicio"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cosaseria.mx/servicios/escalabilidad/#faq",
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/servicios/escalabilidad/"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesitamos microservicios para escalar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Casi nunca es lo primero. Un mismo binario desplegado en dos grupos de máquinas con responsabilidades distintas ya escala por partes. Partir el despliegue se justifica cuando hay equipos que se bloquean entre sí o una parte con un perfil de escala genuinamente diferente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden trabajar sobre un sistema en producción sin detenerlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ese es el caso habitual. Las mediciones se hacen sobre el sistema real y los cambios se despliegan por etapas, con forma de volver atrás. Detener la operación para «rediseñar» suele ser más caro que el problema original."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué nube o herramientas usan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las que ya tiene el cliente, salvo que el diagnóstico diga lo contrario. El cuello de botella rara vez está en la marca del proveedor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Incluye reducir costos de infraestructura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuando el diagnóstico lo permite, sí. Un sistema que gasta recursos en reintentos, consultas sin índice o máquinas sobredimensionadas suele abaratarse al corregir el problema de rendimiento. Se mide antes y después, sin prometer un porcentaje de antemano."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!--
+                       ,~.
+                    ,-'__ `-,                     ,
+                   {,-'  `. }                   ,'|
+                  ,( o )   `-.__              ,'  |  ,
+                 <=.) (          `-.__      ,'    |,'|
+                   (   )               `-._'      '  |
+                    `-'                    `-.       |
+                      \                       `-.   ,'
+                       \                         `-'
+                        `-.___________________,-'
+                            ||         ||
+                           _||_       _||_
+                          (____)     (____)
+
+    miau.
+
+    ─────────────────────────────────────────────────────────────
+    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
+    Expediente 001 · Sitio propio
+    ─────────────────────────────────────────────────────────────
+
+    Si estás leyendo el código fuente, probablemente nos vamos a
+    llevar bien.
+
+    Esta gallina tampoco necesita un framework. No hay build, ni
+    bundler, ni hydration, ni node_modules. Un HTML por página, una
+    hoja de estilos y un archivo de JavaScript que puedes leer
+    completo en menos de lo que tarda un `npm install`.
+
+    Nada de lo que hace ese JavaScript es necesario para leer el
+    sitio. Apágalo y compruébalo.
+
+    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
+    Ese tipo de correo lo contestamos rapidísimo.
+
+    hola@cosaseria.mx
+-->
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="/" aria-label="CosaSeria. Engineering studio. Inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/servicios/" aria-current="page">Servicios</a>
+      <a href="/trabajo/">Trabajo</a>
+      <a href="/notas/">Notas</a>
+      <a href="/#detras" data-secundario>Quiénes están detrás</a>
+    </nav>
+    <a class="nav-contacto" href="/#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <article class="marco articulo">
+    <p class="ceja"><a href="/servicios/">Servicios</a> · Asunto B</p>
+    <h1>Escalabilidad y sistemas distribuidos<span class="punto">.</span></h1>
+    <p class="articulo-meta">
+      <span>Servicio</span>
+      <span>Estudio de ingeniería · México</span>
+      <span>Español e inglés</span>
+    </p>
+
+    <div class="prosa">
+      <p>Funcionaba perfecto con veinte usuarios. Después llegaron dos mil, la base de datos empezó a contestar tarde, un servicio se cayó a las tres de la mañana y nadie supo por cuál empezar a mirar. Escalar empieza por saber qué parte del sistema está pidiendo ayuda y qué parte solo hace ruido. Agregar servidores sin esa respuesta compra tiempo y poco más.</p>
+      <p>CosaSeria atiende sistemas que ya están en producción y han dejado de ser pequeños. El servicio cubre rendimiento, confiabilidad, observabilidad y operación: medir antes de cambiar, cambiar lo que la medición señala y dejar al equipo con las herramientas para ver venir el siguiente cuello de botella.</p>
+
+      <h2>Problemas que atiende</h2>
+      <ul>
+        <li>Latencia que crece con el tráfico y nadie sabe en qué capa se gasta el tiempo.</li>
+        <li>Una base de datos que se convirtió en el único punto de contención de todo el sistema.</li>
+        <li>Fallos parciales: un componente lento arrastra al resto porque no hay timeouts, límites ni degradación controlada.</li>
+        <li>Caídas que se detectan cuando un cliente avisa, por falta de métricas, trazas y alertas que signifiquen algo.</li>
+        <li>Costos de infraestructura que suben más rápido que el uso.</li>
+      </ul>
+
+      <h2>Cuándo conviene</h2>
+      <ul>
+        <li>Cuando el crecimiento ya llegó o está agendado (un lanzamiento, una temporada, un contrato grande) y el sistema no ha sido probado a ese nivel.</li>
+        <li>Cuando los incidentes se repiten y las soluciones son reiniciar o agregar máquinas.</li>
+        <li>Cuando el equipo opera un sistema distribuido sin observabilidad distribuida y depurar se volvió adivinar.</li>
+        <li>Cuando una parte del sistema tiene un perfil de carga claramente distinto al resto y hay que decidir si aislarla.</li>
+      </ul>
+
+      <h2>Cómo trabajamos</h2>
+      <ol>
+        <li><strong>Medir primero.</strong> Perfilado, trazas y métricas sobre el sistema real con carga real. Se busca el cuello de botella con evidencia, antes de tocar el componente que más sospechas despierta.</li>
+        <li><strong>Atender la cola larga.</strong> La petición más lenta manda. Se revisan latencia por percentil, reintentos, idempotencia y qué ocurre cuando una dependencia no contesta.</li>
+        <li><strong>Corregir en orden de impacto.</strong> Índices, consultas, cachés, colas, límites de concurrencia, particionado. Lo más barato que resuelva el problema medido va primero; partir el sistema va al final.</li>
+        <li><strong>Diseñar para fallar bien.</strong> Timeouts, bulkheads, circuit breakers y degradación controlada, para que un fallo parcial siga siendo parcial.</li>
+        <li><strong>Dejar observabilidad.</strong> Tableros, alertas y trazas que el equipo entienda y mantenga. Un sistema que escala y nadie puede ver es un problema aplazado.</li>
+      </ol>
+
+      <h2>Qué entregamos</h2>
+      <ul>
+        <li>Informe de diagnóstico con mediciones reproducibles y el cuello de botella identificado.</li>
+        <li>Cambios implementados o especificados, priorizados por impacto y riesgo.</li>
+        <li>Instrumentación: métricas, trazas y alertas con umbrales justificados.</li>
+        <li>Pruebas de carga y los criterios para repetirlas antes del siguiente salto de tráfico.</li>
+        <li>Guía de operación: qué mirar, qué significa y qué hacer cuando se dispara una alerta.</li>
+      </ul>
+      <p class="al-margen"><b>Sobre los resultados.</b> No se prometen porcentajes ni plazos antes de entender el problema. Los números se publican cuando se puede decir exactamente qué miden, en qué periodo y quién los verificó.</p>
+
+      <h2>Evidencia relacionada</h2>
+      <p>Buena parte del costo oculto de escalar está en la red entre componentes. La nota <a href="/notas/microservicios-cuando-no/">Microservicios: cuándo no</a> detalla qué aparece cuando cada llamada de función se convierte en una llamada remota: fallos parciales, latencia de cola larga, idempotencia obligatoria y consistencia eventual.</p>
+      <p>El fundador trabajó en sistemas con tráfico global en Amazon, entre ellos la plataforma de traducción de reseñas de clientes, y en plataformas de pagos. Ese trabajo fue como empleado y está descrito con sus límites de confidencialidad en <a href="/trabajo/">Trabajo</a>.</p>
+
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Necesitamos microservicios para escalar?</h3>
+      <p>Casi nunca es lo primero. Un mismo binario desplegado en dos grupos de máquinas con responsabilidades distintas ya escala por partes. Partir el despliegue se justifica cuando hay equipos que se bloquean entre sí o una parte con un perfil de escala genuinamente diferente.</p>
+
+      <h3>¿Pueden trabajar sobre un sistema en producción sin detenerlo?</h3>
+      <p>Ese es el caso habitual. Las mediciones se hacen sobre el sistema real y los cambios se despliegan por etapas, con forma de volver atrás. Detener la operación para «rediseñar» suele ser más caro que el problema original.</p>
+
+      <h3>¿Qué nube o herramientas usan?</h3>
+      <p>Las que ya tiene el cliente, salvo que el diagnóstico diga lo contrario. El cuello de botella rara vez está en la marca del proveedor.</p>
+
+      <h3>¿Incluye reducir costos de infraestructura?</h3>
+      <p>Cuando el diagnóstico lo permite, sí. Un sistema que gasta recursos en reintentos, consultas sin índice o máquinas sobredimensionadas suele abaratarse al corregir el problema de rendimiento. Se mide antes y después, sin prometer un porcentaje de antemano.</p>
+
+      <hr>
+
+      <p class="al-margen"><b>Otros servicios.</b> <a href="/servicios/arquitectura-software/">Arquitectura de software</a> · <a href="/servicios/software-a-medida/">Software a medida</a> · <a href="/servicios/inteligencia-artificial/">Inteligencia artificial</a> · <a href="/servicios/technical-advisory/">Technical advisory</a>.</p>
+    </div>
+
+    <div class="cierre-articulo">
+      <h2>Trae el problema difícil<span class="punto">.</span></h2>
+      <p>Tres párrafos bastan para empezar. Si el problema necesita otra cosa, te lo vamos a decir.</p>
+      <a class="btn btn-primario" href="/#contacto">Cuéntanos el problema</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="/servicios/">Servicios</a>
+        <a href="/trabajo/">Trabajo</a>
+        <a href="/notas/">Notas</a>
+        <a href="/privacidad/">Privacidad</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

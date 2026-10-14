@@ -13,6 +13,8 @@ raíz. No pongas aquí nada que no publicarías.
 
 ```
 index.html                 inicio
+servicios/                 índice de servicios
+servicios/<slug>/          una página por servicio, con Service y FAQPage
 trabajo/                   evidencia, en tres categorías
 notas/                     bitácora
 notas/<slug>/              cada nota
@@ -26,6 +28,14 @@ functions/api/contacto.js  Pages Function del formulario
 _headers                   cabeceras de seguridad y caché
 llms.txt                   resumen del sitio para motores de respuesta
 og.png                     tarjeta social 1200x630
+```
+
+Fuera de `public/`, y por tanto fuera del sitio:
+
+```
+scripts/paginas.mjs        inventario de páginas; lo usan los otros dos
+scripts/sitemap.mjs        genera public/sitemap.xml a partir de las páginas indexables
+scripts/verificar.mjs      comprobaciones de metadatos, JSON-LD, enlaces, sitemap y robots
 ```
 
 ## Despliegue
@@ -55,10 +65,27 @@ Autoalojadas en `assets/fonts` como woff2, con subconjuntos `latin` y
 sirve la fuente variable. Para actualizarlas hay que volver a descargar los
 woff2 y ajustar los `@font-face` al inicio de `site.css`.
 
+## Páginas nuevas
+
+Cada página lleva su propia cabecera: title, description, canonical absoluto con
+barra final, Open Graph, Twitter Card y un bloque JSON-LD con `BreadcrumbList`.
+Las páginas que no deben indexarse llevan `<meta name="robots" content="noindex, follow">`
+y quedan fuera del sitemap automáticamente.
+
+Después de añadir o quitar una página:
+
+```sh
+node scripts/sitemap.mjs      # reescribe sitemap.xml con lastmod tomado de git
+node scripts/verificar.mjs    # falla si algo quedó incoherente
+```
+
 ## Comprobaciones antes de publicar
 
 ```sh
-node --check functions/api/contacto.js
-node --check assets/js/site.js
-python3 -m http.server 8899
+node --check src/worker.js
+node --check src/contacto.js
+node --check public/assets/js/site.js
+node scripts/sitemap.mjs --check
+node scripts/verificar.mjs
+python3 -m http.server 8899 --directory public
 ```

@@ -2,37 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cosaseria.mx/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://cosaseria.mx/trabajo/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://cosaseria.mx/notas/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://cosaseria.mx/notas/microservicios-cuando-no/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://cosaseria.mx/privacidad/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <priority>0.2</priority>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://cosaseria.mx/privacy-apps/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.2</priority>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/servicios/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/servicios/arquitectura-software/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/servicios/escalabilidad/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/servicios/inteligencia-artificial/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/servicios/software-a-medida/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/servicios/technical-advisory/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://cosaseria.mx/StoneVsSilicon/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://cosaseria.mx/trabajo/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
 </urlset>

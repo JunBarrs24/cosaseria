@@ -1,27 +1,37 @@
 # CosaSeria
 
-> Estudio mexicano de ingeniería de software. Arquitectura, sistemas a medida,
-> escalabilidad, inteligencia artificial y technical advisory para equipos que
-> necesitan criterio técnico senior.
+> Estudio mexicano de ingeniería de software. Arquitectura, escalabilidad y
+> sistemas distribuidos, software a medida, inteligencia artificial y technical
+> advisory para equipos que necesitan criterio técnico senior.
 
 CosaSeria es un engineering studio con sede en México, fundado por Juan Barrera,
 ingeniero de software con experiencia en Google, Microsoft, Amazon y HP en
-posiciones senior y Principal Engineering.
+posiciones senior y Principal Engineering. Atiende en español e inglés.
 
-El estudio trabaja en cinco frentes: arquitectura de sistemas, escalabilidad y
-sistemas distribuidos, software a medida, inteligencia artificial (incluidos
+El estudio trabaja en cinco frentes: arquitectura de software, escalabilidad y
+sistemas distribuidos, software a medida, inteligencia artificial (LLMs, RAG y
 agentes en producción) y technical advisory de nivel Staff/Principal.
 
 Contacto: hola@cosaseria.mx
 
+## Servicios
+
+- [Servicios](https://cosaseria.mx/servicios/): índice de los cinco asuntos que atiende el estudio.
+- [Arquitectura de software](https://cosaseria.mx/servicios/arquitectura-software/): diagnóstico de sistemas existentes, decisiones de modernización, fronteras entre módulos y servicios, registros de decisión y acompañamiento durante la implementación.
+- [Escalabilidad y sistemas distribuidos](https://cosaseria.mx/servicios/escalabilidad/): rendimiento, confiabilidad y observabilidad de sistemas en producción; medir antes de cambiar, fallos parciales, latencia de cola larga y operación.
+- [Software a medida](https://cosaseria.mx/servicios/software-a-medida/): diseño, construcción y puesta en operación de sistemas construidos alrededor del problema, con pruebas, documentación y observabilidad; el código es del cliente.
+- [Inteligencia artificial](https://cosaseria.mx/servicios/inteligencia-artificial/): diseño, integración y evaluación de sistemas con LLMs, recuperación aumentada (RAG) y agentes, con la pregunta previa de si el problema necesita IA.
+- [Technical advisory](https://cosaseria.mx/servicios/technical-advisory/): experiencia de nivel Staff/Principal por tiempo definido para revisiones de arquitectura, decisiones difíciles y acompañamiento a CTOs y founders.
+
 ## Páginas
 
-- [Inicio](https://cosaseria.mx/): qué hace el estudio, los cinco asuntos que atiende y el formulario de contacto.
+- [Inicio](https://cosaseria.mx/): qué hace el estudio, los cinco asuntos que atiende, quién está detrás y el formulario de contacto.
 - [Trabajo](https://cosaseria.mx/trabajo/): evidencia, separada en tres categorías. Productos propios del estudio (AuxiDocente, QuinielaRoyale), trabajo del fundador fuera del estudio (RevenueCat, Amazon Devices, Amazon Music, traducción de reseñas de Amazon, pagos e impuestos, ValladolIA, sistema de denuncias ciudadanas de Michoacán) y dos sistemas domésticos de aprendizaje.
 - [Notas](https://cosaseria.mx/notas/): notas de ingeniería sobre decisiones técnicas.
 - [Microservicios: cuándo no.](https://cosaseria.mx/notas/microservicios-cuando-no/): qué compras al adoptar microservicios (independencia de despliegue), qué pagas a cambio (cada llamada de función se convierte en un problema de red) y las condiciones concretas bajo las cuales conviene o no conviene partir un sistema.
 - [StoneVsSilicon](https://cosaseria.mx/StoneVsSilicon/): página del juego, en español e inglés. Historia, personajes, cómo se juega y video. Juego de duelos sin conexión para iOS y Android.
 - [Privacidad](https://cosaseria.mx/privacidad/): qué datos recoge el sitio y cómo pedir que se borren.
+- [Privacidad de apps](https://cosaseria.mx/privacy-apps/): política de privacidad y soporte de StoneVsSilicon, en español e inglés.
 
 ## Postura técnica
 
@@ -29,6 +39,14 @@ El estudio defiende que la complejidad se justifica por el problema y no por la
 moda. Recomienda no adoptar microservicios sin equipos separados que se bloqueen
 entre sí con evidencia, no usar IA donde basta software, y tratar la
 mantenibilidad, la observabilidad y la operación como parte del entregable.
+
+## Atribución del trabajo
+
+Los productos del estudio (AuxiDocente, QuinielaRoyale, StoneVsSilicon) son
+responsabilidad de CosaSeria. El trabajo del fundador en Google, Microsoft,
+Amazon, HP y RevenueCat fue como empleado de esas empresas. ValladolIA y el
+sistema de denuncias ciudadanas de Michoacán son proyectos académicos del
+fundador. Nada de eso fue un encargo al estudio.
 
 ## Uso de este contenido
 

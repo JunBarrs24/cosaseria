@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>Arquitectura de software · Servicios · CosaSeria.</title>
+<meta name="description" content="Consultoría de arquitectura de software en México: diagnóstico, modernización, revisión de diseño y decisiones técnicas que siguen teniendo sentido años después.">
+<link rel="canonical" href="https://cosaseria.mx/servicios/arquitectura-software/">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/servicios/arquitectura-software/">
+<meta property="og:title" content="Arquitectura de software · Servicios · CosaSeria.">
+<meta property="og:description" content="Decisiones técnicas que puedan seguir teniendo sentido varios años después. Primero el problema; después la tecnología.">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arquitectura de software · Servicios · CosaSeria.">
+<meta name="twitter:description" content="Decisiones técnicas que puedan seguir teniendo sentido varios años después. Primero el problema; después la tecnología.">
+
+<link rel="preload" href="../../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://cosaseria.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://cosaseria.mx/servicios/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Arquitectura de software",
+          "item": "https://cosaseria.mx/servicios/arquitectura-software/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://cosaseria.mx/servicios/arquitectura-software/#servicio",
+      "name": "Arquitectura de software",
+      "serviceType": "Consultoría de arquitectura de software",
+      "description": "Diagnóstico y diseño de arquitectura de software: revisión de sistemas existentes, decisiones de modernización, fronteras entre módulos y servicios, y acompañamiento al equipo durante la implementación.",
+      "url": "https://cosaseria.mx/servicios/arquitectura-software/",
+      "provider": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "CTOs, founders y equipos de ingeniería"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cosaseria.mx/servicios/arquitectura-software/",
+      "url": "https://cosaseria.mx/servicios/arquitectura-software/",
+      "name": "Arquitectura de software · Servicios",
+      "description": "Consultoría de arquitectura de software en México: diagnóstico, decisiones técnicas con memoria larga, modernización y revisión de diseño para sistemas que ya existen o están por construirse.",
+      "inLanguage": "es-MX",
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/#sitio"
+      },
+      "about": {
+        "@id": "https://cosaseria.mx/servicios/arquitectura-software/#servicio"
+      },
+      "mainEntity": {
+        "@id": "https://cosaseria.mx/servicios/arquitectura-software/#servicio"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cosaseria.mx/servicios/arquitectura-software/#faq",
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/servicios/arquitectura-software/"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Hacen solo el diagnóstico o también construyen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ambas cosas, según lo que haga falta. Hay proyectos donde el equipo del cliente implementa y el estudio revisa; hay otros donde CosaSeria construye la parte crítica. Lo que el estudio evita es entregar un documento y desaparecer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si la recomendación es no cambiar nada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se dice. Una parte importante del valor de una revisión de arquitectura es evitar una migración innecesaria. Si el sistema actual aguanta lo que viene, el entregable es ese diagnóstico y las señales que indicarían que llegó el momento de revisarlo otra vez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan con el stack que ya tenemos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La arquitectura se decide alrededor del problema, del equipo y de lo que ya opera. Cambiar de lenguaje o de plataforma es una decisión más, con su costo, y rara vez es la primera que conviene tomar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Recomiendan microservicios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuando hay evidencia de que varios equipos se bloquean entre sí al desplegar, o cuando una parte del sistema tiene un perfil de escala o de riesgo genuinamente distinto. En los demás casos, casi siempre hay un camino intermedio más barato: fronteras claras dentro de un solo despliegue."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!--
+                       ,~.
+                    ,-'__ `-,                     ,
+                   {,-'  `. }                   ,'|
+                  ,( o )   `-.__              ,'  |  ,
+                 <=.) (          `-.__      ,'    |,'|
+                   (   )               `-._'      '  |
+                    `-'                    `-.       |
+                      \                       `-.   ,'
+                       \                         `-'
+                        `-.___________________,-'
+                            ||         ||
+                           _||_       _||_
+                          (____)     (____)
+
+    miau.
+
+    ─────────────────────────────────────────────────────────────
+    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
+    Expediente 001 · Sitio propio
+    ─────────────────────────────────────────────────────────────
+
+    Si estás leyendo el código fuente, probablemente nos vamos a
+    llevar bien.
+
+    Esta gallina tampoco necesita un framework. No hay build, ni
+    bundler, ni hydration, ni node_modules. Un HTML por página, una
+    hoja de estilos y un archivo de JavaScript que puedes leer
+    completo en menos de lo que tarda un `npm install`.
+
+    Nada de lo que hace ese JavaScript es necesario para leer el
+    sitio. Apágalo y compruébalo.
+
+    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
+    Ese tipo de correo lo contestamos rapidísimo.
+
+    hola@cosaseria.mx
+-->
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="/" aria-label="CosaSeria. Engineering studio. Inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/servicios/" aria-current="page">Servicios</a>
+      <a href="/trabajo/">Trabajo</a>
+      <a href="/notas/">Notas</a>
+      <a href="/#detras" data-secundario>Quiénes están detrás</a>
+    </nav>
+    <a class="nav-contacto" href="/#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <article class="marco articulo">
+    <p class="ceja"><a href="/servicios/">Servicios</a> · Asunto A</p>
+    <h1>Arquitectura de software<span class="punto">.</span></h1>
+    <p class="articulo-meta">
+      <span>Servicio</span>
+      <span>Estudio de ingeniería · México</span>
+      <span>Español e inglés</span>
+    </p>
+
+    <div class="prosa">
+      <p>Hay decisiones técnicas que duran mucho más que el proyecto que las originó. La base de datos que se eligió en una tarde, el servicio que se partió «para escalar» y la cola que nadie recuerda por qué está ahí siguen cobrando años después. Este servicio existe para tomar esas decisiones con calma y con alguien que ya vio cómo terminan.</p>
+      <p>CosaSeria revisa, diseña y acompaña arquitecturas de software para equipos que tienen un sistema en producción y una decisión pendiente que les da miedo tomar mal. El trabajo empieza por el problema y la organización que lo opera. La tecnología llega después, y a veces resulta que ya la tienes.</p>
+
+      <h2>Problemas que atiende</h2>
+      <ul>
+        <li>Un sistema que creció sin plan y hoy nadie se atreve a tocar: cada cambio rompe algo en otro lado.</li>
+        <li>Una migración pendiente (de monolito a servicios, de un proveedor de nube a otro, de una base de datos a otra) donde equivocarse cuesta un trimestre.</li>
+        <li>Fronteras borrosas entre módulos, con datos compartidos por todos y responsabilidad de nadie.</li>
+        <li>Dos alternativas técnicas sobre la mesa, cada una con un defensor, y ninguna forma objetiva de decidir.</li>
+        <li>Deuda técnica convertida en modelo operativo: el equipo pasa más tiempo rodeando el sistema que mejorándolo.</li>
+      </ul>
+
+      <h2>Cuándo conviene</h2>
+      <ul>
+        <li>Antes de una decisión difícil de revertir: partir un sistema, cambiar de plataforma, reescribir un componente central.</li>
+        <li>Cuando el equipo tiene criterio pero le falta alguien que ya haya operado un sistema parecido a escala.</li>
+        <li>Cuando la arquitectura actual empieza a doler y no está claro si el problema es de diseño, de operación o de organización.</li>
+        <li>Cuando se necesita una segunda opinión independiente antes de comprometer presupuesto.</li>
+      </ul>
+
+      <h2>Cómo trabajamos</h2>
+      <ol>
+        <li><strong>Entender el problema.</strong> Lectura del sistema tal como está: código, despliegues, incidentes, métricas y, sobre todo, conversaciones con quienes lo operan. Un diagrama bonito no sustituye saber qué se rompe los martes.</li>
+        <li><strong>Nombrar las restricciones.</strong> Equipo disponible, plazo, presupuesto, cumplimiento, dependencias que no se pueden mover. Las restricciones definen la solución tanto como el problema.</li>
+        <li><strong>Proponer opciones con costos.</strong> Dos o tres caminos viables, cada uno con lo que compra, lo que paga y qué pasa si no se hace nada. La opción «no cambiar la arquitectura» siempre está en la lista.</li>
+        <li><strong>Decidir y documentar.</strong> La decisión queda escrita con su razonamiento, para que dentro de dos años alguien pueda saber por qué se tomó y si las condiciones siguen vigentes.</li>
+        <li><strong>Acompañar la implementación.</strong> Revisión de diseño y de código durante los primeros pasos, que es donde una buena decisión se puede echar a perder.</li>
+      </ol>
+
+      <h2>Qué entregamos</h2>
+      <ul>
+        <li>Diagnóstico escrito del sistema actual: qué funciona, qué duele y por qué.</li>
+        <li>Propuesta de arquitectura con alternativas evaluadas y la recomendación justificada.</li>
+        <li>Registros de decisión (ADR o equivalente) para las decisiones importantes.</li>
+        <li>Plan de transición por etapas, con los puntos donde se puede detener sin dejar el sistema a medias.</li>
+        <li>Sesiones de revisión con el equipo durante la implementación.</li>
+      </ul>
+      <p class="al-margen"><b>Sobre los resultados.</b> No se prometen porcentajes ni plazos antes de entender el problema. Los números se publican cuando se puede decir exactamente qué miden, en qué periodo y quién los verificó.</p>
+
+      <h2>Evidencia relacionada</h2>
+      <p>La postura del estudio sobre este tema está escrita en la nota <a href="/notas/microservicios-cuando-no/">Microservicios: cuándo no</a>: qué compras al partir un sistema, qué pagas a cambio y bajo qué condiciones verificables conviene hacerlo.</p>
+      <p>El fundador ha trabajado en arquitectura, backend y sistemas distribuidos en Google, Microsoft, Amazon y HP, incluyendo posiciones senior y Principal Engineering. Ese trabajo fue como empleado de esas empresas y se describe, con sus límites, en la página de <a href="/trabajo/">Trabajo</a>.</p>
+
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Hacen solo el diagnóstico o también construyen?</h3>
+      <p>Ambas cosas, según lo que haga falta. Hay proyectos donde el equipo del cliente implementa y el estudio revisa; hay otros donde CosaSeria construye la parte crítica. Lo que el estudio evita es entregar un documento y desaparecer.</p>
+
+      <h3>¿Qué pasa si la recomendación es no cambiar nada?</h3>
+      <p>Se dice. Una parte importante del valor de una revisión de arquitectura es evitar una migración innecesaria. Si el sistema actual aguanta lo que viene, el entregable es ese diagnóstico y las señales que indicarían que llegó el momento de revisarlo otra vez.</p>
+
+      <h3>¿Trabajan con el stack que ya tenemos?</h3>
+      <p>Sí. La arquitectura se decide alrededor del problema, del equipo y de lo que ya opera. Cambiar de lenguaje o de plataforma es una decisión más, con su costo, y rara vez es la primera que conviene tomar.</p>
+
+      <h3>¿Recomiendan microservicios?</h3>
+      <p>Cuando hay evidencia de que varios equipos se bloquean entre sí al desplegar, o cuando una parte del sistema tiene un perfil de escala o de riesgo genuinamente distinto. En los demás casos, casi siempre hay un camino intermedio más barato: fronteras claras dentro de un solo despliegue.</p>
+
+      <hr>
+
+      <p class="al-margen"><b>Otros servicios.</b> <a href="/servicios/escalabilidad/">Escalabilidad y sistemas distribuidos</a> · <a href="/servicios/software-a-medida/">Software a medida</a> · <a href="/servicios/inteligencia-artificial/">Inteligencia artificial</a> · <a href="/servicios/technical-advisory/">Technical advisory</a>.</p>
+    </div>
+
+    <div class="cierre-articulo">
+      <h2>Trae el problema difícil<span class="punto">.</span></h2>
+      <p>Tres párrafos bastan para empezar. Si el problema necesita otra cosa, te lo vamos a decir.</p>
+      <a class="btn btn-primario" href="/#contacto">Cuéntanos el problema</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="/servicios/">Servicios</a>
+        <a href="/trabajo/">Trabajo</a>
+        <a href="/notas/">Notas</a>
+        <a href="/privacidad/">Privacidad</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

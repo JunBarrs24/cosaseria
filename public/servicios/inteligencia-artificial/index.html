@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>Inteligencia artificial, LLMs y agentes · Servicios · CosaSeria.</title>
+<meta name="description" content="Estudio mexicano que diseña, integra y evalúa sistemas con inteligencia artificial: LLMs, RAG y agentes en producción, solo cuando el problema lo justifica.">
+<link rel="canonical" href="https://cosaseria.mx/servicios/inteligencia-artificial/">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/servicios/inteligencia-artificial/">
+<meta property="og:title" content="Inteligencia artificial, LLMs y agentes · Servicios · CosaSeria.">
+<meta property="og:description" content="Diseño, integración y evaluación de agentes y sistemas con IA cuando el problema lo justifica. Si no la necesitas, te lo vamos a decir.">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inteligencia artificial, LLMs y agentes · Servicios · CosaSeria.">
+<meta name="twitter:description" content="Diseño, integración y evaluación de agentes y sistemas con IA cuando el problema lo justifica. Si no la necesitas, te lo vamos a decir.">
+
+<link rel="preload" href="../../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://cosaseria.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://cosaseria.mx/servicios/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Inteligencia artificial",
+          "item": "https://cosaseria.mx/servicios/inteligencia-artificial/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://cosaseria.mx/servicios/inteligencia-artificial/#servicio",
+      "name": "Inteligencia artificial",
+      "serviceType": "Ingeniería de sistemas con inteligencia artificial, LLMs, RAG y agentes",
+      "description": "Diseño, integración y evaluación de sistemas con inteligencia artificial: modelos de lenguaje, recuperación aumentada (RAG), agentes y la infraestructura de evaluación y control necesaria para operarlos en producción.",
+      "url": "https://cosaseria.mx/servicios/inteligencia-artificial/",
+      "provider": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "CTOs, founders y equipos de ingeniería"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cosaseria.mx/servicios/inteligencia-artificial/",
+      "url": "https://cosaseria.mx/servicios/inteligencia-artificial/",
+      "name": "Inteligencia artificial, LLMs y agentes · Servicios",
+      "description": "Estudio mexicano que diseña, integra y evalúa sistemas con inteligencia artificial: LLMs, RAG y agentes en producción, solo cuando el problema lo justifica.",
+      "inLanguage": "es-MX",
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/#sitio"
+      },
+      "about": {
+        "@id": "https://cosaseria.mx/servicios/inteligencia-artificial/#servicio"
+      },
+      "mainEntity": {
+        "@id": "https://cosaseria.mx/servicios/inteligencia-artificial/#servicio"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cosaseria.mx/servicios/inteligencia-artificial/#faq",
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/servicios/inteligencia-artificial/"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si no necesitamos IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se dice, y se propone la alternativa. Una parte del valor del servicio es evitar un proyecto de IA que un formulario bien diseñado o una consulta a la base de datos resolvía mejor y más barato."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué modelos usan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los que el problema, el presupuesto y los requisitos de privacidad permitan. El sistema se diseña para poder cambiar de modelo o de proveedor sin reescribirlo, porque ese cambio va a ocurrir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden trabajar con nuestros datos sin que salgan de la empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de los requisitos y de la infraestructura disponible. Hay opciones con modelos desplegados en infraestructura propia o en regiones acordadas, con costos y limitaciones distintos. Se evalúa caso por caso antes de prometer nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es RAG y cuándo conviene?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recuperación aumentada por generación: el sistema busca los fragmentos relevantes de tus documentos y los usa como contexto para redactar la respuesta. Conviene cuando las respuestas deben salir de un cuerpo de documentos propio y verificable, con cita a la fuente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los agentes son seguros para ejecutar acciones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lo son en la medida en que el sistema alrededor los limite: permisos acotados, confirmación humana para acciones irreversibles, trazas de todo lo que hicieron y evaluación antes de ampliar su alcance. La evaluación y el control van antes que la generación."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!--
+                       ,~.
+                    ,-'__ `-,                     ,
+                   {,-'  `. }                   ,'|
+                  ,( o )   `-.__              ,'  |  ,
+                 <=.) (          `-.__      ,'    |,'|
+                   (   )               `-._'      '  |
+                    `-'                    `-.       |
+                      \                       `-.   ,'
+                       \                         `-'
+                        `-.___________________,-'
+                            ||         ||
+                           _||_       _||_
+                          (____)     (____)
+
+    miau.
+
+    ─────────────────────────────────────────────────────────────
+    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
+    Expediente 001 · Sitio propio
+    ─────────────────────────────────────────────────────────────
+
+    Si estás leyendo el código fuente, probablemente nos vamos a
+    llevar bien.
+
+    Esta gallina tampoco necesita un framework. No hay build, ni
+    bundler, ni hydration, ni node_modules. Un HTML por página, una
+    hoja de estilos y un archivo de JavaScript que puedes leer
+    completo en menos de lo que tarda un `npm install`.
+
+    Nada de lo que hace ese JavaScript es necesario para leer el
+    sitio. Apágalo y compruébalo.
+
+    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
+    Ese tipo de correo lo contestamos rapidísimo.
+
+    hola@cosaseria.mx
+-->
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="/" aria-label="CosaSeria. Engineering studio. Inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/servicios/" aria-current="page">Servicios</a>
+      <a href="/trabajo/">Trabajo</a>
+      <a href="/notas/">Notas</a>
+      <a href="/#detras" data-secundario>Quiénes están detrás</a>
+    </nav>
+    <a class="nav-contacto" href="/#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <article class="marco articulo">
+    <p class="ceja"><a href="/servicios/">Servicios</a> · Asunto D</p>
+    <h1>Inteligencia artificial<span class="punto">.</span></h1>
+    <p class="articulo-meta">
+      <span>Servicio</span>
+      <span>Estudio de ingeniería · México</span>
+      <span>Español e inglés</span>
+    </p>
+
+    <div class="prosa">
+      <p>Los proyectos de inteligencia artificial suelen fallar lejos del modelo: nadie definió qué significa «respuesta correcta», el sistema alrededor no controla qué entra ni qué sale, o el problema se resolvía con software convencional y nadie quiso decirlo.</p>
+      <p>CosaSeria diseña, integra y evalúa sistemas con IA: modelos de lenguaje, recuperación aumentada (RAG), agentes y la infraestructura que hace falta para operarlos. El servicio empieza con una pregunta incómoda, si el problema necesita IA, y sigue con ingeniería: datos, evaluación, control, costos y operación. IA cuando ayuda. Software cuando basta.</p>
+
+      <h2>Problemas que atiende</h2>
+      <ul>
+        <li>Un prototipo con un LLM que impresionó en la demo y nadie sabe cómo llevar a producción con garantías.</li>
+        <li>Un asistente que responde con seguridad cosas que no están en la documentación de la empresa.</li>
+        <li>Falta de evaluación: no hay forma de saber si la versión de hoy contesta mejor o peor que la de la semana pasada.</li>
+        <li>Costos y latencia de inferencia que crecen sin control conforme suben los usuarios.</li>
+        <li>Un agente que ejecuta acciones (crear, cobrar, enviar) sin límites, trazas ni manera de revisar lo que hizo.</li>
+      </ul>
+
+      <h2>Cuándo conviene</h2>
+      <ul>
+        <li>Cuando hay un proceso que depende de leer, clasificar o redactar texto a un volumen que las personas ya no alcanzan.</li>
+        <li>Cuando se quiere responder preguntas sobre un cuerpo de documentos propio con trazabilidad a la fuente.</li>
+        <li>Cuando un prototipo funciona y hay que decidir si vale la pena convertirlo en producto.</li>
+        <li>Cuando se está evaluando «implementar IA» y no está claro dónde tendría sentido.</li>
+      </ul>
+
+      <h2>Cómo trabajamos</h2>
+      <ol>
+        <li><strong>Decidir si hace falta.</strong> Se compara la solución con IA contra la alternativa convencional en costo, riesgo y mantenimiento. Si la alternativa gana, se recomienda la alternativa.</li>
+        <li><strong>Definir qué es una buena respuesta.</strong> Conjunto de casos de evaluación con respuestas esperadas, construido con quien conoce el dominio. Sin esto, cualquier cambio es una apuesta.</li>
+        <li><strong>Diseñar el sistema alrededor del modelo.</strong> Recuperación con fuentes verificables, contexto controlado, validación de salidas, límites de acción para agentes y registro de cada decisión.</li>
+        <li><strong>Evaluar y medir.</strong> Precisión, cobertura, latencia y costo por petición, antes de cada cambio de modelo, de prompt o de datos.</li>
+        <li><strong>Operar.</strong> Monitoreo de calidad en producción, control de costos y un plan para cuando el proveedor del modelo cambie algo sin avisar.</li>
+      </ol>
+
+      <h2>Qué entregamos</h2>
+      <ul>
+        <li>Evaluación de viabilidad con la recomendación de usar IA, software convencional o una combinación.</li>
+        <li>El sistema implementado: pipeline de ingesta, recuperación, generación y validación, según el caso.</li>
+        <li>Conjunto de evaluación y el tablero que mide la calidad de las respuestas a lo largo del tiempo.</li>
+        <li>Controles para agentes: permisos, límites, trazas y revisión humana donde el riesgo lo pida.</li>
+        <li>Documentación de costos, dependencias de proveedores y operación.</li>
+      </ul>
+      <p class="al-margen"><b>Sobre los resultados.</b> No se prometen porcentajes ni plazos antes de entender el problema. Los números se publican cuando se puede decir exactamente qué miden, en qué periodo y quién los verificó.</p>
+
+      <h2>Evidencia relacionada</h2>
+      <p><a href="https://auxidocente.com" rel="noopener">AuxiDocente</a>, producto del estudio en operación, interpreta notas de voz, fotos y texto que las maestras envían por WhatsApp y las organiza en planeaciones editables. Es un sistema con IA que cobra suscripción y da soporte en producción.</p>
+      <p><a href="https://valladolia.com" rel="noopener">ValladolIA</a> es un asistente con recuperación aumentada que responde dudas sobre reglamentos municipales de Morelia y muestra los artículos que consultó en cada respuesta. Nació como investigación doctoral del fundador en el Tecnológico Nacional de México campus Morelia, y lo mantiene él, fuera del estudio. El fundador también colabora, como empleado de RevenueCat, en un agente que construye paywalls a partir de una descripción en texto. Las tres cosas, con su atribución exacta, están en <a href="/trabajo/">Trabajo</a>.</p>
+
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Qué pasa si no necesitamos IA?</h3>
+      <p>Se dice, y se propone la alternativa. Una parte del valor del servicio es evitar un proyecto de IA que un formulario bien diseñado o una consulta a la base de datos resolvía mejor y más barato.</p>
+
+      <h3>¿Qué modelos usan?</h3>
+      <p>Los que el problema, el presupuesto y los requisitos de privacidad permitan. El sistema se diseña para poder cambiar de modelo o de proveedor sin reescribirlo, porque ese cambio va a ocurrir.</p>
+
+      <h3>¿Pueden trabajar con nuestros datos sin que salgan de la empresa?</h3>
+      <p>Depende de los requisitos y de la infraestructura disponible. Hay opciones con modelos desplegados en infraestructura propia o en regiones acordadas, con costos y limitaciones distintos. Se evalúa caso por caso antes de prometer nada.</p>
+
+      <h3>¿Qué es RAG y cuándo conviene?</h3>
+      <p>Recuperación aumentada por generación: el sistema busca los fragmentos relevantes de tus documentos y los usa como contexto para redactar la respuesta. Conviene cuando las respuestas deben salir de un cuerpo de documentos propio y verificable, con cita a la fuente.</p>
+
+      <h3>¿Los agentes son seguros para ejecutar acciones?</h3>
+      <p>Lo son en la medida en que el sistema alrededor los limite: permisos acotados, confirmación humana para acciones irreversibles, trazas de todo lo que hicieron y evaluación antes de ampliar su alcance. La evaluación y el control van antes que la generación.</p>
+
+      <hr>
+
+      <p class="al-margen"><b>Otros servicios.</b> <a href="/servicios/arquitectura-software/">Arquitectura de software</a> · <a href="/servicios/escalabilidad/">Escalabilidad y sistemas distribuidos</a> · <a href="/servicios/software-a-medida/">Software a medida</a> · <a href="/servicios/technical-advisory/">Technical advisory</a>.</p>
+    </div>
+
+    <div class="cierre-articulo">
+      <h2>Trae el problema difícil<span class="punto">.</span></h2>
+      <p>Tres párrafos bastan para empezar. Si el problema necesita otra cosa, te lo vamos a decir.</p>
+      <a class="btn btn-primario" href="/#contacto">Cuéntanos el problema</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="/servicios/">Servicios</a>
+        <a href="/trabajo/">Trabajo</a>
+        <a href="/notas/">Notas</a>
+        <a href="/privacidad/">Privacidad</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>
