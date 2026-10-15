@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>¿Multicloud? Primero haz las cuentas · Bitácora · CosaSeria.</title>
+<meta name="description" content="Cuando AWS se cayó en octubre de 2025 aparecieron los gurús del multicloud. Antes de recomendarlo, conviene hacer las cuentas.">
+<link rel="canonical" href="https://cosaseria.mx/bitacora/multicloud/">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/bitacora/multicloud/">
+<meta property="og:title" content="¿Multicloud? Primero haz las cuentas">
+<meta property="og:description" content="Cuando AWS se cayó en octubre de 2025 aparecieron los gurús del multicloud. Antes de recomendarlo, conviene hacer las cuentas.">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Multicloud? Primero haz las cuentas">
+<meta name="twitter:description" content="Cuando AWS se cayó en octubre de 2025 aparecieron los gurús del multicloud. Antes de recomendarlo, conviene hacer las cuentas.">
+
+<link rel="preload" href="../../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261014">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://cosaseria.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bitácora",
+          "item": "https://cosaseria.mx/bitacora/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "¿Multicloud? Primero haz las cuentas",
+          "item": "https://cosaseria.mx/bitacora/multicloud/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://cosaseria.mx/bitacora/multicloud/",
+      "headline": "¿Multicloud? Primero haz las cuentas",
+      "description": "Cuando AWS se cayó en octubre de 2025 aparecieron los gurús del multicloud. Antes de recomendarlo, conviene hacer las cuentas.",
+      "inLanguage": "es-MX",
+      "mainEntityOfPage": "https://cosaseria.mx/bitacora/multicloud/",
+      "url": "https://cosaseria.mx/bitacora/multicloud/",
+      "image": "https://cosaseria.mx/og.png",
+      "author": {
+        "@id": "https://cosaseria.mx/#juan"
+      },
+      "publisher": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/bitacora/"
+      },
+      "wordCount": 127
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="/" aria-label="CosaSeria. Engineering studio. Inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/bitacora/" aria-current="page">Bitácora</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
+    <a class="nav-contacto" href="/#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <article class="marco articulo">
+    <p class="ceja articulo-cabeza"><a href="/bitacora/" style="text-decoration:none;border-bottom:2px solid var(--rosa)">Bitácora</a></p>
+    <h1>¿Multicloud? Primero haz las cuentas<span class="punto">.</span></h1>
+    <p class="articulo-meta">
+      <span><a href="/#detras" style="text-decoration:none">Juan Barrera</a></span>
+      <span>1 min de lectura</span>
+    </p>
+    <div class="prosa">
+      <p>En octubre de 2025 se cayó AWS.</p>
+
+      <p>Y, como siempre, aparecieron los gurús diciendo:</p>
+
+      <p>”Haganlo Multicloud!”</p>
+
+      <p>Seamos serios.</p>
+
+      <p>Se cayeron Snapchat, Reddit, Duolingo, Zoom, bancos como Lloyds y Halifax, y juegos como Roblox y Fortnite.</p>
+
+      <p>Ellos tienen miles de ingenieros más listos que tú y yo.</p>
+
+      <p>¿Tú crees que no saben cómo hacer una solución multicloud?</p>
+
+      <p>Claro que lo saben.</p>
+
+      <p>Pero… ¿qué crees? Es MUY CARO.</p>
+
+      <p>Si una nube con gente más brillante que tú y yo se cae una vez cada mucho tiempo,</p>
+
+      <p>¿de verdad vas a gastar una fortuna cada año solo para estar arriba unas horas más cuando los demás no lo están?</p>
+
+      <p>Antes de recomendar multicloud, haz las cuentas: cuánto te cuesta cada hora caída y cuánto te cuesta evitarla todo el año.</p>
+
+      <hr>
+
+      <p>Se publicó primero en <a href="https://www.linkedin.com/in/junbarrs/" rel="noopener">LinkedIn</a>. Hay más textos como este en la <a href="/bitacora/">bitácora</a>.</p>
+
+    </div>
+
+    <div class="cierre-articulo">
+      <h2>¿Algo de esto te está pasando?</h2>
+      <p>CosaSeria es un estudio de ingeniería. Si tu equipo está ante una decisión así y equivocarse sale caro, platiquemos.</p>
+      <a class="btn btn-primario" href="/#contacto">Cuéntanos el problema</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/bitacora/">Bitácora</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/site.js?v=20261014" defer></script>
+</body>
+</html>

@@ -2,8 +2,8 @@
   "name": "cosaseria-site",
   "private": true,
   "scripts": {
-    "generate": "python3 scripts/generar-comunes.py && python3 scripts/generar-juego.py && node scripts/sitemap.mjs",
-    "check": "python3 scripts/generar-comunes.py --check && python3 scripts/generar-juego.py --check && node scripts/sitemap.mjs --check && node scripts/verificar.mjs",
+    "generate": "python3 scripts/generar-bitacora.py && python3 scripts/generar-comunes.py && python3 scripts/generar-juego.py && node scripts/sitemap.mjs",
+    "check": "python3 scripts/generar-bitacora.py --check && python3 scripts/generar-comunes.py --check && python3 scripts/generar-juego.py --check && node scripts/sitemap.mjs --check && node scripts/verificar.mjs",
     "test": "node --test tests/contacto.test.mjs",
     "test:runtime": "node tests/contacto-runtime.cjs",
     "test:browser": "node tests/browser.cjs",

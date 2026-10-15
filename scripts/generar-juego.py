@@ -53,7 +53,7 @@ def generar(idioma):
     s = s.replace(f'data-set-lang="{idioma}"', f'data-set-lang="{idioma}" aria-current="page"')
     s = re.sub(r'aria-label="([^"]+) / ([^"]+)"',lambda m:'aria-label="'+m[2 if ingles else 1]+'"',s)
     if ingles:
-        for a,b in {'CosaSeria. Engineering studio. Inicio':'CosaSeria. Engineering studio. Home','Pie de página':'Footer','PODER ':'POWER ','>Servicios<':'>Services (Spanish)<','>Trabajo<':'>Work (Spanish)<','>Notas<':'>Notes (Spanish)<','>Privacidad del sitio<':'>Site privacy (Spanish)<','Hecho a conciencia en México':'Made with care in Mexico','Stone y Silicon frente a frente: cavernícolas de un lado, máquinas del otro.':'Stone and Silicon face off: cavemen against machines.'}.items(): s=s.replace(a,b)
+        for a,b in {'CosaSeria. Engineering studio. Inicio':'CosaSeria. Engineering studio. Home','Pie de página':'Footer','PODER ':'POWER ','>Servicios<':'>Services (Spanish)<','>Trabajo<':'>Work (Spanish)<','>Notas<':'>Notes (Spanish)<','>Bitácora<':'>Journal (Spanish)<','>Privacidad del sitio<':'>Site privacy (Spanish)<','Hecho a conciencia en México':'Made with care in Mexico','Stone y Silicon frente a frente: cavernícolas de un lado, máquinas del otro.':'Stone and Silicon face off: cavemen against machines.'}.items(): s=s.replace(a,b)
     def schema(m):
         data=json.loads(m[1])
         for n in data['@graph']:

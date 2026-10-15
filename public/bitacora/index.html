@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+
+<title>Bitácora · CosaSeria.</title>
+<meta name="description" content="Lo que Juan Barrera, fundador de CosaSeria, ha ido pensando sobre ingeniería, equipos y criterio. Textos cortos publicados primero en LinkedIn.">
+<link rel="canonical" href="https://cosaseria.mx/bitacora/">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CosaSeria">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://cosaseria.mx/bitacora/">
+<meta property="og:title" content="Bitácora">
+<meta property="og:description" content="Lo que Juan Barrera, fundador de CosaSeria, ha ido pensando sobre ingeniería, equipos y criterio. Textos cortos publicados primero en LinkedIn.">
+<meta property="og:image" content="https://cosaseria.mx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CosaSeria. Estudio de ingeniería. Trae el problema difícil.">
+<meta name="twitter:image" content="https://cosaseria.mx/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bitácora">
+<meta name="twitter:description" content="Lo que Juan Barrera, fundador de CosaSeria, ha ido pensando sobre ingeniería, equipos y criterio. Textos cortos publicados primero en LinkedIn.">
+
+<link rel="preload" href="../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css?v=20261014">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://cosaseria.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bitácora",
+          "item": "https://cosaseria.mx/bitacora/"
+        }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://cosaseria.mx/bitacora/",
+      "name": "Bitácora",
+      "url": "https://cosaseria.mx/bitacora/",
+      "inLanguage": "es-MX",
+      "description": "Lo que Juan Barrera, fundador de CosaSeria, ha ido pensando sobre ingeniería, equipos y criterio. Textos cortos publicados primero en LinkedIn.",
+      "author": {
+        "@id": "https://cosaseria.mx/#juan"
+      },
+      "publisher": {
+        "@id": "https://cosaseria.mx/#org"
+      },
+      "isPartOf": {
+        "@id": "https://cosaseria.mx/#sitio"
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="sello-cs" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="42.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path id="arco-sup" d="M 60,60 m -50,0 a 50,50 0 1,1 100,0" fill="none" stroke="none"/>
+    <path id="arco-inf" d="M 60,60 m -46,0 a 46,46 0 1,0 92,0" fill="none" stroke="none"/>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:2.6px;font-weight:500">
+      <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">COSASERIA</textPath>
+    </text>
+    <text fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:5.6px;letter-spacing:2.2px;font-weight:500">
+      <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">ENGINEERING STUDIO</textPath>
+    </text>
+    <circle cx="14.5" cy="60" r="1.6" fill="currentColor"/>
+    <circle cx="105.5" cy="60" r="1.6" fill="currentColor"/>
+    <g transform="translate(60,58) scale(0.85) translate(-60,-60)">
+      <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,0)">
+        <path stroke-width="2.4" d="M 35 41 Q 33 34 38 37 Q 39 31 44 35 Q 47 30 48 38"/>
+        <circle cx="41" cy="47" r="7.5" stroke-width="2.6"/>
+        <path d="M 34 45.5 L 26.5 48.5 L 34 51 Z" fill="currentColor" stroke="none"/>
+        <path stroke-width="2.2" d="M 36 54 Q 35 59 39 57"/>
+        <circle cx="42.5" cy="45.5" r="1.7" fill="currentColor" stroke="none"/>
+        <path d="M 44 53 C 40 62 40 73 48 80 C 56 87 70 87 77 79"/>
+        <path d="M 47 51 C 58 52 70 55 78 63"/>
+        <path d="M 78 63 C 85 54 89 46 88 37"/>
+        <path d="M 78 64 C 88 58 93 51 95 43"/>
+        <path d="M 77 66 C 89 64 95 58 98 51"/>
+        <path stroke-width="2.4" d="M 54 62 C 62 61 69 65 71 71 C 64 74 56 71 54 62 Z"/>
+        <path stroke-width="2.4" d="M 57 84 L 57 93 M 57 93 L 52.5 96.5 M 57 93 L 61 96.5"/>
+        <path stroke-width="2.4" d="M 67 84 L 67 93 M 67 93 L 62.5 96.5 M 67 93 L 71 96.5"/>
+      </g>
+    </g>
+    <text x="60" y="98.5" text-anchor="middle" fill="currentColor" style="font-family:'IBM Plex Mono',monospace;font-size:6.4px;letter-spacing:2.8px;font-weight:500">·&#160;MIAU&#160;·</text>
+  </symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="marco barra">
+    <a class="marca" href="/" aria-label="CosaSeria. Engineering studio. Inicio">
+      <svg class="sello" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#sello-cs"/></svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">CosaSeria<span class="punto">.</span></span>
+        <span class="marca-desc">engineering studio</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/bitacora/" aria-current="page">Bitácora</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
+    <a class="nav-contacto" href="/#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <div class="heroe">
+    <div class="marco">
+      <p class="ceja">Juan Barrera · Fundador</p>
+      <h1 style="font-size:clamp(2.4rem,7vw,4.6rem);max-width:14ch">Bitácora<span class="punto">.</span></h1>
+      <p class="deck">
+        Lo que Juan Barrera, fundador de CosaSeria, ha ido pensando sobre
+        ingeniería, equipos y criterio. Textos cortos que se publicaron
+        primero en LinkedIn.
+      </p>
+    </div>
+  </div>
+
+  <section class="seccion" aria-labelledby="h-lista">
+    <div class="marco">
+      <div class="cabeza">
+        <h2 id="h-lista" class="oculto-visual">Todas las entradas</h2>
+        <span class="folio" style="margin-left:auto">Folio 006·B · Bitácora</span>
+      </div>
+      <div class="cuerpo">
+        <div class="lista-notas">
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/el-baseline-se-movio/">El baseline se movió</a></h3>
+            <span class="fecha">Serie · 1 de 2</span>
+            <p class="resumen">Algo cambió en cómo se construye software con LLMs. Lo que antes era sobresaliente ahora se espera, y la vara va a seguir subiendo.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/la-parte-que-preocupa/">La parte que sí me preocupa</a></h3>
+            <span class="fecha">Serie · 2 de 2</span>
+            <p class="resumen">Lo que más me preocupa de los LLMs son las nuevas generaciones: el criterio se forma con fricción, y estas herramientas no son baratas para todos.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/real-madrid/">Vamos a hacerlo porque así lo hace el Real Madrid</a></h3>
+            <p class="resumen">Un equipo de liga municipal que quería parecer el Real Madrid nunca jugó un partido. Lo mismo pasa con Kubernetes y microservicios desde el día uno.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/el-problema-nunca-fue-el-codigo/">El problema nunca fue el código</a></h3>
+            <p class="resumen">Un paso a desnivel movió el embotellamiento al siguiente cruce. Con la IA escribiendo código, el cuello de botella se movió a pruebas, revisión y procesos.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/contrataste-mal/">Si eres el más inteligente de tu equipo, contrataste mal</a></h3>
+            <p class="resumen">Un buen ejecutivo se rodea de personas más capaces que él en lo que no domina. Si tu equipo no te reta ni te supera, revisa a quién contrataste.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/motivo-equivocado/">Hacer lo correcto por el motivo equivocado</a></h3>
+            <p class="resumen">Una ley de cinturones de seguridad salvó vidas y enriqueció a un familiar de alguien en el gobierno. Cuando eres líder, la intención también cuenta.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/la-ia-reemplaza-friccion/">La IA reemplaza fricción</a></h3>
+            <p class="resumen">Hace un año usar IA para programar era casi un mito. La IA quita fricción, y el criterio para usarla se sigue aprendiendo con fundamentos.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/respect-what-came-before/">Respect what came before</a></h3>
+            <p class="resumen">El tenet de Principal Engineer de Amazon que más me ha marcado: entender el contexto y agradecer el sistema que ya funciona antes de juzgarlo.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/multicloud/">¿Multicloud? Primero haz las cuentas</a></h3>
+            <p class="resumen">Cuando AWS se cayó en octubre de 2025 aparecieron los gurús del multicloud. Antes de recomendarlo, conviene hacer las cuentas.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/cualquier-lenguaje/">Un SDE capaz debe poder usar cualquier lenguaje</a></h3>
+            <p class="resumen">Si dominas tipos, hilos, estructuras de datos y Big O, puedes leer y escribir en cualquier lenguaje. Por eso en las Big Tech no te preguntan cuál sabes.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">4 min</span>
+            <h3><a href="/bitacora/uso-un-llm-luego-existo/">¿Uso un LLM, luego existo?</a></h3>
+            <span class="fecha">Sep 2025</span>
+            <p class="resumen">Cómo uso los LLMs para programar, por qué se equivocan en bases de código grandes y por qué hoy saber importa más que saber hacer.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/vuelve-el-tipado/">Vuelve el perro arrepentido: el tipado</a></h3>
+            <p class="resumen">Hace años muchos huían de Java por los tipos. Con TypeScript, type hints en Python y los LLMs, el tipado regresó como héroe inesperado.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/las-metas/">Las metas no son la meta</a></h3>
+            <p class="resumen">Las metas dan estructura, hasta que cumplirlas pesa más que el propósito que las originó. Sobre objetivos que dejaron de apuntar a lo que querías.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/el-mejor-camino/">El mejor camino</a></h3>
+            <p class="resumen">Un perro que a veces muerde y una pregunta de mi hijo: ¿qué camino es mejor? En los proyectos, mejor depende de las prioridades y de la información nueva.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/alarmas-ruidosas/">Una alarma ruidosa es peor que no tener alarma</a></h3>
+            <p class="resumen">Un amigo que se quejaba de todo y una noche llena de hormigas. Las alarmas ruidosas se vuelven ruido de fondo y nadie las atiende cuando importa.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/consejos-recien-egresado/">Consejos para mi yo recién egresado</a></h3>
+            <span class="fecha">Índice de serie</span>
+            <p class="resumen">Cinco consejos que le daría a mi yo recién egresado: errores, preguntas, amabilidad, tiempo propio y volverse obsoleto. Índice de la serie.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/ser-amable/">Ser amable no te hace débil</a></h3>
+            <p class="resumen">Un manager me dijo que ser amable me hacía ver débil. Con los años llegué a otra conclusión: la amabilidad abre puertas y gritar no demuestra poder.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/resolver-algo/">Resolver algo</a></h3>
+            <p class="resumen">Programar es mover datos de un lugar a otro para resolver algo. Muchos seniors se enamoran del algo y se olvidan de resolver.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/pilares-de-un-buen-trabajo/">Los pilares de un buen trabajo</a></h3>
+            <p class="resumen">No existe el trabajo perfecto. Equipo, manager, propósito y reto: cuatro pilares que nunca he encontrado juntos, y por qué uno solo no alcanza.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/estimar-proyectos/">No sabes estimar proyectos, pero aun así hazlo</a></h3>
+            <p class="resumen">Odiaba dar fechas. Con el tiempo aprendí a estimar en piezas pequeñas, a documentar imprevistos y a usar los plazos a favor de mi lado procrastinador.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/el-mejor-microservicio/">El mejor microservicio es el que no se construye</a></h3>
+            <p class="resumen">Diez años con microservicios enseñan que mantener cada uno cuesta: dependencias, migraciones y versiones. Antes de diseñar 56, pregúntate si los necesitas.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/ya-nadie-usa-software/">Ya nadie usa software</a></h3>
+            <p class="resumen">Un estudiante dijo que el software ya no se usa, que lo de hoy es la nube y la IA. Cada herramienta tiene su lugar, y el oficio es saber cuál usar.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/errores/">Cambia el modo en que ves los errores</a></h3>
+            <span class="fecha">Serie · 1 de 5</span>
+            <p class="resumen">Primer consejo para mi yo recién egresado: los errores enseñan más que cualquier examen. Aceptar, corregir, aprender y compartir.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/lo-cortes-no-quita-lo-valiente/">Lo cortés no quita lo valiente</a></h3>
+            <span class="fecha">Serie · 2 de 5</span>
+            <p class="resumen">Segundo consejo: el software se hace con personas. Ser accesible, empático y humilde, y oponerse con datos cuando toca decir que no.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/todos-fingimos-saber/">Todos fingimos saber</a></h3>
+            <span class="fecha">Serie · 3 de 5</span>
+            <p class="resumen">Tercer consejo: nadie lo sabe todo. Preguntar ayuda a quien pregunta y a quienes están en la sala, y hay formas de hacerlo mejor.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">1 min</span>
+            <h3><a href="/bitacora/tu-vida-primero/">Nadie te va a extrañar como tus seres queridos</a></h3>
+            <span class="fecha">Serie · 4 de 5</span>
+            <p class="resumen">Cuarto consejo: nadie te asciende por trabajar más horas. Quedarse tarde por pasión está bien; tu tiempo libre y tu familia pesan más.</p>
+          </article>
+
+          <article class="nota-item">
+            <span class="num">2 min</span>
+            <h3><a href="/bitacora/vuelvete-obsoleto/">Vuélvete obsoleto</a></h3>
+            <span class="fecha">Serie · 5 de 5</span>
+            <p class="resumen">Quinto consejo: comparte, documenta y automatiza hasta que tu equipo funcione sin ti. Volverse obsoleto da libertad y espacio para crecer.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion en-oscuro" aria-labelledby="h-cta">
+    <div class="marco">
+      <div class="cuerpo" style="padding-top:var(--seccion)">
+        <h2 id="h-cta" class="cierre-lema">Trae el problema difícil<span class="punto">.</span></h2>
+        <p class="acciones">
+          <a class="btn btn-primario" href="/#contacto">Cuéntanos el problema</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie en-oscuro">
+  <div class="marco">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <p class="nombre">CosaSeria<span class="punto">.</span></p>
+        <p class="sub">Engineering studio · México</p>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/bitacora/">Bitácora</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 CosaSeria</span>
+      <span>Hecho a conciencia en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js?v=20261014" defer></script>
+</body>
+</html>

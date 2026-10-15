@@ -26,9 +26,10 @@ Contacto: hola@cosaseria.mx
 ## Páginas
 
 - [Inicio](https://cosaseria.mx/): qué hace el estudio, los cinco asuntos que atiende, quién está detrás y el formulario de contacto.
-- [Trabajo](https://cosaseria.mx/trabajo/): evidencia, separada en tres categorías. Productos propios del estudio (AuxiDocente, QuinielaRoyale), trabajo del fundador fuera del estudio (RevenueCat, Amazon Devices, Amazon Music, traducción de reseñas de Amazon, pagos e impuestos, ValladolIA, sistema de denuncias ciudadanas de Michoacán) y dos sistemas domésticos de aprendizaje.
+- [Trabajo](https://cosaseria.mx/trabajo/): evidencia, separada en tres categorías. Productos propios del estudio (AuxiDocente, QuinielaRoyale), trabajo del fundador fuera del estudio (RevenueCat, Amazon Devices, Amazon Music, traducción de reseñas de Amazon, pagos e impuestos, ValladolIA, Rehabilytec, sistema de denuncias ciudadanas de Michoacán) y dos sistemas domésticos de aprendizaje.
 - [Notas](https://cosaseria.mx/notas/): notas de ingeniería sobre decisiones técnicas.
 - [Microservicios: cuándo no.](https://cosaseria.mx/notas/microservicios-cuando-no/): qué compras al adoptar microservicios (independencia de despliegue), qué pagas a cambio (cada nueva frontera de proceso añade costos de comunicación) y las condiciones concretas bajo las cuales conviene o no conviene partir un sistema.
+- [Bitácora](https://cosaseria.mx/bitacora/): textos cortos de Juan Barrera, fundador del estudio, sobre ingeniería, equipos y criterio técnico. Se publicaron primero en LinkedIn.
 - [StoneVsSilicon](https://cosaseria.mx/StoneVsSilicon/): página del juego, en español e inglés. Historia, personajes, cómo se juega y video. Juego de duelos sin conexión para iOS y Android.
 - [Privacidad](https://cosaseria.mx/privacidad/): qué datos recoge el sitio y cómo pedir que se borren.
 - [Privacidad de apps](https://cosaseria.mx/privacy-apps/): política de privacidad y soporte de StoneVsSilicon, en español e inglés.
@@ -44,8 +45,8 @@ mantenibilidad, la observabilidad y la operación como parte del entregable.
 
 Los productos del estudio (AuxiDocente, QuinielaRoyale, StoneVsSilicon) son
 responsabilidad de CosaSeria. El trabajo del fundador en Google, Microsoft,
-Amazon, HP y RevenueCat fue como empleado de esas empresas. ValladolIA y el
-sistema de denuncias ciudadanas de Michoacán son proyectos académicos del
+Amazon, HP y RevenueCat fue como empleado de esas empresas. ValladolIA, Rehabilytec y
+el sistema de denuncias ciudadanas de Michoacán son proyectos académicos del
 fundador. Nada de eso fue un encargo al estudio.
 
 ## Uso de este contenido

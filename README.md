@@ -15,6 +15,13 @@ Las herramientas de desarrollo están fijadas en `package-lock.json`.
 - `templates/stone-vs-silicon.html`: fuente bilingüe única del juego.
 - `scripts/generar-juego.py`: genera `/StoneVsSilicon/` (español) y
   `/StoneVsSilicon/en/` (inglés). No editar directamente esas dos salidas.
+- `contenido/bitacora/*.md`: fuente de la bitácora, un archivo por entrada con
+  frontmatter (`titulo`, `slug`, `orden`, `resumen`; opcionales `fecha`, `serie`,
+  `parte`). `orden` 1 es la más reciente. Markdown mínimo: párrafos, listas,
+  citas, negritas y enlaces.
+- `templates/bitacora-entrada.html`, `bitacora-indice.html` y
+  `scripts/generar-bitacora.py`: generan `/bitacora/`. No editar sus salidas.
+  `scripts/comunes.py` aplica la navegación común a estas páginas y al resto.
 - `scripts/paginas.mjs`, `sitemap.mjs`, `verificar.mjs`: inventario, sitemap y
   checks de enlaces, metadata, schema, idiomas, sello compartido y límites.
 - `src/contacto.js`: contrato HTTP, validación y protección del formulario.

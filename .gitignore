@@ -8,3 +8,4 @@ radiografia_escritura_juan_barrera.md
 
 .DS_Store
 node_modules/
+__pycache__/
