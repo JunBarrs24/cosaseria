@@ -16,7 +16,7 @@
 <meta property="og:locale" content="es_MX">
 <meta property="og:url" content="https://cosaseria.mx/notas/microservicios-cuando-no/">
 <meta property="og:title" content="Microservicios: cuándo no.">
-<meta property="og:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada de función se convierte en un problema de red.">
+<meta property="og:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada que cruza una nueva frontera de proceso adquiere problemas de comunicación distribuida.">
 <meta property="article:published_time" content="2026-08-16">
 <meta property="og:image" content="https://cosaseria.mx/og.png">
 <meta property="og:image:width" content="1200">
@@ -25,11 +25,11 @@
 <meta name="twitter:image" content="https://cosaseria.mx/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Microservicios: cuándo no.">
-<meta name="twitter:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada de función se convierte en un problema de red.">
+<meta name="twitter:description" content="Lo que compras es independencia de despliegue. Lo que pagas es que cada llamada que cruza una nueva frontera de proceso adquiere problemas de comunicación distribuida.">
 
 <link rel="preload" href="../../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261014">
 
 <script type="application/ld+json">
 {
@@ -65,7 +65,7 @@
       "description": "Qué compras cuando adoptas microservicios, qué pagas a cambio y cómo saber si todavía no te toca.",
       "inLanguage": "es-MX",
       "datePublished": "2026-08-16",
-      "dateModified": "2026-08-16",
+      "dateModified": "2026-10-14",
       "mainEntityOfPage": "https://cosaseria.mx/notas/microservicios-cuando-no/",
       "url": "https://cosaseria.mx/notas/microservicios-cuando-no/",
       "image": "https://cosaseria.mx/og.png",
@@ -101,44 +101,7 @@
 </head>
 
 <body>
-<!--
-                       ,~.
-                    ,-'__ `-,                     ,
-                   {,-'  `. }                   ,'|
-                  ,( o )   `-.__              ,'  |  ,
-                 <=.) (          `-.__      ,'    |,'|
-                   (   )               `-._'      '  |
-                    `-'                    `-.       |
-                      \                       `-.   ,'
-                       \                         `-'
-                        `-.___________________,-'
-                            ||         ||
-                           _||_       _||_
-                          (____)     (____)
-
-    miau.
-
-    ─────────────────────────────────────────────────────────────
-    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
-    Expediente 001 · Sitio propio
-    ─────────────────────────────────────────────────────────────
-
-    Si estás leyendo el código fuente, probablemente nos vamos a
-    llevar bien.
-
-    Esta gallina tampoco necesita un framework. No hay build, ni
-    bundler, ni hydration, ni node_modules. Un HTML por página, una
-    hoja de estilos y un archivo de JavaScript que puedes leer
-    completo en menos de lo que tarda un `npm install`.
-
-    Nada de lo que hace ese JavaScript es necesario para leer el
-    sitio. Apágalo y compruébalo.
-
-    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
-    Ese tipo de correo lo contestamos rapidísimo.
-
-    hola@cosaseria.mx
--->
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
 
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
@@ -187,11 +150,11 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="/servicios/">Servicios</a>
-      <a href="/trabajo/">Trabajo</a>
-      <a href="/notas/" aria-current="page">Notas</a>
-      <a href="/#detras" data-secundario>Quiénes están detrás</a>
-    </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/" aria-current="page">Notas</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
     <a class="nav-contacto" href="/#contacto">Contacto</a>
   </div>
 </header>
@@ -205,13 +168,13 @@
 
     <p class="articulo-meta">
       <span>Nota 001</span>
-      <span>16 de agosto de 2026</span>
+      <span>16 de agosto de 2026 · Revisada el 14 de octubre de 2026</span>
       <span>8 min de lectura</span>
     </p>
 
     <div class="prosa">
 
-      <p>Una junta de dos horas, seis personas y un diagrama en el pizarrón con once cajitas y flechas entre casi todas. Cuando ya estaba dibujado, alguien preguntó cuántos ingenieros había en el equipo. Eran cuatro.</p>
+      <p>Imagina esta escena: una junta de dos horas, seis personas y un diagrama con once cajitas y flechas entre casi todas. El equipo tiene cuatro ingenieros. Es un ejemplo hipotético para discutir costos, no un caso de cliente.</p>
 
       <p>Esa junta pasa seguido, y la pregunta que la convoca llega casi siempre con la misma forma: <em>¿deberíamos migrarnos a microservicios?</em> Es una pregunta sobre cómo está organizado tu equipo y cuántas cosas quieres poder desplegar sin pedirle permiso a nadie.</p>
 
@@ -219,21 +182,21 @@
 
       <h2>Lo que compras</h2>
 
-      <p>Un microservicio te vende exactamente un producto: <strong>independencia de despliegue</strong>. Un pedazo del sistema puede salir a producción en su propio horario, con su propio riesgo, sin coordinarse con el resto.</p>
+      <p>Una razón central para extraer un servicio es la <strong>independencia de despliegue</strong>: poder cambiar una parte sin desplegar las demás. No viene incluida por tener procesos separados. Requiere contratos compatibles, propiedad clara de los datos y cambios de esquema que admitan versiones coexistentes.</p>
 
-      <p>Todo lo demás que se le atribuye (escalar por partes, usar otro lenguaje, aislar fallos, separar responsabilidades) se puede conseguir sin partir el despliegue, y casi siempre más barato:</p>
+      <p>También puede aportar escala independiente, aislamiento operativo o libertad tecnológica. Antes de asumir su costo, compara alternativas y sus límites:</p>
 
       <ul>
-        <li><strong>Escalar por partes.</strong> Un mismo binario desplegado en dos grupos de máquinas, uno atendiendo tráfico web y otro consumiendo una cola, ya escala por partes. No hacen falta dos repositorios.</li>
-        <li><strong>Aislar fallos.</strong> Bulkheads, timeouts, límites de concurrencia y circuit breakers son patrones de proceso. Funcionan igual dentro de un solo binario.</li>
+        <li><strong>Escalar por partes.</strong> Un mismo binario desplegado como web y como consumidor de cola puede escalar ambos roles por separado. Aún comparte código y posiblemente ciclo de release. Separar repositorios es otra decisión.</li>
+        <li><strong>Aislar fallos.</strong> Límites de concurrencia, pools separados y circuit breakers reducen propagación de fallos dentro de un proceso, pero no aíslan un OOM, un crash nativo ni el bloqueo de su event loop. Procesos o contenedores separados mejoran esas fronteras; una dependencia compartida o una cadena síncrona aún puede derribar varios servicios.</li>
         <li><strong>Separar responsabilidades.</strong> Eso son módulos con fronteras que alguien defiende. La frontera la imponen la disciplina y el compilador.</li>
       </ul>
 
-      <p>Si lo que te duele es alguna de esas tres cosas, hay una respuesta más corta que partir el sistema.</p>
+      <p>La opción más simple depende del fallo que necesitas contener y del recurso que necesitas escalar. Un compilador ayuda con dependencias de código; no sustituye límites de CPU, memoria ni permisos.</p>
 
       <h2>Lo que pagas</h2>
 
-      <p>El costo tiene un nombre concreto: <strong>cada llamada de función se convierte en un problema de red</strong>. Esa frase parece pequeña escrita. No lo es.</p>
+      <p>El costo tiene un nombre concreto: <strong>cada llamada que cruza una nueva frontera de proceso adquiere problemas de comunicación distribuida</strong>. Esa frase parece pequeña escrita. No lo es.</p>
 
       <figure>
         <svg class="diagrama" viewBox="0 0 680 300" role="img" aria-labelledby="dg-t dg-d">
@@ -255,7 +218,7 @@
           <path class="trazo" d="M 230 122 V 148"/>
           <path class="trazo" d="M 159 179 H 171"/>
           <text class="tenue" x="20" y="238">1 despliegue · 4 llamadas en proceso</text>
-          <text class="tenue" x="20" y="256">falla todo o no falla nada</text>
+          <text class="tenue" x="20" y="256">comparte proceso; atomicidad depende de la transacción</text>
 
           <text class="titulo" x="370" y="26">B · CUATRO DESPLIEGUES</text>
           <rect class="trazo" x="370" y="60" width="119" height="62"/>
@@ -273,45 +236,48 @@
           <text class="tenue" x="370" y="238">4 despliegues · 4 llamadas de red · 4 contratos versionados</text>
           <text class="tenue" x="370" y="256">cada línea rosa puede fallar sola, tardar de más o llegar dos veces</text>
         </svg>
-        <figcaption>Lo mismo, partido. Las cuatro líneas rosas son el trabajo nuevo.</figcaption>
+        <figcaption>Esquema simplificado de llamadas síncronas. También hay comunicación asíncrona: las colas desacoplan disponibilidad, pero añaden duplicados, orden, retrasos y evolución de eventos.</figcaption>
       </figure>
 
-      <p>Lo que en el panel A era esto:</p>
+      <p>Pseudocódigo ilustrativo, no una API ejecutable. En ambos paneles, esta llamada puede esconder una petición a un proveedor de pagos:</p>
 
 <pre><code>total = pagos.cobrar(carrito)</code></pre>
 
-      <p>en el panel B es esto, y ninguna de las líneas nuevas es opcional:</p>
+      <p>Al cruzar una frontera hay que definir un contrato de fallos. Estos nombres representan políticas; sus valores dependen del proveedor, la latencia observada y el presupuesto total de la operación:</p>
 
-<pre><code>total = pagos.cobrar(
+<pre tabindex="0" role="region" aria-label="Pseudocódigo de cobro con políticas de integración"><code># Pseudocódigo: políticas definidas por cada integración.
+resultado = pagos.cobrar(
     carrito,
-    timeout        = 800ms,      # ¿cuánto es demasiado?
-    reintentos     = 3,          # ¿y si el cobro sí pasó?
-    clave_idem     = pedido.id,  # por eso hace falta esta
-    contrato       = "v2",       # y por eso hace falta esta otra
+    deadline = presupuesto_restante,
+    clave_idempotencia = intento_de_pago.id,
 )
-# y si aun así no contesta: ¿el pedido queda cobrado, cancelado o pendiente?</code></pre>
+# Timeout: registrar PENDIENTE; consultar/conciliar con el proveedor.
+# Reintentar solo errores elegibles, con la misma clave y contenido,
+# backoff + jitter, límite de intentos y presupuesto total.
+# La versión del contrato se acuerda; no exige un parámetro por llamada.</code></pre>
 
-      <p>Esa última línea es la factura. En el panel A la pregunta no existía: o corría la función o no corría. En el panel B existe un estado nuevo (<em>no sé</em>) y alguien tiene que diseñarlo, probarlo, monitorearlo y explicárselo a soporte.</p>
+      <p>El estado <em>no sé</em> también existe en un monolito: el proveedor puede cobrar y perderse la respuesta, o el proceso puede caer antes de guardar el resultado. Una transacción local solo hace atómicas las escrituras que participan en ella; no incluye automáticamente al proveedor externo.</p>
 
-      <p>Multiplícalo por cada frontera que cruces. Aparecen, todos juntos y el mismo mes:</p>
+      <p>Una clave de idempotencia debe identificar la misma operación lógica y mantenerse en los reintentos. El receptor debe reservarla de forma atómica, vincularla al contenido, conservar el resultado y resolver peticiones concurrentes. Si el efecto externo no participa en esa transacción, hace falta además soporte de idempotencia del proveedor o conciliación. Una clave por sí sola no garantiza un cobro único. Un outbox coordina estado local y publicación, pero no convierte al consumidor en exactamente-una-vez.</p>
+      <p>Con más fronteras, revisa explícitamente:</p>
 
       <ul>
         <li>fallos parciales y el estado <em>no sé</em>;</li>
-        <li>latencia de cola larga (<em>tail latency</em>): la petición más lenta manda, y ahora hay cuatro oportunidades de ser la más lenta;</li>
-        <li>idempotencia obligatoria en cualquier cosa que cobre, cargue o envíe;</li>
+        <li>latencia acumulada en cadenas síncronas y latencia de la rama más lenta en llamadas paralelas; las colas añaden espera y acumulación de trabajo;</li>
+        <li>política de idempotencia, deduplicación o conciliación para efectos que puedan repetirse; si no existe una garantía suficiente, evita reintentos automáticos;</li>
         <li>versionado de contratos y despliegues que ya no pueden ir en cualquier orden;</li>
-        <li>consistencia eventual donde antes había una transacción;</li>
-        <li>trazas distribuidas, porque sin ellas depurar es adivinar;</li>
+        <li>consistencia eventual cuando una operación deja de caber en una transacción local; no toda comunicación entre servicios la exige;</li>
+        <li>correlación de logs, métricas y, cuando la topología lo requiere, trazas distribuidas;</li>
         <li>entornos: levantar el sistema completo en la laptop deja de ser gratis.</li>
       </ul>
 
-      <p class="al-margen"><b>Una señal barata de diagnóstico.</b> Pregunta cuántas veces al mes el equipo despliega y cuántas de esas hubo que coordinar con otro equipo. Si la respuesta es «desplegamos los jueves y no coordinamos con nadie», tienes un problema de frecuencia de despliegue, y ese se arregla con pipeline.</p>
+      <p class="al-margen"><b>Una señal barata de diagnóstico.</b> Pregunta cuántas veces al mes el equipo despliega y cuántas de esas hubo que coordinar con otro equipo. Si la respuesta es «desplegamos los jueves y no coordinamos con nadie», investiga primero pruebas, aprobaciones, riesgo y automatización. El pipeline puede ayudar, pero no corrige por sí solo restricciones regulatorias o falta de cobertura.</p>
 
       <h2>Conway, en la dirección correcta</h2>
 
       <p>La ley de Conway dice que los sistemas terminan pareciéndose a la estructura de comunicación de la organización que los construye. La lectura útil es la inversa: <strong>no compres una topología de sistema que no corresponde a tu topología de equipos</strong>.</p>
 
-      <p>Cuatro servicios y un equipo dan cuatro repositorios que la misma gente tiene que desplegar en orden. Eso es un monolito distribuido: el monolito con la factura de red incluida y ninguno de sus beneficios.</p>
+      <p>Cuatro servicios pueden vivir en un monorepo y tener despliegues independientes. También pueden vivir en cuatro repositorios y exigir releases coordinados. Si los cambios comunes requieren modificar y desplegar todos a la vez, hay acoplamiento de release: investiga contratos, datos compartidos y dependencias síncronas antes de llamarlo autonomía.</p>
 
       <blockquote>El mejor microservicio puede ser el que decidimos no construir.</blockquote>
 
@@ -320,20 +286,20 @@
       <p>Si alguna de estas es cierta hoy, la respuesta probablemente es <em>todavía no</em>:</p>
 
       <ul>
-        <li><strong>El equipo cabe en una sala.</strong> Con uno o dos equipos, la coordinación se resuelve en una junta de quince minutos.</li>
-        <li><strong>El dominio todavía se mueve.</strong> Las fronteras que dibujes hoy se van a mover. Moverlas dentro de un repositorio cuesta una tarde; moverlas entre servicios cuesta un trimestre.</li>
-        <li><strong>No tienes observabilidad distribuida.</strong> Sin trazas correlacionadas, partir el sistema es apagar la luz antes de entrar.</li>
+        <li><strong>El equipo cabe en una sala.</strong> Un equipo pequeño suele tener menos capacidad para operar múltiples servicios. No es un veto: aislamiento de seguridad, cargas especializadas o límites regulatorios pueden justificarlo.</li>
+        <li><strong>El dominio todavía se mueve.</strong> Las fronteras pueden cambiar. Moverlas entre servicios implica migrar datos y contratos además de código; el costo depende del volumen, los consumidores y la compatibilidad exigida, no de un plazo universal.</li>
+        <li><strong>No tienes observabilidad distribuida.</strong> Define cómo localizar una operación y distinguir fallos de red, cola y negocio. Logs correlacionados pueden bastar al principio; prueba esa capacidad antes de aumentar fronteras.</li>
         <li><strong>El cuello de botella está en la base de datos.</strong> Cuatro servicios contra la misma base de datos son cuatro clientes peleándose por el mismo recurso, con más conexiones y menos control del plan de consultas.</li>
         <li><strong>Nadie está de guardia.</strong> Los sistemas distribuidos fallan de formas que solo se aprenden operándolos. Si no hay quien los opere, no los construyas.</li>
       </ul>
 
       <h2>Cuándo sí</h2>
 
-      <p>Hay razones buenas, y son concretas y pocas:</p>
+      <p>Hay razones concretas que pueden justificar la separación, incluso con un equipo pequeño:</p>
 
       <ul>
         <li>Dos o más equipos con dueños distintos se bloquean entre sí, con evidencia: despliegues detenidos, releases coordinados, filas de revisión.</li>
-        <li>Una parte tiene un perfil de escala genuinamente distinto: mil veces más tráfico, o mil veces más caro por petición.</li>
+        <li>Una parte tiene un perfil de escala genuinamente distinto: por ejemplo, inferencia con GPU frente a una API ligera, con métricas de saturación y costos que justifiquen el despliegue independiente.</li>
         <li>Una parte tiene un perfil de riesgo o cumplimiento distinto y conviene aislarla también en operación.</li>
         <li>Una parte tiene un ciclo de vida distinto: cambia cada semana mientras el resto cambia cada trimestre.</li>
       </ul>
@@ -342,17 +308,19 @@
 
       <h2>Qué hacer mientras tanto</h2>
 
-      <p>Casi siempre hay un camino intermedio que se paga solo:</p>
+      <p>Un camino intermedio que conviene evaluar:</p>
 
       <ol>
         <li><strong>Pon fronteras dentro de un solo despliegue.</strong> Módulos con interfaz pública explícita, y una regla de compilación que impida importar sus adentros. Si el lenguaje puede fallar el build por una dependencia prohibida, mejor: el criterio deja de depender de que alguien lo recuerde en la revisión.</li>
         <li><strong>Separa los datos antes que el proceso.</strong> Que cada módulo sea dueño de sus tablas y nadie más las lea directamente. Este es el trabajo difícil, y es el mismo trabajo que tendrías que hacer para extraer un servicio. Hazlo primero, donde equivocarse es barato.</li>
         <li><strong>Haz que desplegar sea aburrido.</strong> Si desplegar da miedo, partir el sistema no lo va a quitar: lo va a multiplicar por cuatro.</li>
-        <li><strong>Extrae uno, cuando duela por una razón que puedas nombrar.</strong> El primero enseña cuánto cuesta en tu contexto. Sácalo, opéralo tres meses y vuelve a decidir con datos.</li>
+        <li><strong>Extrae uno, cuando duela por una razón que puedas nombrar.</strong> El primero enseña cuánto cuesta en tu contexto. Define un periodo de observación que incluya carga y releases representativos; compara incidentes, latencia, costo y tiempo de entrega antes de extraer otro.</li>
       </ol>
 
       <p>Si haces los tres primeros pasos y el cuarto ya no hace falta, hiciste el mismo trabajo de diseño y te ahorraste la red.</p>
 
+      <h2>Referencias y límites</h2>
+      <p>Estos criterios son heurísticas, no umbrales universales. Contrasta el diseño con <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">el contrato de idempotencia descrito por AWS</a>, <a href="https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/">los presupuestos de timeout y reintento</a> y <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead">los límites del patrón Bulkhead</a>. Mide el problema que esperas resolver y el costo operativo que introduces.</p>
       <hr>
 
       <p>La arquitectura correcta es la que corresponde al tamaño de tu equipo, al estado de tu dominio y a lo que tu operación puede sostener un martes a las tres de la mañana. Elegir eso bien cuesta trabajo. Elegirlo mal cuesta más.</p>
@@ -376,11 +344,11 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="/servicios/">Servicios</a>
-        <a href="/trabajo/">Trabajo</a>
-        <a href="/notas/">Notas</a>
-        <a href="/privacidad/">Privacidad</a>
-      </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
     </div>
     <div class="pie-legal">
       <span>© 2026 CosaSeria</span>
@@ -389,6 +357,6 @@
   </div>
 </footer>
 
-<script src="../../assets/js/site.js" defer></script>
+<script src="../../assets/js/site.js?v=20261014" defer></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+[
+  {
+    "command": "node --check functions/api/contacto.js",
+    "exitCode": 1,
+    "stderr": "node:internal/modules/cjs/loader:1408\n  throw err;\n  ^\n\nError: Cannot find module '/Users/junbarrs/cosa-seria/functions/api/contacto.js'\n    at node:internal/modules/cjs/loader:1405:15\n    at node:internal/main/check_syntax:33:20 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v24.1.0\n"
+  },
+  {
+    "command": "node --check assets/js/site.js",
+    "exitCode": 1,
+    "stderr": "node:internal/modules/cjs/loader:1408\n  throw err;\n  ^\n\nError: Cannot find module '/Users/junbarrs/cosa-seria/assets/js/site.js'\n    at node:internal/modules/cjs/loader:1405:15\n    at node:internal/main/check_syntax:33:20 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v24.1.0\n"
+  }
+]

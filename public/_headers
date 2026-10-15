@@ -11,19 +11,25 @@
   Access-Control-Allow-Origin: *
 
 /assets/css/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /assets/js/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /og.png
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /favicon.svg
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /StoneVsSilicon/img/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /StoneVsSilicon/video/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
+
+/StoneVsSilicon/svs.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/StoneVsSilicon/svs.js
+  Cache-Control: public, max-age=0, must-revalidate

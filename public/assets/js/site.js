@@ -131,63 +131,95 @@
 
   (function formulario() {
     var forma = document.querySelector('[data-forma]');
-    if (!forma || !window.fetch) return;
-
+    if (!forma || !window.fetch || !window.AbortController || !window.crypto || !crypto.randomUUID) return;
     var recado = forma.querySelector('[data-recado]');
     var enviar = forma.querySelector('button[type="submit"]');
     var campoToken = forma.querySelector('[name="token"]');
-    var destino = forma.getAttribute('action') || '';
-    var correo = forma.getAttribute('data-correo') || 'hola@cosaseria.mx';
-    var pidiendoToken = false;
+    var campoId = forma.querySelector('[name="envio_id"]');
+    var destino = forma.getAttribute('action');
+    var expiracion = 0;
+    var pendienteToken = null;
+    var ocupado = false;
 
-    function decir(texto, esError) {
-      if (!recado) return;
+    function decir(texto, error) {
       recado.textContent = texto;
-      recado.hidden = false;
-      recado.classList.toggle('error', !!esError);
+      recado.classList.toggle('error', !!error);
     }
-
-    function pedirToken() {
-      if (pidiendoToken || !campoToken || campoToken.value) return;
-      pidiendoToken = true;
-      window.fetch(destino, { headers: { 'Accept': 'application/json' } })
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (datos) { if (datos && datos.token) campoToken.value = datos.token; })
-        .catch(function () {});
+    async function solicitar(opciones) {
+      var control = new AbortController();
+      var reloj = setTimeout(function () { control.abort(); }, 15000);
+      try {
+        var r = await fetch(destino, Object.assign({}, opciones, {signal:control.signal}));
+        if (!(r.headers.get('content-type') || '').includes('application/json')) throw new Error('RESPUESTA_INVALIDA');
+        return {respuesta:r, datos:await r.json()};
+      } finally { clearTimeout(reloj); }
     }
-
-    forma.addEventListener('focusin', pedirToken, { once: true });
-
-    forma.addEventListener('submit', function (evento) {
-      var trampa = forma.querySelector('[name="empresa_adicional"]');
-      if (trampa && trampa.value) { evento.preventDefault(); return; }
-
+    function pedirToken(renovar) {
+      if (pendienteToken) return pendienteToken;
+      if (!renovar && campoToken.value && expiracion > Date.now() + 60000) return Promise.resolve();
+      pendienteToken = solicitar({headers:{Accept:'application/json'}}).then(function (r) {
+        if (!r.respuesta.ok || typeof r.datos.token !== 'string' || !Number.isFinite(r.datos.expiresAt)) throw new Error('TOKEN_NO_DISPONIBLE');
+        campoToken.value = r.datos.token;
+        expiracion = r.datos.expiresAt;
+      }).finally(function () { pendienteToken = null; });
+      return pendienteToken;
+    }
+    forma.addEventListener('focusin', function () { pedirToken(false).catch(function () {}); });
+    forma.addEventListener('input', function (e) {
+      if (e.target.setCustomValidity) e.target.setCustomValidity('');
+      e.target.removeAttribute('aria-invalid');
+    });
+    async function mandar(renovado) {
+      var r = await solicitar({method:'POST',body:new FormData(forma),headers:{Accept:'application/json'}});
+      var d = r.datos;
+      if (typeof d.ok !== 'boolean' || typeof d.codigo !== 'string' || typeof d.mensaje !== 'string') throw new Error('RESPUESTA_INVALIDA');
+      if (d.codigo === 'TOKEN_CADUCADO' && r.respuesta.status === 403 && !renovado) {
+        await pedirToken(true);
+        return mandar(true); // Only this explicit pre-send rejection is retried automatically.
+      }
+      if (r.respuesta.status === 200 && d.ok === true && d.codigo === 'ENVIADO') {
+        forma.reset();
+        expiracion = 0;
+        decir(d.mensaje, false);
+        return;
+      }
+      if (d.ok || r.respuesta.status === 200) throw new Error('RESPUESTA_INVALIDA');
+      if (d.campos) {
+        Object.keys(d.campos).forEach(function (nombre) {
+          var campo = forma.elements.namedItem(nombre);
+          if (campo && campo.setCustomValidity && typeof d.campos[nombre] === 'string') {
+            campo.setCustomValidity(d.campos[nombre]);
+            campo.setAttribute('aria-invalid','true');
+          }
+        });
+        decir(d.mensaje + ' ' + Object.values(d.campos).join(' '), true);
+      } else decir(d.mensaje, true);
+    }
+    forma.addEventListener('submit', async function (evento) {
       evento.preventDefault();
-      if (enviar) { enviar.disabled = true; enviar.textContent = 'Enviando…'; }
-      decir('Enviando…');
-
-      window.fetch(destino, {
-        method: 'POST',
-        body: new FormData(forma),
-        headers: { 'Accept': 'application/json' }
-      }).then(function (respuesta) {
-        return respuesta.json()
-          .catch(function () { return {}; })
-          .then(function (datos) { return { ok: respuesta.ok, datos: datos }; });
-      }).then(function (r) {
-        if (r.ok) {
-          forma.reset();
-          if (campoToken) campoToken.value = '';
-          decir(r.datos.mensaje || 'Recibido. Leemos personalmente cada mensaje.');
-          if (enviar) enviar.textContent = 'Enviado';
-          return;
-        }
-        decir(r.datos.mensaje || ('No salió. Escríbenos directo a ' + correo + '.'), true);
-        if (enviar) { enviar.disabled = false; enviar.textContent = 'Enviar'; }
-      }).catch(function () {
-        decir('No salió. Escríbenos directo a ' + correo + ' y lo resolvemos por ahí.', true);
-        if (enviar) { enviar.disabled = false; enviar.textContent = 'Enviar'; }
-      });
+      if (ocupado) return;
+      if (!campoId.value) campoId.value = Date.now() + '.' + crypto.randomUUID();
+      ocupado = true;
+      enviar.disabled = true;
+      enviar.textContent = 'Enviando…';
+      enviar.setAttribute('aria-busy','true');
+      // readonly preserves FormData while preventing changes during the request.
+      var editables = forma.querySelectorAll('input:not([type="hidden"]),textarea');
+      editables.forEach(function (e) { e.readOnly = true; });
+      decir('Enviando tu mensaje…', false);
+      try {
+        await pedirToken(false);
+        await mandar(false);
+      } catch (e) {
+        decir('No pudimos confirmar el envío. Tu texto sigue aquí. Vuelve a intentar con el mismo mensaje o escribe a hola@cosaseria.mx; no crearemos otro envío con este identificador.', true);
+      } finally {
+        ocupado = false;
+        enviar.disabled = false;
+        enviar.textContent = 'Enviar';
+        enviar.removeAttribute('aria-busy');
+        editables.forEach(function (e) { e.readOnly = false; });
+        if (forma.querySelector('[aria-invalid="true"]')) forma.reportValidity();
+      }
     });
   })();
 

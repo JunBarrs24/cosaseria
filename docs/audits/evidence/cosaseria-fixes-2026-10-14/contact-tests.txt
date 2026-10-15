@@ -1,0 +1,40 @@
+✔ rechaza nombre con 121 unidades sin enviar (14.194459ms)
+✔ rechaza empresa con 161 unidades sin enviar (1.065542ms)
+✔ rechaza email con 201 unidades sin enviar (0.888083ms)
+✔ rechaza problema con 8001 unidades sin enviar (0.839208ms)
+✔ acepta 8000 unidades y conserva texto exactamente (2.510084ms)
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+contacto: CONFIGURACION_INCOMPLETA
+✔ token recién emitido funciona y token expirado no envía (1.812167ms)
+✔ falta FIRMA_SECRETO: 503 controlado (0.28975ms)
+✔ falta CORREO_DESTINO: 503 controlado (0.137667ms)
+✔ falta CORREO_ORIGEN: 503 controlado (0.134208ms)
+✔ falta EMAIL: 503 controlado (0.17175ms)
+✔ falta CONTACTO: 503 controlado (0.131ms)
+✔ falta RAFAGA: 503 controlado (0.107959ms)
+{"evento":"contacto_infraestructura","referencia":"1792027820291.7b0d5c6c-aa53-41f0-a085-516bb3d469a1"}
+{"evento":"contacto_infraestructura","referencia":"1792027820292.10b1ab94-0fbe-48df-8844-608f43fce2a1"}
+✔ dependencias que fallan: respuesta controlada, sin filtrar excepción (1.871834ms)
+✔ límite de cuerpo en stream sin Content-Length (0.470875ms)
+✔ rechaza JSON, multipart roto, archivo y campos repetidos (1.719083ms)
+✔ HTML de error preserva y escapa los campos; nativo funciona sin token (1.736042ms)
+✔ origen rechazado y ráfaga limitada no envían (0.992833ms)
+✔ 8000 unidades con saltos de línea coinciden con maxlength del textarea (0.94775ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 65.766666

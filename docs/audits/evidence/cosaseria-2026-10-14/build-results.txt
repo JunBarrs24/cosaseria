@@ -1,0 +1,7 @@
+Command: WRANGLER_LOG_PATH=/tmp/cosaseria-audit-evidence/wrangler.log WRANGLER_SEND_METRICS=false node /Users/junbarrs/.npm/_npx/d77349f55c2be1c0/node_modules/wrangler/bin/wrangler.js deploy --dry-run --outdir /tmp/cosaseria-audit-evidence/build
+Wrangler 4.123.0
+Exit code: 0
+Read 78 files from public assets directory (Wrangler internal count; git ls-files is the versioned source inventory).
+Total Upload: 9.46 KiB / gzip: 3.50 KiB
+Bindings: LIMITES (KV), EMAIL (unrestricted send_email), RAFAGA (2 requests/60s), ASSETS, CORREO_ORIGEN.
+--dry-run: exiting now. No deployment executed. No real email sent.

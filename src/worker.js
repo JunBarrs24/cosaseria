@@ -1,4 +1,5 @@
 import { contactoGet, contactoPost } from './contacto.js';
+export { RegistroContacto } from './registro-contacto.js';
 
 const RUTA_CONTACTO = '/api/contacto';
 
@@ -23,8 +24,6 @@ const CABECERAS = {
 };
 
 function blindar(respuesta) {
-  if (respuesta.status >= 300 && respuesta.status < 400) return respuesta;
-
   const copia = new Response(respuesta.body, respuesta);
   for (const [nombre, valor] of Object.entries(CABECERAS)) {
     copia.headers.set(nombre, valor);

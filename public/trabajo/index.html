@@ -28,7 +28,7 @@
 
 <link rel="preload" href="../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/site.css?v=20261014">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -126,44 +126,7 @@
 </head>
 
 <body>
-<!--
-                       ,~.
-                    ,-'__ `-,                     ,
-                   {,-'  `. }                   ,'|
-                  ,( o )   `-.__              ,'  |  ,
-                 <=.) (          `-.__      ,'    |,'|
-                   (   )               `-._'      '  |
-                    `-'                    `-.       |
-                      \                       `-.   ,'
-                       \                         `-'
-                        `-.___________________,-'
-                            ||         ||
-                           _||_       _||_
-                          (____)     (____)
-
-    miau.
-
-    ─────────────────────────────────────────────────────────────
-    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
-    Expediente 001 · Sitio propio
-    ─────────────────────────────────────────────────────────────
-
-    Si estás leyendo el código fuente, probablemente nos vamos a
-    llevar bien.
-
-    Esta gallina tampoco necesita un framework. No hay build, ni
-    bundler, ni hydration, ni node_modules. Un HTML por página, una
-    hoja de estilos y un archivo de JavaScript que puedes leer
-    completo en menos de lo que tarda un `npm install`.
-
-    Nada de lo que hace ese JavaScript es necesario para leer el
-    sitio. Apágalo y compruébalo.
-
-    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
-    Ese tipo de correo lo contestamos rapidísimo.
-
-    hola@cosaseria.mx
--->
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
 
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
@@ -212,11 +175,11 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="/servicios/">Servicios</a>
-      <a href="/trabajo/" aria-current="page">Trabajo</a>
-      <a href="/notas/">Notas</a>
-      <a href="/#detras" data-secundario>Quiénes están detrás</a>
-    </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/" aria-current="page">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
     <a class="nav-contacto" href="/#contacto">Contacto</a>
   </div>
 </header>
@@ -246,7 +209,7 @@
       </div>
       <div class="cuerpo">
         <p class="deck medida-corta" style="margin-top:0;margin-bottom:clamp(28px,4vw,40px)">
-          Productos diseñados, construidos y operados por el estudio.
+          Productos diseñados, construidos y operados por el estudio. AuxiDocente muestra un flujo de producto con integraciones; StoneVsSilicon permite inspeccionar una experiencia móvil publicada. Son productos propios, no contratos de clientes ni evidencia de una escala de operación no publicada.
         </p>
 
         <div class="fichas revela">
@@ -261,17 +224,36 @@
               <dd>Un asistente por WhatsApp recibe notas de voz, fotos y texto, interpreta qué pidió la maestra y lo organiza en un tablero web. Exporta a Word listo para entregar, agenda respetando fines de semana y días festivos oficiales, y da seguimiento formativo por alumno.</dd>
               <dt>Nuestra responsabilidad</dt>
               <dd>Producto completo: diseño, construcción y operación. Incluye suscripción, facturación y soporte en producción.</dd>
+              <dt>Evidencia pública</dt>
+              <dd>El producto y sus flujos visibles. No publicamos aquí cifras de usuarios, disponibilidad ni resultados auditados.</dd>
               <dt>Dominio</dt>
               <dd><a class="enlace" href="https://auxidocente.com" rel="noopener">auxidocente.com</a></dd>
             </dl>
           </article>
 
           <article class="ficha">
-            <span class="ficha-etiqueta">Producto propio · Estacional</span>
+            <span class="ficha-etiqueta">Producto propio · Disponible para iPhone</span>
+            <h3><a href="/StoneVsSilicon/">StoneVsSilicon</a></h3>
+            <dl>
+              <dt>De dónde viene</dt>
+              <dd>De un juego de infancia que el fundador nunca pudo volver a encontrar y una pregunta: ¿qué pasaría si la IA viajara al pasado para conquistar a la humanidad? Las máquinas llegan con cálculos y predicciones. Los humanos tienen piedras y la costumbre de hacer cosas inesperadas.</dd>
+              <dt>Cómo se juega</dt>
+              <dd>Cinco duelos por partida. Eliges personajes y administras recursos: gastar lo mejor al principio puede dejarte sin opciones al final. La máquina también está jugando.</dd>
+              <dt>Nuestra responsabilidad</dt>
+              <dd>Diseño y construcción del juego, publicación y soporte. La versión para iPhone se juega sin internet, sin cuenta y sin anuncios.</dd>
+              <dt>Qué puedes comprobar</dt>
+              <dd>El juego publicado y su experiencia offline. Android y el modo PvP para jugar contra otras personas están previstos; todavía no forman parte de la versión disponible.</dd>
+              <dt>Jugar y conocerlo</dt>
+              <dd><a class="enlace" href="/StoneVsSilicon/">Historia, personajes y cómo se juega</a> · <a class="enlace" href="https://apps.apple.com/mx/app/stonevssilicon/id6820747510">Descargar para iPhone</a></dd>
+            </dl>
+          </article>
+
+          <article class="ficha">
+            <span class="ficha-etiqueta">Producto propio · Experimento estacional</span>
             <h3><a href="https://quinielaroyale.mx" rel="noopener">QuinielaRoyale</a></h3>
             <dl>
               <dt>Qué es</dt>
-              <dd>Quiniela del Mundial 2026 para jugar en familia.</dd>
+              <dd>Quiniela del Mundial 2026 para jugar en familia. Es un ejemplo de alcance pequeño; no lo presentamos como prueba de operación empresarial.</dd>
               <dt>Nuestra responsabilidad</dt>
               <dd>Producto completo: diseño, construcción y operación.</dd>
               <dt>Dominio</dt>
@@ -423,7 +405,8 @@
           Ninguno de los dos pidió una arquitectura, y los dos acabaron con una.
         </p>
 
-        <div class="fichas revela">
+        <details><summary>Ver dos experimentos personales (acceso privado)</summary>
+        <div class="fichas">
 
           <article class="ficha">
             <span class="ficha-etiqueta">Doméstico · En uso</span>
@@ -453,12 +436,9 @@
 
         </div>
 
+        </details>
         <p class="aviso">
-          <b>Por qué están aquí.</b> Ninguno de los dos es un producto ni
-          pretende serlo. Están en esta página porque el criterio que se aplicó
-          es el mismo que se aplica cobrando, y porque un estudio que presume de
-          cuidar los detalles debería poder enseñar los que hizo gratis. Los dos
-          piden login, porque los usan dos menores de edad y eso no se negocia.
+          <b>Qué demuestran y qué no.</b> Son experimentos personales de aprendizaje, no entregas contractuales ni referencias para evaluar capacidad empresarial. El acceso es privado porque los usan menores; el visitante no puede verificar los flujos descritos desde estos enlaces.
         </p>
       </div>
     </div>
@@ -485,11 +465,11 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="/servicios/">Servicios</a>
-        <a href="/trabajo/">Trabajo</a>
-        <a href="/notas/">Notas</a>
-        <a href="/privacidad/">Privacidad</a>
-      </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
     </div>
     <div class="pie-legal">
       <span>© 2026 CosaSeria</span>
@@ -498,6 +478,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/site.js?v=20261014" defer></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { paginas, indexables, ORIGEN, PUBLICO, RAIZ } from './paginas.mjs';
+import { LIMITES_TEXTO } from '../src/contacto.js';
 
 const problemas = [];
 const avisos = [];
@@ -33,9 +34,31 @@ function resolver(base, destino) {
 
 const titulos = new Map();
 const descripciones = new Map();
+const normalizar = s => s.replace(/\s+/g, ' ').toLowerCase();
+const selloBase = todas.find(p => p.ruta === '/').html.match(/<symbol id="sello-cs"[\s\S]*?<\/symbol>/)[0];
+const perfilesPersonales = new Set(todas.flatMap(p => p.jsonld.flatMap(b => {
+  try { const d = JSON.parse(b); return (d['@graph'] || [d]).filter(n => n['@type'] === 'Person').flatMap(n => n.sameAs || []); }
+  catch { return []; }
+})));
 
 for (const p of todas) {
   const r = p.ruta;
+  const sello = p.html.match(/<symbol id="sello-cs"[\s\S]*?<\/symbol>/)?.[0];
+  if (!sello || normalizar(sello) !== normalizar(selloBase)) falla(r, 'el sello compartido diverge del inicio');
+  if (/<a\b[^>]*aria-pressed=/.test(p.html)) falla(r, 'aria-pressed no corresponde a enlaces');
+  for (const recurso of ['assets/css/site.css', 'assets/js/site.js']) {
+    if (p.html.includes(recurso + '"')) falla(r, `referencia sin versión de transición: ${recurso}`);
+  }
+  if (r === '/') for (const [nombre, max] of Object.entries(LIMITES_TEXTO)) {
+    const campo = p.html.match(new RegExp(`<[^>]+name="${nombre}"[^>]*>`))?.[0];
+    if (!campo?.includes(`maxlength="${max}"`)) falla(r, `límite de ${nombre} no coincide con servidor`);
+  }
+  if (r.startsWith('/StoneVsSilicon/')) {
+    for (const [idioma, ruta] of [['es-MX','/StoneVsSilicon/'],['en','/StoneVsSilicon/en/']]) {
+      if (!p.cabecera.includes(`hreflang="${idioma}" href="${ORIGEN}${ruta}"`)) falla(r, `falta hreflang recíproco ${idioma}`);
+    }
+    if ((p.html.match(/<video\b/g) || []).length !== 1) falla(r, 'debe existir un único video por idioma');
+  }
 
   // Metadatos básicos.
   if (!p.lang) falla(r, 'sin atributo lang');
@@ -72,6 +95,7 @@ for (const p of todas) {
       const nodos = datos['@graph'] || [datos];
       for (const n of nodos) {
         if (!n['@type']) falla(r, 'nodo JSON-LD sin @type');
+        if (n['@type'] === 'Organization' && (n.sameAs || []).some(u => perfilesPersonales.has(u))) falla(r, 'Organization usa sameAs de una persona');
         if (n['@type'] === 'BreadcrumbList') {
           const items = n.itemListElement || [];
           const ultimo = items[items.length - 1];

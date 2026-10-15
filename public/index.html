@@ -28,7 +28,7 @@
 
 <link rel="preload" href="assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=20261014">
 
 <script type="application/ld+json">
 {
@@ -56,10 +56,6 @@
       "founder": {
         "@id": "https://cosaseria.mx/#juan"
       },
-      "sameAs": [
-        "https://www.linkedin.com/in/junbarrs/",
-        "https://x.com/JunBarrs24"
-      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -186,44 +182,7 @@
 </head>
 
 <body>
-<!--
-                       ,~.
-                    ,-'__ `-,                     ,
-                   {,-'  `. }                   ,'|
-                  ,( o )   `-.__              ,'  |  ,
-                 <=.) (          `-.__      ,'    |,'|
-                   (   )               `-._'      '  |
-                    `-'                    `-.       |
-                      \                       `-.   ,'
-                       \                         `-'
-                        `-.___________________,-'
-                            ||         ||
-                           _||_       _||_
-                          (____)     (____)
-
-    miau.
-
-    ─────────────────────────────────────────────────────────────
-    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
-    Expediente 001 · Sitio propio
-    ─────────────────────────────────────────────────────────────
-
-    Si estás leyendo el código fuente, probablemente nos vamos a
-    llevar bien.
-
-    Esta gallina tampoco necesita un framework. No hay build, ni
-    bundler, ni hydration, ni node_modules. Un HTML por página, una
-    hoja de estilos y un archivo de JavaScript que puedes leer
-    completo en menos de lo que tarda un `npm install`.
-
-    Nada de lo que hace ese JavaScript es necesario para leer el
-    sitio. Apágalo y compruébalo.
-
-    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
-    Ese tipo de correo lo contestamos rapidísimo.
-
-    hola@cosaseria.mx
--->
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
 
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
@@ -272,11 +231,11 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="/servicios/">Servicios</a>
-      <a href="/trabajo/">Trabajo</a>
-      <a href="/notas/">Notas</a>
-      <a href="#detras" data-secundario>Quiénes están detrás</a>
-    </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
     <a class="nav-contacto" href="#contacto">Contacto</a>
   </div>
 </header>
@@ -515,7 +474,7 @@
           <h3><a href="/notas/microservicios-cuando-no/">Microservicios: cuándo no<span class="punto">.</span></a></h3>
           <p>
             Lo que compras es independencia de despliegue. Lo que pagas es que
-            cada llamada de función se convierte en un problema de red. Cómo
+            cada nueva frontera de proceso añade costos de comunicación. Cómo
             saber de qué lado de esa cuenta estás hoy.
           </p>
         </div>
@@ -532,29 +491,30 @@
       </div>
       <div class="cuerpo">
         <p class="cierre-lema">Cuando ya sea cosa seria<span class="punto">.</span></p>
+        <p class="medida">Cuéntanos qué necesitas resolver, el estado del sistema y tu principal restricción. Revisamos encaje y disponibilidad antes de proponer alcance y precio. <a href="/servicios/#h-modalidades">Modalidades y entregables</a> · <a href="/privacidad/">Cómo tratamos tus datos</a>.</p>
 
         <form class="forma" data-forma method="post" action="/api/contacto"
               data-correo="hola@cosaseria.mx">
 
           <div class="campo">
             <label for="f-nombre">Nombre</label>
-            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            <input id="f-nombre" name="nombre" maxlength="120" type="text" autocomplete="name" required>
           </div>
 
           <div class="campo">
             <label for="f-empresa">Empresa <span class="opcional">(opcional)</span></label>
-            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+            <input id="f-empresa" name="empresa" maxlength="160" type="text" autocomplete="organization">
           </div>
 
           <div class="campo">
             <label for="f-email">Email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <input id="f-email" name="email" maxlength="200" type="email" autocomplete="email" required>
           </div>
 
           <div class="campo">
             <label for="f-problema">Cuéntanos el problema</label>
-            <textarea id="f-problema" name="problema" required aria-describedby="ayuda-problema"></textarea>
-            <p class="ayuda" id="ayuda-problema">Tres párrafos bastan.</p>
+            <textarea id="f-problema" name="problema" maxlength="8000" required aria-describedby="ayuda-problema"></textarea>
+            <p class="ayuda" id="ayuda-problema">Tres párrafos bastan. Máximo 8000 caracteres. No incluyas contraseñas ni datos sensibles.</p>
           </div>
 
           <div class="trampa" aria-hidden="true">
@@ -562,10 +522,11 @@
             <input id="f-trampa" name="empresa_adicional" type="text" tabindex="-1" autocomplete="off">
           </div>
           <input type="hidden" name="token" value="">
+          <input type="hidden" name="envio_id" value="">
 
           <div class="forma-pie">
             <button class="btn btn-primario" type="submit">Enviar</button>
-            <p class="recado" data-recado hidden></p>
+            <p class="recado" data-recado role="status" aria-live="polite" aria-atomic="true"></p>
           </div>
         </form>
 
@@ -587,13 +548,11 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="/servicios/">Servicios</a>
-        <a href="/trabajo/">Trabajo</a>
-        <a href="/notas/">Notas</a>
-        <a href="https://www.linkedin.com/in/junbarrs/" rel="me noopener">LinkedIn</a>
-        <a href="https://x.com/JunBarrs24" rel="me noopener">X</a>
-        <a href="/privacidad/">Privacidad</a>
-      </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
     </div>
     <div class="pie-legal">
       <span>© 2026 CosaSeria</span>
@@ -604,6 +563,6 @@
 
 <button id="audio-toggle" type="button" hidden>Audio · Sí</button>
 
-<script src="assets/js/site.js" defer></script>
+<script src="assets/js/site.js?v=20261014" defer></script>
 </body>
 </html>

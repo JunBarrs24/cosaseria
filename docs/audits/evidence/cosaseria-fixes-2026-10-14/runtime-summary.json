@@ -1,0 +1,13 @@
+{
+  "description": "Resumen de resultados observados en la ejecución de tests/contacto-runtime.cjs; no es un log íntegro.",
+  "runtime": "Miniflare 5.20261012.0-beta / workerd 1.20261012.1",
+  "transport": "mock local, sin correo externo",
+  "passed": [
+    "12 cuotas concurrentes: exactamente 5 admitidas; retry admitido no consume plaza",
+    "8 envíos concurrentes y retries con éxito: una invocación EMAIL",
+    "8 envíos concurrentes y retries con error del proveedor: una invocación EMAIL",
+    "8 envíos concurrentes y retries con recibo inválido: una invocación EMAIL",
+    "Fallo al guardar recibo: reserva persiste, retry 202, una invocación EMAIL",
+    "Proveedor lento: retry 202 durante espera, 200 tras completar"
+  ]
+}

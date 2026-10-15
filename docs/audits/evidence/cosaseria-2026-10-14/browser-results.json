@@ -1,0 +1,594 @@
+{
+  "browser": "151.0.7922.34",
+  "axe": "4.14.0",
+  "pages": [
+    {
+      "path": "/",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/trabajo/",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/notas/",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/notas/microservicios-cuando-no/",
+      "errors": [],
+      "axe": {
+        "violations": [
+          {
+            "id": "scrollable-region-focusable",
+            "impact": "serious",
+            "help": "Scrollable region must have keyboard access",
+            "nodes": [
+              {
+                "target": [
+                  "pre:nth-child(15)"
+                ],
+                "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+                "html": "<pre>"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "count": 14
+          }
+        ]
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": [
+            {
+              "tag": "CODE",
+              "id": "",
+              "class": "",
+              "width": 564.53125
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": [
+            {
+              "tag": "CODE",
+              "id": "",
+              "class": "",
+              "width": 564.53125
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/privacidad/",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/privacy-apps/",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/gracias/",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/404.html",
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": []
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": []
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": []
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "path": "/StoneVsSilicon/",
+      "errors": [],
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-allowed-attr",
+            "impact": "critical",
+            "help": "Elements must only use supported ARIA attributes",
+            "nodes": [
+              {
+                "target": [
+                  "a[href$=\"#es\"]"
+                ],
+                "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-pressed=\"true\"",
+                "html": "<a href=\"#es\" data-set-lang=\"es\" lang=\"es\" hreflang=\"es\" aria-pressed=\"true\">ES</a>"
+              },
+              {
+                "target": [
+                  "a[href$=\"#en\"]"
+                ],
+                "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-pressed=\"false\"",
+                "html": "<a href=\"#en\" data-set-lang=\"en\" lang=\"en\" hreflang=\"en\" aria-pressed=\"false\">EN</a>"
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": [
+              {
+                "target": [
+                  ".pronto > .es"
+                ],
+                "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.08 (foreground color: #f0821e, background color: #e8e4d9, font size: 7.9pt (10.56px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "html": "<span class=\"es\">Próximamente</span>"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-valid-attr-value",
+            "count": 3
+          },
+          {
+            "id": "color-contrast",
+            "count": 8
+          },
+          {
+            "id": "video-caption",
+            "count": 1
+          }
+        ]
+      },
+      "sizes": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "id": "",
+              "class": "es",
+              "width": 170.734375
+            },
+            {
+              "tag": "FIGURE",
+              "id": "mapa",
+              "class": "mapa",
+              "width": 760
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "es",
+              "width": 760
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-silicio",
+              "width": 48
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-silicio",
+              "width": 48
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-piedra",
+              "width": 48
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "",
+              "width": 48
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-piedra",
+              "width": 48
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "",
+              "width": 48
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "id": "",
+              "class": "es",
+              "width": 170.734375
+            },
+            {
+              "tag": "FIGURE",
+              "id": "mapa",
+              "class": "mapa",
+              "width": 760
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "es",
+              "width": 760
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-silicio",
+              "width": 48
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-silicio",
+              "width": 48
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-piedra",
+              "width": 48
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "",
+              "width": 48
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "class": "marcador marcador-piedra",
+              "width": 48
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "",
+              "width": 48
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "id": "",
+              "class": "es",
+              "width": 170.734375
+            },
+            {
+              "tag": "FIGURE",
+              "id": "mapa",
+              "class": "mapa",
+              "width": 760
+            },
+            {
+              "tag": "IMG",
+              "id": "",
+              "class": "es",
+              "width": 760
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "id": "",
+              "class": "es",
+              "width": 170.734375
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interactions": {
+    "modalTabs": [
+      {
+        "text": "×",
+        "tag": "BUTTON",
+        "insideDialog": true
+      },
+      {
+        "text": "Cómo se juegaHow to play",
+        "tag": "A",
+        "insideDialog": true
+      },
+      {
+        "text": "Trabajo",
+        "tag": "A",
+        "insideDialog": false
+      },
+      {
+        "text": "Notas",
+        "tag": "A",
+        "insideDialog": false
+      },
+      {
+        "text": "Privacidad del sitio",
+        "tag": "A",
+        "insideDialog": false
+      },
+      {
+        "text": "Apps · Privacy & support",
+        "tag": "A",
+        "insideDialog": false
+      }
+    ],
+    "modalEscape": true,
+    "noJS": {
+      "htmlLang": "es-MX",
+      "historyVisible": false,
+      "visibleVideos": 2,
+      "englishVisible": false
+    },
+    "feedback": {
+      "text": "Recibido de prueba",
+      "role": null,
+      "ariaLive": null,
+      "focused": false
+    }
+  },
+  "production": {
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_FAILED"
+    ],
+    "resources": [
+      {
+        "name": "https://cosaseria.mx/assets/fonts/archivo-black-400-latin.woff2",
+        "transferSize": 10092,
+        "decodedBodySize": 9792
+      },
+      {
+        "name": "https://cosaseria.mx/assets/css/site.css",
+        "transferSize": 6780,
+        "decodedBodySize": 28686
+      },
+      {
+        "name": "https://cosaseria.mx/assets/js/site.js",
+        "transferSize": 2772,
+        "decodedBodySize": 6954
+      },
+      {
+        "name": "https://cosaseria.mx/assets/fonts/archivo-400-latin.woff2",
+        "transferSize": 35240,
+        "decodedBodySize": 34940
+      },
+      {
+        "name": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920",
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://cosaseria.mx/assets/fonts/ibm-plex-mono-400-latin.woff2",
+        "transferSize": 10352,
+        "decodedBodySize": 10052
+      },
+      {
+        "name": "https://cosaseria.mx/assets/fonts/libre-caslon-text-400-italic-latin.woff2",
+        "transferSize": 19876,
+        "decodedBodySize": 19576
+      },
+      {
+        "name": "https://cosaseria.mx/assets/fonts/ibm-plex-mono-500-latin.woff2",
+        "transferSize": 10360,
+        "decodedBodySize": 10060
+      },
+      {
+        "name": "https://cosaseria.mx/cdn-cgi/rum?",
+        "transferSize": 0,
+        "decodedBodySize": 0
+      }
+    ]
+  }
+}

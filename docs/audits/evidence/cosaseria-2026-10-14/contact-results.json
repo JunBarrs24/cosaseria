@@ -1,0 +1,143 @@
+{
+  "node": "v24.1.0",
+  "tests": [
+    {
+      "name": "sin token ni bindings antiabuso envía",
+      "pass": true,
+      "evidence": {
+        "status": 200,
+        "emails": 1
+      }
+    },
+    {
+      "name": "token inválido se rechaza",
+      "pass": true,
+      "evidence": {
+        "status": 403
+      }
+    },
+    {
+      "name": "token recién adquirido bloquea envío menor de 3 segundos",
+      "pass": true,
+      "evidence": {
+        "status": 403,
+        "body": {
+          "ok": false,
+          "mensaje": "La sesión del formulario ya no es válida. Recarga la página e inténtalo otra vez."
+        }
+      }
+    },
+    {
+      "name": "token expirado se rechaza",
+      "pass": true,
+      "evidence": {
+        "status": 403
+      }
+    },
+    {
+      "name": "reenvío idéntico duplica correo",
+      "pass": true,
+      "evidence": {
+        "emails": 2
+      }
+    },
+    {
+      "name": "mensaje de 8100 caracteres se trunca con éxito",
+      "pass": true,
+      "evidence": {
+        "status": 200,
+        "inputLength": 8100,
+        "receivedLength": 8000
+      }
+    },
+    {
+      "name": "fallo KV escapa sin respuesta de aplicación",
+      "pass": true,
+      "evidence": {
+        "uncaught": true
+      }
+    },
+    {
+      "name": "fallo RAFAGA escapa sin respuesta de aplicación",
+      "pass": true,
+      "evidence": {
+        "uncaught": true
+      }
+    },
+    {
+      "name": "5 intentos inválidos consumen ventana y bloquean uno válido",
+      "pass": true,
+      "evidence": {
+        "invalidStatuses": [
+          400,
+          400,
+          400,
+          400,
+          400
+        ],
+        "validStatus": 429
+      }
+    },
+    {
+      "name": "origen ajeno se rechaza",
+      "pass": true,
+      "evidence": {
+        "status": 403
+      }
+    },
+    {
+      "name": "proveedor caído devuelve 502",
+      "pass": true,
+      "evidence": {
+        "status": 502
+      }
+    },
+    {
+      "name": "configuración de correo ausente devuelve 503",
+      "pass": true,
+      "evidence": {
+        "status": 503
+      }
+    },
+    {
+      "name": "GET sin firma devuelve 200 token null",
+      "pass": true,
+      "evidence": {
+        "status": 200,
+        "body": {
+          "token": null
+        }
+      }
+    },
+    {
+      "name": "PUT devuelve 405 y cabeceras",
+      "pass": true,
+      "evidence": {
+        "status": 405,
+        "headers": {
+          "allow": "GET, POST",
+          "cache-control": "no-store",
+          "content-security-policy": "default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'; object-src 'none'",
+          "content-type": "text/plain;charset=UTF-8",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-robots-tag": "noindex"
+        }
+      }
+    },
+    {
+      "name": "carrera KV local pierde incremento de dos solicitudes",
+      "pass": true,
+      "evidence": {
+        "statuses": [
+          200,
+          200
+        ],
+        "count": 1,
+        "expectedForExactCounter": 2
+      }
+    }
+  ]
+}

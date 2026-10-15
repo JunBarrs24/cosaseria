@@ -28,7 +28,7 @@
 
 <link rel="preload" href="../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/site.css?v=20261014">
 
 <script type="application/ld+json">
 {
@@ -141,44 +141,7 @@
 </head>
 
 <body>
-<!--
-                       ,~.
-                    ,-'__ `-,                     ,
-                   {,-'  `. }                   ,'|
-                  ,( o )   `-.__              ,'  |  ,
-                 <=.) (          `-.__      ,'    |,'|
-                   (   )               `-._'      '  |
-                    `-'                    `-.       |
-                      \                       `-.   ,'
-                       \                         `-'
-                        `-.___________________,-'
-                            ||         ||
-                           _||_       _||_
-                          (____)     (____)
-
-    miau.
-
-    ─────────────────────────────────────────────────────────────
-    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
-    Expediente 001 · Sitio propio
-    ─────────────────────────────────────────────────────────────
-
-    Si estás leyendo el código fuente, probablemente nos vamos a
-    llevar bien.
-
-    Esta gallina tampoco necesita un framework. No hay build, ni
-    bundler, ni hydration, ni node_modules. Un HTML por página, una
-    hoja de estilos y un archivo de JavaScript que puedes leer
-    completo en menos de lo que tarda un `npm install`.
-
-    Nada de lo que hace ese JavaScript es necesario para leer el
-    sitio. Apágalo y compruébalo.
-
-    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
-    Ese tipo de correo lo contestamos rapidísimo.
-
-    hola@cosaseria.mx
--->
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
 
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
@@ -227,11 +190,11 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="/servicios/" aria-current="page">Servicios</a>
-      <a href="/trabajo/">Trabajo</a>
-      <a href="/notas/">Notas</a>
-      <a href="/#detras" data-secundario>Quiénes están detrás</a>
-    </nav>
+  <a href="/servicios/" aria-current="page">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
     <a class="nav-contacto" href="/#contacto">Contacto</a>
   </div>
 </header>
@@ -306,6 +269,20 @@
     </div>
   </section>
 
+  <section class="seccion" aria-labelledby="h-modalidades">
+    <div class="marco">
+      <div class="cabeza"><h2 id="h-modalidades">Cómo contratar</h2><span class="folio">Alcance antes que promesas</span></div>
+      <div class="cuerpo">
+        <div class="fichas">
+          <article class="ficha"><h3>Diagnóstico acotado</h3><p>Para decidir qué corregir antes de financiar una implementación.</p><p><strong>Entregables:</strong> hallazgos reproducibles, alternativas con sus costos y un plan priorizado con criterios de aceptación. Acordamos qué sistemas y evidencia entran en la revisión.</p></article>
+          <article class="ficha"><h3>Implementación por hitos</h3><p>Para construir o intervenir un sistema con un resultado definido.</p><p><strong>Entregables:</strong> código, pruebas relevantes, documentación operativa y transferencia al equipo. Cada hito se acepta contra criterios acordados; cambios de alcance se cotizan antes de ejecutarse.</p></article>
+          <article class="ficha"><h3>Acompañamiento técnico</h3><p>Para un equipo que necesita criterio senior durante decisiones y entregas.</p><p><strong>Entregables:</strong> revisiones de diseño y código, decisiones documentadas y seguimiento de riesgos. Acordamos dedicación, responsables y cadencia; no implica guardia permanente.</p></article>
+        </div>
+        <div class="prosa"><h3>El siguiente paso</h3><p>Cuéntanos el problema, el estado del sistema, quién lo opera y la restricción principal de tiempo o presupuesto. Primero revisamos encaje y disponibilidad. Si lo hay, definimos una conversación de alcance y una propuesta escrita con entregables, responsables, calendario, precio, aceptación y condiciones de soporte.</p><p>El trabajo técnico se acuerda con el fundador. La capacidad y cualquier colaboración adicional se explicitan en la propuesta; no ofrecemos capacidad ilimitada ni atención 24/7 por defecto.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="seccion en-oscuro" aria-labelledby="h-cta">
     <div class="marco">
       <div class="cuerpo" style="padding-top:var(--seccion)">
@@ -327,11 +304,11 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="/servicios/">Servicios</a>
-        <a href="/trabajo/">Trabajo</a>
-        <a href="/notas/">Notas</a>
-        <a href="/privacidad/">Privacidad</a>
-      </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
     </div>
     <div class="pie-legal">
       <span>© 2026 CosaSeria</span>
@@ -340,6 +317,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/site.js?v=20261014" defer></script>
 </body>
 </html>

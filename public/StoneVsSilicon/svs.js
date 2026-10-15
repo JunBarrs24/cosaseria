@@ -1,32 +1,5 @@
-/* StoneVsSilicon: idioma, modales, mapa de la pantalla y parallax.
-   Idioma: elección guardada, ancla #es/#en, idioma del navegador. Sin JavaScript queda español. */
+/* StoneVsSilicon: mejoras opcionales. El idioma y el contenido vienen del HTML. */
 (function () {
-  var raiz = document.documentElement;
-
-  function fijarIdioma(idioma, guardar) {
-    raiz.setAttribute('data-lang', idioma);
-    raiz.setAttribute('lang', idioma === 'es' ? 'es-MX' : 'en');
-    var botones = document.querySelectorAll('[data-set-lang]');
-    for (var i = 0; i < botones.length; i++) {
-      var propio = botones[i].getAttribute('data-set-lang') === idioma;
-      botones[i].setAttribute('aria-pressed', propio ? 'true' : 'false');
-    }
-    if (guardar) {
-      try { localStorage.setItem('svs-lang', idioma); } catch (e) {}
-    }
-  }
-
-  function idiomaInicial() {
-    var ancla = (location.hash || '').replace('#', '');
-    if (ancla === 'es' || ancla === 'en') return ancla;
-    var guardado = null;
-    try { guardado = localStorage.getItem('svs-lang'); } catch (e) {}
-    if (guardado === 'es' || guardado === 'en') return guardado;
-    var navegador = (navigator.languages && navigator.languages[0]) || navigator.language || 'es';
-    return /^es/i.test(navegador) ? 'es' : 'en';
-  }
-
-  fijarIdioma(idiomaInicial(), false);
 
   function cada(selector, fn) {
     var lista = document.querySelectorAll(selector);
@@ -34,51 +7,59 @@
   }
 
   function listo() {
-    cada('[data-set-lang]', function (boton) {
-      boton.addEventListener('click', function (evento) {
-        evento.preventDefault();
-        var idioma = this.getAttribute('data-set-lang');
-        fijarIdioma(idioma, true);
-        if (history.replaceState) history.replaceState(null, '', '#' + idioma);
-      });
-    });
-    fijarIdioma(raiz.getAttribute('data-lang'), false);
-
-    /* Modales: historia y las dos alineaciones comparten el mismo mecanismo. */
+    /* Mejora progresiva: las secciones son legibles sin JS. showModal()
+       aporta fondo inerte, contención de foco y cierre nativo con Escape. */
     var abierto = null;
-    var origen = null;
-    function cerrarModal() {
-      if (!abierto) return;
-      abierto.hidden = true;
-      abierto = null;
-      document.body.classList.remove('modal-abierto');
-      if (origen && origen.focus) origen.focus();
-      origen = null;
-    }
-    function abrirModal(id) {
-      var modal = document.getElementById(id);
-      if (!modal) return;
-      cerrarModal();
-      origen = document.activeElement;
-      modal.hidden = false;
-      abierto = modal;
-      document.body.classList.add('modal-abierto');
-      var caja = modal.querySelector('.modal-caja');
-      if (caja) { caja.scrollTop = 0; caja.focus(); }
-    }
-    cada('[data-abre-modal]', function (el) {
-      el.addEventListener('click', function (evento) {
-        evento.preventDefault();
-        abrirModal(this.getAttribute('data-abre-modal'));
+    if (window.HTMLDialogElement && HTMLDialogElement.prototype.showModal) {
+      cada('.modal', function (seccion) {
+        var dialogo = document.createElement('dialog');
+        dialogo.id = seccion.id;
+        dialogo.className = seccion.className;
+        dialogo.setAttribute('aria-labelledby', seccion.querySelector('.modal-caja').getAttribute('aria-labelledby'));
+        while (seccion.firstChild) dialogo.appendChild(seccion.firstChild);
+        seccion.replaceWith(dialogo);
+        dialogo.querySelector('.modal-cerrar').hidden = false;
+        dialogo.addEventListener('keydown', function (e) {
+          if (e.key !== 'Tab') return;
+          var controles = Array.from(dialogo.querySelectorAll('a[href],button:not([disabled]),[tabindex="0"]')).filter(function (el) { return el.getClientRects().length; });
+          var primero = controles[0], ultimo = controles[controles.length - 1];
+          if (!primero) { e.preventDefault(); return; }
+          if (e.shiftKey && (document.activeElement === primero || !controles.includes(document.activeElement))) {
+            e.preventDefault(); ultimo.focus();
+          } else if (!e.shiftKey && document.activeElement === ultimo) {
+            e.preventDefault(); primero.focus();
+          }
+        });
+        dialogo.addEventListener('close', function () {
+          document.body.classList.remove('modal-abierto');
+          abierto = null;
+          if (dialogo.origen) dialogo.origen.focus();
+        });
+        dialogo.addEventListener('click', function (e) { if (e.target === dialogo) dialogo.close(); });
       });
-    });
-    cada('[data-cierra-modal]', function (el) {
-      el.addEventListener('click', function () { cerrarModal(); });
-    });
-    document.addEventListener('keydown', function (evento) {
-      if (evento.key === 'Escape') { cerrarModal(); cerrarTip(); }
-    });
-    if (location.hash === '#historia') abrirModal('historia');
+      cada('[data-abre-modal]', function (el) {
+        el.setAttribute('aria-haspopup','dialog');
+        el.addEventListener('click', function (e) {
+          var dialogo = document.getElementById(el.getAttribute('data-abre-modal'));
+          e.preventDefault();
+          dialogo.querySelectorAll('template[data-imagen]').forEach(function (t) { t.replaceWith(t.content.cloneNode(true)); });
+          dialogo.origen = el;
+          dialogo.showModal();
+          abierto = dialogo;
+          document.body.classList.add('modal-abierto');
+          dialogo.querySelector('.modal-caja').scrollTop = 0;
+        });
+      });
+      cada('[data-cierra-modal]', function (el) {
+        el.addEventListener('click', function () { if (abierto) abierto.close(); });
+      });
+    } else {
+      cada('template[data-imagen]', function (t) {
+        t.content.querySelector('img').loading = 'lazy';
+        t.replaceWith(t.content.cloneNode(true));
+      });
+    }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrarTip(); });
 
     /* Mapa de la pantalla: cada piedra o chip muestra su explicación. */
     var tipAbierto = null;
@@ -109,6 +90,7 @@
       tip.style.maxWidth = Math.min(300, ancho - 24) + 'px';
     }
     cada('.marcador', function (boton) {
+      boton.hidden = false;
       boton.addEventListener('click', function (evento) {
         evento.stopPropagation();
         var tip = document.getElementById(this.getAttribute('data-tip'));
@@ -134,13 +116,19 @@
       marcoVideo.classList.toggle('vertical', vertical);
       cada('#video-marco video[data-src-h]', function (video) {
         var sufijo = vertical ? 'v' : 'h';
-        video.poster = video.getAttribute('data-poster-' + sufijo);
+        function mostrarPoster() {
+          video.poster = video.getAttribute('data-poster-' + sufijo);
+          var fuente = video.querySelector('source');
+          fuente.src = video.getAttribute('data-src-' + sufijo);
+          video.load();
+        }
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) { if (entries[0].isIntersecting) { mostrarPoster(); io.disconnect(); } }, {rootMargin:'100px'});
+          io.observe(video);
+        } else mostrarPoster();
         video.width = vertical ? 720 : 1280;
         video.height = vertical ? 1280 : 720;
-        var fuente = document.createElement('source');
-        fuente.src = video.getAttribute('data-src-' + sufijo);
-        fuente.type = 'video/mp4';
-        video.appendChild(fuente);
+
       });
     }
 

@@ -1,0 +1,9 @@
+
+> check
+> python3 scripts/generar-comunes.py --check && python3 scripts/generar-juego.py --check && node scripts/sitemap.mjs --check && node scripts/verificar.mjs
+
+Navegación común verificada
+StoneVsSilicon: ES y EN verificados
+sitemap.xml al día (14 URL).
+16 páginas, 14 indexables.
+Sin problemas.

@@ -1,0 +1,230 @@
+[
+  {
+    "name": "baseline",
+    "run": 0,
+    "version": "13.5.0",
+    "scores": {
+      "performance": 0.85,
+      "accessibility": 0.9,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": 1354.55535,
+      "largest-contentful-paint": 4281.0738,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 842743
+    },
+    "warnings": [],
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "score": 0.98,
+        "display": "1.4 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "score": 0.42,
+        "display": "4.3 s"
+      },
+      {
+        "id": "interactive",
+        "score": 0.83,
+        "display": "4.4 s"
+      },
+      {
+        "id": "unsized-images",
+        "score": 0.5
+      },
+      {
+        "id": "aria-allowed-attr",
+        "score": 0
+      },
+      {
+        "id": "color-contrast",
+        "score": 0
+      },
+      {
+        "id": "image-delivery-insight",
+        "score": 0,
+        "display": "Est savings of 390 KiB"
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "score": 0
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "display": "Est savings of 710 ms"
+      }
+    ]
+  },
+  {
+    "name": "after",
+    "run": 0,
+    "version": "13.5.0",
+    "scores": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": 1356.4828499999999,
+      "largest-contentful-paint": 2030.402375,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 422917
+    },
+    "warnings": [],
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "score": 0.98,
+        "display": "1.4 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "score": 0.97,
+        "display": "2.0 s"
+      },
+      {
+        "id": "interactive",
+        "score": 0.99,
+        "display": "2.1 s"
+      },
+      {
+        "id": "unsized-images",
+        "score": 0.5
+      },
+      {
+        "id": "image-delivery-insight",
+        "score": 0.5,
+        "display": "Est savings of 246 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "display": "Est savings of 700 ms"
+      }
+    ]
+  },
+  {
+    "name": "after",
+    "run": 1,
+    "version": "13.5.0",
+    "scores": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": 1354.22175,
+      "largest-contentful-paint": 2028.518125,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 422917
+    },
+    "warnings": [],
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "score": 0.98,
+        "display": "1.4 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "score": 0.97,
+        "display": "2.0 s"
+      },
+      {
+        "id": "interactive",
+        "score": 0.99,
+        "display": "2.1 s"
+      },
+      {
+        "id": "unsized-images",
+        "score": 0.5
+      },
+      {
+        "id": "image-delivery-insight",
+        "score": 0.5,
+        "display": "Est savings of 246 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "display": "Est savings of 700 ms"
+      }
+    ]
+  },
+  {
+    "name": "after",
+    "run": 2,
+    "version": "13.5.0",
+    "scores": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": 1352.65155,
+      "largest-contentful-paint": 2027.209625,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 422917
+    },
+    "warnings": [],
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "score": 0.98,
+        "display": "1.4 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "score": 0.97,
+        "display": "2.0 s"
+      },
+      {
+        "id": "interactive",
+        "score": 0.99,
+        "display": "2.0 s"
+      },
+      {
+        "id": "unsized-images",
+        "score": 0.5
+      },
+      {
+        "id": "image-delivery-insight",
+        "score": 0.5,
+        "display": "Est savings of 246 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "display": "Est savings of 560 ms"
+      }
+    ]
+  }
+]

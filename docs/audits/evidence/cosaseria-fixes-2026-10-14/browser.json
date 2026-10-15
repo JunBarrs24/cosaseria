@@ -1,0 +1,142 @@
+[
+  {
+    "case": "game es 390",
+    "axeViolations": 0,
+    "keyboard": true,
+    "hiddenMediaRequests": 0
+  },
+  {
+    "case": "game es 1440",
+    "axeViolations": 0,
+    "keyboard": true,
+    "hiddenMediaRequests": 0
+  },
+  {
+    "case": "game en 390",
+    "axeViolations": 0,
+    "keyboard": true,
+    "hiddenMediaRequests": 0
+  },
+  {
+    "case": "game en 1440",
+    "axeViolations": 0,
+    "keyboard": true,
+    "hiddenMediaRequests": 0
+  },
+  {
+    "case": "noJS es",
+    "content": true,
+    "oneVideo": true,
+    "videoPlayed": true
+  },
+  {
+    "case": "noJS en",
+    "content": true,
+    "oneVideo": true,
+    "videoPlayed": true
+  },
+  {
+    "case": "/ mobile",
+    "axeViolations": 0
+  },
+  {
+    "case": "/trabajo/ mobile",
+    "axeViolations": 0
+  },
+  {
+    "case": "/servicios/ mobile",
+    "axeViolations": 0
+  },
+  {
+    "case": "/notas/microservicios-cuando-no/ mobile",
+    "axeViolations": 0
+  },
+  {
+    "case": "/privacidad/ mobile",
+    "axeViolations": 0
+  },
+  {
+    "case": "logo DPR 2",
+    "src": "logo-800.avif"
+  },
+  {
+    "case": "logo DPR 3",
+    "src": "logo-1000.avif"
+  },
+  {
+    "case": "contact success",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact invalid-json",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact wrong-contract",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact false-success",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact bad-request",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact rate-limit",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact unavailable",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact renew",
+    "passed": true,
+    "gets": 2,
+    "posts": 2
+  },
+  {
+    "case": "contact initial-token-failure",
+    "passed": true,
+    "gets": 2,
+    "posts": 1
+  },
+  {
+    "case": "contact network-error",
+    "passed": true,
+    "gets": 1,
+    "posts": 2
+  },
+  {
+    "case": "contact validation",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "contact timeout",
+    "passed": true,
+    "gets": 1,
+    "posts": 1
+  },
+  {
+    "case": "cached release transition",
+    "passed": true
+  }
+]

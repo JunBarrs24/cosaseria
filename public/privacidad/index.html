@@ -29,7 +29,7 @@
 
 <link rel="preload" href="../assets/fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/site.css?v=20261014">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,44 +67,7 @@
 </head>
 
 <body>
-<!--
-                       ,~.
-                    ,-'__ `-,                     ,
-                   {,-'  `. }                   ,'|
-                  ,( o )   `-.__              ,'  |  ,
-                 <=.) (          `-.__      ,'    |,'|
-                   (   )               `-._'      '  |
-                    `-'                    `-.       |
-                      \                       `-.   ,'
-                       \                         `-'
-                        `-.___________________,-'
-                            ||         ||
-                           _||_       _||_
-                          (____)     (____)
-
-    miau.
-
-    ─────────────────────────────────────────────────────────────
-    COSASERIA · DEPARTAMENTO DE PROBLEMAS DIFÍCILES
-    Expediente 001 · Sitio propio
-    ─────────────────────────────────────────────────────────────
-
-    Si estás leyendo el código fuente, probablemente nos vamos a
-    llevar bien.
-
-    Esta gallina tampoco necesita un framework. No hay build, ni
-    bundler, ni hydration, ni node_modules. Un HTML por página, una
-    hoja de estilos y un archivo de JavaScript que puedes leer
-    completo en menos de lo que tarda un `npm install`.
-
-    Nada de lo que hace ese JavaScript es necesario para leer el
-    sitio. Apágalo y compruébalo.
-
-    Si algo aquí te parece mal resuelto, dinos cuál y por qué.
-    Ese tipo de correo lo contestamos rapidísimo.
-
-    hola@cosaseria.mx
--->
+<!-- HTML estático. Fuentes, generación y comprobaciones en README.md. -->
 
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
@@ -153,11 +116,11 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="/servicios/">Servicios</a>
-      <a href="/trabajo/">Trabajo</a>
-      <a href="/notas/">Notas</a>
-      <a href="/#detras" data-secundario>Quiénes están detrás</a>
-    </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/#detras" data-secundario>Quiénes están detrás</a>
+</nav>
     <a class="nav-contacto" href="/#contacto">Contacto</a>
   </div>
 </header>
@@ -166,32 +129,23 @@
   <article class="marco articulo">
     <p class="ceja">Aviso</p>
     <h1 style="font-size:clamp(2.1rem,5.5vw,3.4rem)">Privacidad<span class="punto">.</span></h1>
-    <p class="articulo-meta"><span>Vigente desde agosto de 2026</span></p>
+    <p class="articulo-meta"><span>Actualizado el 14 de octubre de 2026</span></p>
 
     <div class="prosa">
-      <p>La versión corta: este sitio recoge lo mínimo para poder contestarte, y nada más.</p>
-
-      <p>¿Buscas la política de StoneVsSilicon? Consulta <a href="/privacy-apps/">Privacidad y soporte de apps / App privacy and support</a>, disponible en español e inglés.</p>
-
-      <h2>Qué datos recibimos</h2>
-      <p>Únicamente los que escribes en el formulario de contacto: <strong>nombre, correo electrónico, empresa si decides ponerla y el texto del mensaje</strong>. No hay campos ocultos que recojan otra cosa.</p>
-      <p>Si prefieres escribir directo a <a href="mailto:hola@cosaseria.mx">hola@cosaseria.mx</a>, aplica lo mismo.</p>
-
-      <h2>Para qué los usamos</h2>
-      <p>Para leer tu mensaje y responderte. No los usamos para publicidad, no los vendemos, no los compartimos con terceros para fines comerciales y no te vamos a suscribir a ningún boletín.</p>
-
-      <h2>Cookies y analítica</h2>
-      <p>Este sitio no instala cookies propias, no usa píxeles de seguimiento y no te perfila entre sitios. Las tipografías, los estilos y el JavaScript se sirven desde este mismo dominio.</p>
-      <p>La única excepción es la analítica de Cloudflare, que carga un archivo desde <code>static.cloudflareinsights.com</code> para contar visitas. No usa cookies, no te identifica y no sigue tu rastro entre sitios: registra cosas como la página que abriste y el tipo de navegador. Sirve para saber cuánta gente lee esto, y nada más.</p>
-
-      <h2>Cuánto tiempo los guardamos</h2>
-      <p>Conservamos la conversación mientras siga siendo útil para el asunto que la originó. Si nos pides que la borremos, la borramos.</p>
-
-      <h2>Tus derechos</h2>
-      <p>Puedes pedirnos acceso, corrección o eliminación de tus datos, o que dejemos de usarlos, escribiendo a <a href="mailto:hola@cosaseria.mx">hola@cosaseria.mx</a>. Es la misma dirección de siempre y la lee una persona.</p>
-
-      <h2>Cambios</h2>
-      <p>Si esto cambia, cambia también la fecha de arriba.</p>
+      <p>Usamos los datos del contacto para atender tu solicitud y datos técnicos para servir y proteger el sitio. Este aviso corresponde a cosaseria.mx; las apps tienen su <a href="/privacy-apps/">política de privacidad y soporte</a>.</p>
+      <h2>Contacto y correo</h2>
+      <p>Recibimos nombre, correo electrónico, empresa opcional y mensaje. El formulario incluye además un token temporal, un identificador de envío y un campo de control contra spam. Cloudflare procesa el envío y entrega el mensaje al buzón del estudio; esos proveedores procesan el contenido para transportarlo y almacenarlo. No incluyas contraseñas, expedientes ni datos sensibles de terceros.</p>
+      <p>La finalidad es responder y dar seguimiento a tu solicitud. No vendemos estos datos, no los usamos para publicidad ni te suscribimos a boletines. Escribir directamente a <a href="mailto:hola@cosaseria.mx">hola@cosaseria.mx</a> también genera una conversación almacenada en nuestro correo.</p>
+      <h2>Datos técnicos y prevención de abuso</h2>
+      <p>La infraestructura de Cloudflare recibe tu dirección IP y datos de la petición, como URL, fecha y cabeceras del navegador. La IP se usa para limitar envíos. La aplicación conserva para la cuota horaria una referencia protegida derivada de la IP, junto con identificadores de intento; no guarda la IP original en ese registro. Su eliminación se programa aproximadamente una hora después de crearlo.</p>
+      <p>Para evitar repetir un correo conservamos el identificador, una huella protegida del contenido y el estado del envío. Programamos la eliminación de ese registro a las 24 horas del intento, con un minuto de margen. Estos registros no contienen el nombre, correo ni mensaje en claro. Los tiempos corresponden a datos activos de la aplicación; el proveedor puede mantener copias de recuperación y registros operativos según sus políticas.</p>
+      <p>Los errores de aplicación registran códigos y referencias de seguimiento, sin incluir deliberadamente el contenido del formulario. Los registros de infraestructura son distintos de esos errores y pueden contener metadatos de las peticiones.</p>
+      <h2>Analítica y preferencias locales</h2>
+      <p>Cloudflare Web Analytics puede cargar un script desde <code>static.cloudflareinsights.com</code> y recibir métricas de navegación y rendimiento, como página visitada, referencia de origen, navegador y tiempos de carga. Según <a href="https://developers.cloudflare.com/web-analytics/about/">su documentación</a>, no utiliza cookies ni almacenamiento local para identificar visitantes. Esto no significa que la infraestructura deje de procesar tu IP al atender una petición.</p>
+      <p>No instalamos cookies propias. Guardamos en el almacenamiento local de tu navegador únicamente la preferencia de sonido del sitio (<code>cs-audio</code>), hasta que borres los datos del sitio. Las versiones anteriores del juego podían guardar <code>svs-lang</code>; ahora el idioma depende de la URL y esa preferencia ya no se consulta. Puedes borrar ambas desde los ajustes del navegador.</p>
+      <h2>Conservación y solicitudes</h2>
+      <p>La conversación de correo se conserva mientras sea necesaria para atender el asunto o cumplir obligaciones derivadas de una contratación. No tiene un borrado automático asociado al plazo de 24 horas del registro técnico. Puedes pedirnos acceso, corrección, eliminación o que dejemos de usar tus datos escribiendo a <a href="mailto:hola@cosaseria.mx">hola@cosaseria.mx</a>. Revisaremos también las copias y las limitaciones aplicables, y te comunicaremos el alcance de la respuesta.</p>
+      <p>Los servicios de infraestructura y correo pueden procesar datos fuera de México. Este aviso no describe la privacidad de los sitios externos a los que enlazamos. Si cambia el tratamiento del sitio, actualizaremos esta página y su fecha.</p>
     </div>
   </article>
 </main>
@@ -204,11 +158,11 @@
         <p class="sub">Engineering studio · México</p>
       </div>
       <nav class="pie-nav" aria-label="Pie de página">
-        <a href="/servicios/">Servicios</a>
-        <a href="/trabajo/">Trabajo</a>
-        <a href="/notas/">Notas</a>
-        <a href="/privacidad/">Privacidad</a>
-      </nav>
+  <a href="/servicios/">Servicios</a>
+  <a href="/trabajo/">Trabajo</a>
+  <a href="/notas/">Notas</a>
+  <a href="/privacidad/">Privacidad</a>
+</nav>
     </div>
     <div class="pie-legal">
       <span>© 2026 CosaSeria</span>
@@ -217,6 +171,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/site.js?v=20261014" defer></script>
 </body>
 </html>

@@ -1,0 +1,347 @@
+{
+  "pages": 9,
+  "brokenLinks": [],
+  "duplicateIds": [],
+  "jsonld": [
+    {
+      "file": "public/index.html",
+      "valid": true
+    },
+    {
+      "file": "public/privacidad/index.html",
+      "valid": true
+    },
+    {
+      "file": "public/trabajo/index.html",
+      "valid": true
+    },
+    {
+      "file": "public/notas/index.html",
+      "valid": true
+    },
+    {
+      "file": "public/notas/microservicios-cuando-no/index.html",
+      "valid": true
+    }
+  ],
+  "sizes": [
+    {
+      "file": "public/StoneVsSilicon/video/promo-es.mp4",
+      "bytes": 4995683,
+      "gzip": 4966110
+    },
+    {
+      "file": "public/StoneVsSilicon/video/promo-en.mp4",
+      "bytes": 4969922,
+      "gzip": 4940242
+    },
+    {
+      "file": "public/StoneVsSilicon/video/promo-es-vertical.mp4",
+      "bytes": 2807013,
+      "gzip": 2773101
+    },
+    {
+      "file": "public/StoneVsSilicon/video/promo-en-vertical.mp4",
+      "bytes": 2793568,
+      "gzip": 2759635
+    },
+    {
+      "file": "public/StoneVsSilicon/img/hero-1920.webp",
+      "bytes": 238372,
+      "gzip": 238465
+    },
+    {
+      "file": "public/StoneVsSilicon/img/og.jpg",
+      "bytes": 221475,
+      "gzip": 221411
+    },
+    {
+      "file": "public/StoneVsSilicon/video/poster-es.webp",
+      "bytes": 153736,
+      "gzip": 153804
+    },
+    {
+      "file": "public/StoneVsSilicon/video/poster-en.webp",
+      "bytes": 153612,
+      "gzip": 153680
+    },
+    {
+      "file": "public/StoneVsSilicon/img/logo.webp",
+      "bytes": 134374,
+      "gzip": 134222
+    },
+    {
+      "file": "public/StoneVsSilicon/img/recursos-en.webp",
+      "bytes": 126470,
+      "gzip": 126528
+    },
+    {
+      "file": "public/StoneVsSilicon/img/recursos-es.webp",
+      "bytes": 125030,
+      "gzip": 125088
+    },
+    {
+      "file": "public/StoneVsSilicon/img/hero-1024.webp",
+      "bytes": 111312,
+      "gzip": 111365
+    },
+    {
+      "file": "public/StoneVsSilicon/video/poster-en-vertical.webp",
+      "bytes": 77088,
+      "gzip": 77131
+    },
+    {
+      "file": "public/StoneVsSilicon/video/poster-es-vertical.webp",
+      "bytes": 77068,
+      "gzip": 77111
+    },
+    {
+      "file": "public/assets/fonts/archivo-400-latin.woff2",
+      "bytes": 34940,
+      "gzip": 34973
+    },
+    {
+      "file": "public/StoneVsSilicon/index.html",
+      "bytes": 34769,
+      "gzip": 9330
+    },
+    {
+      "file": "public/assets/fonts/archivo-400-latin-ext.woff2",
+      "bytes": 32672,
+      "gzip": 32700
+    },
+    {
+      "file": "public/assets/css/site.css",
+      "bytes": 28686,
+      "gzip": 5781
+    },
+    {
+      "file": "public/StoneVsSilicon/img/stone_thunk.webp",
+      "bytes": 25778,
+      "gzip": 25806
+    },
+    {
+      "file": "public/trabajo/index.html",
+      "bytes": 24291,
+      "gzip": 7144
+    },
+    {
+      "file": "public/index.html",
+      "bytes": 23245,
+      "gzip": 6638
+    },
+    {
+      "file": "public/notas/microservicios-cuando-no/index.html",
+      "bytes": 21078,
+      "gzip": 7109
+    },
+    {
+      "file": "public/StoneVsSilicon/img/silicon_shift.webp",
+      "bytes": 20430,
+      "gzip": 20458
+    },
+    {
+      "file": "public/StoneVsSilicon/img/icon.webp",
+      "bytes": 20420,
+      "gzip": 20448
+    },
+    {
+      "file": "public/StoneVsSilicon/img/silicon_bit.webp",
+      "bytes": 20324,
+      "gzip": 20352
+    },
+    {
+      "file": "public/StoneVsSilicon/img/silicon_processor.webp",
+      "bytes": 19952,
+      "gzip": 19980
+    },
+    {
+      "file": "public/assets/fonts/libre-caslon-text-400-italic-latin.woff2",
+      "bytes": 19576,
+      "gzip": 19604
+    },
+    {
+      "file": "public/StoneVsSilicon/img/stone_ember.webp",
+      "bytes": 18864,
+      "gzip": 18892
+    },
+    {
+      "file": "public/StoneVsSilicon/img/stone_unga.webp",
+      "bytes": 18330,
+      "gzip": 18358
+    },
+    {
+      "file": "public/StoneVsSilicon/img/stone_rolla.webp",
+      "bytes": 17946,
+      "gzip": 17974
+    },
+    {
+      "file": "public/StoneVsSilicon/img/silicon_nexus.webp",
+      "bytes": 17834,
+      "gzip": 17862
+    },
+    {
+      "file": "public/privacy-apps/index.html",
+      "bytes": 17390,
+      "gzip": 6307
+    },
+    {
+      "file": "public/assets/fonts/libre-caslon-text-400-latin.woff2",
+      "bytes": 16984,
+      "gzip": 17012
+    },
+    {
+      "file": "public/StoneVsSilicon/img/silicon_ping.webp",
+      "bytes": 16678,
+      "gzip": 16706
+    },
+    {
+      "file": "public/StoneVsSilicon/svs.css",
+      "bytes": 14034,
+      "gzip": 4128
+    },
+    {
+      "file": "public/StoneVsSilicon/img/stone_peb.webp",
+      "bytes": 13008,
+      "gzip": 13031
+    },
+    {
+      "file": "public/StoneVsSilicon/img/app-store-es.svg",
+      "bytes": 11970,
+      "gzip": 4349
+    },
+    {
+      "file": "public/og.png",
+      "bytes": 11342,
+      "gzip": 10503
+    },
+    {
+      "file": "public/StoneVsSilicon/img/app-store-en.svg",
+      "bytes": 10804,
+      "gzip": 4082
+    },
+    {
+      "file": "public/assets/fonts/libre-caslon-text-400-italic-latin-ext.woff2",
+      "bytes": 10688,
+      "gzip": 10711
+    },
+    {
+      "file": "public/privacidad/index.html",
+      "bytes": 10486,
+      "gzip": 3737
+    },
+    {
+      "file": "public/assets/fonts/ibm-plex-mono-500-latin.woff2",
+      "bytes": 10060,
+      "gzip": 10083
+    },
+    {
+      "file": "public/assets/fonts/ibm-plex-mono-400-latin.woff2",
+      "bytes": 10052,
+      "gzip": 10075
+    },
+    {
+      "file": "public/notas/index.html",
+      "bytes": 10003,
+      "gzip": 3322
+    },
+    {
+      "file": "public/assets/fonts/archivo-black-400-latin.woff2",
+      "bytes": 9792,
+      "gzip": 9815
+    },
+    {
+      "file": "public/assets/fonts/libre-caslon-text-400-latin-ext.woff2",
+      "bytes": 9592,
+      "gzip": 9615
+    },
+    {
+      "file": "public/assets/fonts/ibm-plex-mono-400-latin-ext.woff2",
+      "bytes": 8860,
+      "gzip": 8883
+    },
+    {
+      "file": "public/assets/fonts/ibm-plex-mono-500-latin-ext.woff2",
+      "bytes": 8848,
+      "gzip": 8871
+    },
+    {
+      "file": "public/StoneVsSilicon/svs.js",
+      "bytes": 8038,
+      "gzip": 2615
+    },
+    {
+      "file": "public/404.html",
+      "bytes": 7531,
+      "gzip": 2647
+    },
+    {
+      "file": "public/gracias/index.html",
+      "bytes": 7422,
+      "gzip": 2603
+    },
+    {
+      "file": "public/StoneVsSilicon/img/rock.webp",
+      "bytes": 7414,
+      "gzip": 7388
+    },
+    {
+      "file": "public/assets/js/site.js",
+      "bytes": 6954,
+      "gzip": 2357
+    },
+    {
+      "file": "public/assets/fonts/archivo-black-400-latin-ext.woff2",
+      "bytes": 6400,
+      "gzip": 6423
+    },
+    {
+      "file": "public/llms.txt",
+      "bytes": 2355,
+      "gzip": 1156
+    },
+    {
+      "file": "public/_headers",
+      "bytes": 1095,
+      "gzip": 490
+    },
+    {
+      "file": "public/sitemap.xml",
+      "bytes": 1013,
+      "gzip": 271
+    },
+    {
+      "file": "public/favicon.svg",
+      "bytes": 906,
+      "gzip": 459
+    },
+    {
+      "file": "public/robots.txt",
+      "bytes": 66,
+      "gzip": 81
+    }
+  ],
+  "externalUrls": [
+    "https://angel.vacacionesaprendiendo.xyz/",
+    "https://apps.apple.com/mx/app/stonevssilicon/id6820747510",
+    "https://auxidocente.com",
+    "https://cosaseria.mx/",
+    "https://cosaseria.mx/StoneVsSilicon/",
+    "https://cosaseria.mx/StoneVsSilicon/#en",
+    "https://cosaseria.mx/StoneVsSilicon/#es",
+    "https://cosaseria.mx/gracias/",
+    "https://cosaseria.mx/notas/",
+    "https://cosaseria.mx/notas/microservicios-cuando-no/",
+    "https://cosaseria.mx/privacidad/",
+    "https://cosaseria.mx/privacy-apps/",
+    "https://cosaseria.mx/trabajo/",
+    "https://noe.vacacionesaprendiendo.xyz/",
+    "https://pdeanticorrupcion.michoacan.gob.mx/s5/",
+    "https://quinielaroyale.mx",
+    "https://valladolia.com",
+    "https://www.linkedin.com/in/junbarrs/",
+    "https://x.com/JunBarrs24"
+  ],
+  "secretPatternMatches": [],
+  "filesTracked": 64
+}

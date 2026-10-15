@@ -9,6 +9,7 @@
   --silicio-oscuro:#0E3A82;
   --silicio-claro:#8DBBFF;
   --vs:#F0821E;
+  --vs-texto:#8A3B00;
 }
 
 /* Idioma: el html lleva data-lang y solo se muestra un bloque de cada par. */
@@ -19,9 +20,9 @@ html[data-lang="en"] .es{display:none !important}
   font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.14em;
   text-decoration:none;padding:7px 10px;border:2px solid var(--linea);min-height:0;line-height:1;
 }
-.idiomas a[aria-pressed="true"]{background:var(--tinta);color:var(--papel)}
+.idiomas a[aria-current="page"]{background:var(--tinta);color:var(--papel)}
 .idiomas a:hover{border-color:var(--rosa);color:var(--rosa)}
-.idiomas a[aria-pressed="true"]:hover{color:var(--papel);border-color:var(--tinta)}
+.idiomas a[aria-current="page"]:hover{color:var(--papel);border-color:var(--tinta)}
 
 /* Fondo con parallax */
 html{background:var(--tinta)}
@@ -149,9 +150,12 @@ body[data-escena="portada"] .fondo-parallax img{filter:none}
 .faccion-silicio .faccion-accion{color:var(--silicio)}
 
 /* Modales: historia y alineaciones */
-.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:clamp(12px,3vw,32px)}
-.modal[hidden]{display:none}
-.modal-fondo{position:absolute;inset:0;background:rgba(26,24,21,.72)}
+.modal{display:grid;place-items:center;padding:clamp(12px,3vw,32px)}
+dialog.modal{display:none;position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;background:transparent;color:inherit}
+dialog.modal[open]{display:grid}
+dialog.modal::backdrop{background:rgba(26,24,21,.72)}
+.modal:not(dialog) .modal-caja{max-height:none;overflow:visible}
+.modal-cerrar[hidden],.marcador[hidden]{display:none}
 .modal-caja{
   position:relative;z-index:1;width:min(100%,720px);max-height:calc(100dvh - 2*clamp(12px,3vw,32px));
   overflow:auto;background:var(--tinta);color:var(--papel);
@@ -229,7 +233,7 @@ body.modal-abierto{overflow:hidden}
 .condicion-pronto{background:var(--papel-hondo)}
 .condicion .pronto{
   display:inline-block;margin-bottom:10px;font-family:var(--mono);font-size:.66rem;font-weight:500;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--vs);border:2px solid var(--vs);padding:4px 8px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--vs-texto);border:2px solid var(--vs-texto);padding:4px 8px;
 }
 
 /* Video */
@@ -278,3 +282,5 @@ body.modal-abierto{overflow:hidden}
   .fondo-parallax img{transform:none}
   .marcador::after{animation:none;opacity:.8}
 }
+
+.btn-dual,.faccion-boton{text-decoration:none}

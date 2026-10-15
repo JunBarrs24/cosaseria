@@ -1,0 +1,150 @@
+{
+  "articleTabs": [
+    {
+      "tag": "A",
+      "text": "Saltar al contenido"
+    },
+    {
+      "tag": "A",
+      "text": "CosaSeria.\n        engineering studio"
+    },
+    {
+      "tag": "A",
+      "text": "Trabajo"
+    },
+    {
+      "tag": "A",
+      "text": "Notas"
+    },
+    {
+      "tag": "A",
+      "text": "Contacto"
+    },
+    {
+      "tag": "A",
+      "text": "Notas al expediente"
+    },
+    {
+      "tag": "PRE",
+      "text": "total = pagos.cobrar(\n    carrito,\n    timeout    "
+    },
+    {
+      "tag": "A",
+      "text": "Cuéntanoslo"
+    },
+    {
+      "tag": "A",
+      "text": "Trabajo"
+    },
+    {
+      "tag": "A",
+      "text": "Notas"
+    },
+    {
+      "tag": "A",
+      "text": "Privacidad"
+    },
+    {
+      "tag": "BODY",
+      "text": "Saltar al contenido\n\n\n  \n    \n    \n    \n    \n    \n"
+    },
+    {
+      "tag": "A",
+      "text": "Saltar al contenido"
+    },
+    {
+      "tag": "A",
+      "text": "CosaSeria.\n        engineering studio"
+    },
+    {
+      "tag": "A",
+      "text": "Trabajo"
+    },
+    {
+      "tag": "A",
+      "text": "Notas"
+    },
+    {
+      "tag": "A",
+      "text": "Contacto"
+    },
+    {
+      "tag": "A",
+      "text": "Notas al expediente"
+    },
+    {
+      "tag": "PRE",
+      "text": "total = pagos.cobrar(\n    carrito,\n    timeout    "
+    },
+    {
+      "tag": "A",
+      "text": "Cuéntanoslo"
+    }
+  ],
+  "code": {
+    "clientWidth": 348,
+    "scrollWidth": 605,
+    "tabIndex": -1
+  },
+  "modalAxe": [
+    {
+      "id": "aria-allowed-attr",
+      "nodes": [
+        [
+          "a[href$=\"#es\"]"
+        ],
+        [
+          "a[href$=\"#en\"]"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          ".pronto > .es"
+        ]
+      ]
+    },
+    {
+      "id": "landmark-unique",
+      "nodes": [
+        [
+          ".presentacion"
+        ]
+      ]
+    }
+  ],
+  "language": {
+    "lang": "en",
+    "historyHash": "#en",
+    "visibleSpanish": 0
+  },
+  "text200": [
+    {
+      "path": "/",
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "path": "/trabajo/",
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "path": "/notas/microservicios-cuando-no/",
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "path": "/StoneVsSilicon/",
+      "width": 1280,
+      "scrollWidth": 1280
+    }
+  ],
+  "responseContract": {
+    "input": "",
+    "button": "Enviado",
+    "message": "No enviado"
+  }
+}

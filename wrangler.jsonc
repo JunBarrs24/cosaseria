@@ -24,34 +24,15 @@
     { "name": "EMAIL" }
   ],
 
-  // Conteo del rate limit por IP. El binding debe llamarse LIMITES: es el
-  // nombre que busca src/contacto.js, y si no coincide la función registra
-  // un aviso y deja pasar todas las peticiones.
-  //
-  // Sin "preview_id": wrangler dev simula KV en local. Solo haría falta
-  // para `wrangler dev --remote`, y entonces hay que crear un segundo
-  // namespace con `wrangler kv namespace create LIMITES --preview`.
-  "kv_namespaces": [
-    {
-      "binding": "LIMITES",
-      "id": "b2a119572c5b43b896fd70c697d5ecd9"
-    }
-  ],
+  // Estado consistente: cuotas horarias e identificadores de envío.
+  // Se crea al desplegar; el dry-run no aplica esta migración.
+  "durable_objects": {
+    "bindings": [{ "name": "CONTACTO", "class_name": "RegistroContacto" }]
+  },
+  "migrations": [{ "tag": "contacto-v1", "new_sqlite_classes": ["RegistroContacto"] }],
 
-  // Con un archivo de configuración presente, este archivo manda: un
-  // `wrangler deploy` borra las variables sueltas que se hayan puesto en
-  // el panel. Por eso lo que no es secreto vive aquí, y lo que sí lo es
-  // se sube como secreto, que es lo único que el deploy no toca.
-  // Corte de ráfaga. KV no sirve para esto: leer, decidir y escribir son tres
-  // pasos, así que cien peticiones simultáneas leen el mismo contador y pasan
-  // todas. Este binding cuenta dentro de Cloudflare, en una sola operación.
-  //
-  // "period" solo acepta 10 o 60. Por eso la ventana larga (5 por hora) se
-  // queda en KV, donde la consistencia eventual ya no importa porque la
-  // ráfaga viene detenida de aquí.
-  //
-  // El conteo es por ubicación de Cloudflare y eventualmente consistente:
-  // frena el abuso de un formulario, no es un sistema de contabilidad.
+  // Corte de ráfaga aproximado y local a cada ubicación de Cloudflare.
+  // La cuota de 5 intentos lógicos por IP/hora se coordina en CONTACTO.
   "ratelimits": [
     {
       "name": "RAFAGA",

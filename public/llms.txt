@@ -28,7 +28,7 @@ Contacto: hola@cosaseria.mx
 - [Inicio](https://cosaseria.mx/): qué hace el estudio, los cinco asuntos que atiende, quién está detrás y el formulario de contacto.
 - [Trabajo](https://cosaseria.mx/trabajo/): evidencia, separada en tres categorías. Productos propios del estudio (AuxiDocente, QuinielaRoyale), trabajo del fundador fuera del estudio (RevenueCat, Amazon Devices, Amazon Music, traducción de reseñas de Amazon, pagos e impuestos, ValladolIA, sistema de denuncias ciudadanas de Michoacán) y dos sistemas domésticos de aprendizaje.
 - [Notas](https://cosaseria.mx/notas/): notas de ingeniería sobre decisiones técnicas.
-- [Microservicios: cuándo no.](https://cosaseria.mx/notas/microservicios-cuando-no/): qué compras al adoptar microservicios (independencia de despliegue), qué pagas a cambio (cada llamada de función se convierte en un problema de red) y las condiciones concretas bajo las cuales conviene o no conviene partir un sistema.
+- [Microservicios: cuándo no.](https://cosaseria.mx/notas/microservicios-cuando-no/): qué compras al adoptar microservicios (independencia de despliegue), qué pagas a cambio (cada nueva frontera de proceso añade costos de comunicación) y las condiciones concretas bajo las cuales conviene o no conviene partir un sistema.
 - [StoneVsSilicon](https://cosaseria.mx/StoneVsSilicon/): página del juego, en español e inglés. Historia, personajes, cómo se juega y video. Juego de duelos sin conexión para iOS y Android.
 - [Privacidad](https://cosaseria.mx/privacidad/): qué datos recoge el sitio y cómo pedir que se borren.
 - [Privacidad de apps](https://cosaseria.mx/privacy-apps/): política de privacidad y soporte de StoneVsSilicon, en español e inglés.
@@ -52,3 +52,5 @@ fundador. Nada de eso fue un encargo al estudio.
 
 El contenido de cosaseria.mx puede citarse con atribución a CosaSeria y enlace a
 la URL de origen.
+
+- [StoneVsSilicon in English](https://cosaseria.mx/StoneVsSilicon/en/): offline strategy for iPhone; Android and PvP are planned, not available yet.

@@ -1,0 +1,18 @@
+
+ ⛅️ wrangler 4.151.0
+────────────────────
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+✨ Read 91 files from the assets directory /Users/junbarrs/cosa-seria/public
+Total Upload: 16.50 KiB / gzip: 5.70 KiB
+Your Worker has access to the following bindings:
+Binding                                       Resource                  
+env.CONTACTO (RegistroContacto)               Durable Object            
+env.EMAIL (unrestricted)                      Send Email                
+env.RAFAGA (2 requests/60s)                   Rate Limit                
+env.ASSETS                                    Assets                    
+env.CORREO_ORIGEN ("sitio@cosaseria.mx")      Environment Variable      
+
+--dry-run: exiting now.
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md

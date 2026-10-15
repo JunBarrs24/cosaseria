@@ -1,0 +1,2 @@
+# Preserve captured audit evidence, including HTTP CRLF and tool output spacing.
+docs/audits/evidence/** -text -whitespace
